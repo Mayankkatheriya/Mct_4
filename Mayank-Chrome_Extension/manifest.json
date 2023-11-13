@@ -17,8 +17,8 @@
   "host_permissions": ["https://*.youtube.com/*"],
 
   "icons": {
-    "64" : "./Assets/extn-icon.png",
-    "128" : "./Assets/extn-icon.png"
+    "64" : "Assets/extn-icon.png",
+    "128" : "Assets/extn-icon.png"
   },
 
   "action": {
@@ -27,7 +27,7 @@
   },
 
   "background": {
-    "service-worker": "background.js"
+    "service_worker": "background.js"
   },
 
   "content_scripts": [
@@ -40,10 +40,10 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "./Assets/bookmark.png",
-        "./Assets/delete.png",
-        "./Assets/play.png",
-        "./Assets/save.png"
+        "Assets/bookmark.png",
+        "Assets/delete.png",
+        "Assets/play.png",
+        "Assets/save.png"
       ],
       "matches": ["https://*.youtube.com/*"]
     }
