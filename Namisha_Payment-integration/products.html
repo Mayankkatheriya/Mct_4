@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Products</title>
+    <!-- Add Razorpay script -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+    <header> 
+        <h1>Create your looks</h1>
+        <div id="cart-icon" onclick="openCartPage()">
+            Cart Items
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </header>
+    <div id="products-container">
+        <!-- Render product containers dynamically using JavaScript -->
+    </div>
+    <div id="cart-page">
+        <div id="cart-content">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <button onclick="closeCartPage()">Close</button>
+        </div>
+    </div>
+    <script src="products.js"></script>
+    <script src="https://kit.fontawesome.com/bfe5da5748.js" crossorigin="anonymous"></script>
+</body>
+</html>

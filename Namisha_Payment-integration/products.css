@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+
+}
+
+.product-container {
+    box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+}
+
+.product-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    background-color: rgba(207, 96, 96, 0.7);
+    color: rgb(0, 0, 0);
+    padding: 10px 90px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    /* margin-bottom: 2rem; */
+    text-align: center;
+
+}
+button:hover{
+background-color: rgb(183, 25, 25);
+color: white;
+border: none;
+}
+h2{
+    font-size:1rem;
+    font-weight: 500;
+}
+.price{
+    font-weight:500;
+    font-size: 0.8rem;
+    font-family:'Roboto', sans-serif;
+    font-style:normal;
+    text-decoration: rgba(24, 24, 24, 0.5) line-through;
+    display: inline;
+   margin: 0 6px;
+}
+.special{
+    border: none;
+    color: rgb(177, 45, 45);
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .shades{
+   color: #4a8f4d;
+  font-weight: 550;
+  }
+  
+        header {
+            background-color: #f56060;
+            color: white;
+            text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            align-items: center;
+        }
+        #cart-icon {
+            cursor: pointer;
+            position: relative;
+            font-size: 1.6rem;
+        }
+
+        #cart-page {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        #cart-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            
+        }
+        .cart{
+          padding: 2px;
+          background-color: transparent;
+         
+        }
+        .cart:hover{
+            padding: 2px;
+            background-color: white;
+            color: black;
+           
+          }
+        #cart-icons{
+          color: black;
+          cursor: pointer;
+          text-align: center;
+        }
+        #cart-icons:hover{
+            background-color:white;
+            color: black;
+        }
+        
