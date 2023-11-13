@@ -21,22 +21,23 @@
     <div class="wrapper">
       <div class="nav">
         <div>
-          <select id="gameMode">
+          <select id="gameMode" class="motion">
             <option value="Easy">Easy</option>
             <option value="Easy">Medium</option>
             <option value="Easy">Hard</option>
           </select>
         </div>
         <div class="gameTimeZone">
-          <span>🚩</span>
-          <span>10</span>
-          <span>⏰</span>
-          <span>000</span>
+          <span class="motion">🚩</span>
+          <span class="motion">10</span>
+          <span class="motion">⏰</span>
+          <span class="motion">000</span>
         </div>
         <div class="gameTimeZone">
           <!-- <i class="fa-solid fa-volume-high"></i> -->
           <!-- <i class="fa-solid fa-xmark"></i> -->
-          <i class="fa-solid fa-share-nodes"></i>
+          <span class="motion"><i class="fa-solid fa-share-nodes"></i></span>
+          
         </div>
       </div>
 
@@ -47,6 +48,14 @@
         <button id="restart">Restart</button>
       </div>
     </div>
+
+
+    <!-- gsap cdn -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="script.js"></script>
+
 
     <script src="index.js"></script>
   </body>
