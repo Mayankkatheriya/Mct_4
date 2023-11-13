@@ -1,18 +1,51 @@
 {
   "manifest_version": 3,
-  "name": "Jokes",
+
+  "name": "YouTube Bookmarks Extension ",
+
   "version": "1.0.0",
+
   "author": {
     "name": "Mayank Gupta",
     "email": "mayankkatheriya4@gmail.com"
   },
-  "description": "A simple chrome extension to show jokes.",
+
+  "description": "Saving Timestamps in YT Videos",
+
+  "permissions": ["storage", "tabs"],
+
+  "host_permissions": ["https://*.youtube.com/*"],
+
   "icons": {
-    "64": "./185034.png"
+    "64" : "./Assets/extn-icon.png",
+    "128" : "./Assets/extn-icon.png"
   },
-  "permissions": ["activeTab"],
+
   "action": {
-    "default_popup": "index.html",
-    "default_title": "My Joke extension"
-  }
+    "default_popup": "popup.html",
+    "default_title": "My YT Extension"
+  },
+
+  "background": {
+    "service-worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://*.youtube.com/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "./Assets/bookmark.png",
+        "./Assets/delete.png",
+        "./Assets/play.png",
+        "./Assets/save.png"
+      ],
+      "matches": ["https://*.youtube.com/*"]
+    }
+  ]
 }
