@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generator</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <div class="customer-Detail">
+        <div class="costomer-Name"><label for="">Customer Name</label>
+            <input type="text">
+        </div>
+        <div class="mobile">
+            <label for="">Mobile No:</label>
+            <p>+91</p>
+            <input type="number" maxlength="10" >
+        </div>
+
+    </div>
     <div class="page">
         <div class="bill">
             <p>1</p>
-            <input type="text"  class="name">
+            <input type="text" class="name">
             <input type="number" class="price">
         </div>
     </div>
     <p class="total">Total:0</p>
+    <button class="print">print</button>
     <script src="./main.js"></script>
 </body>
+
 </html>

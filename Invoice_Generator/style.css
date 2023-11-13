@@ -3,6 +3,41 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    width: 100vw;
+    overflow-x: hidden;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.customer-Detail{
+    display: flex;
+    width: 80%;
+    padding: 4%;
+    background-color: blanchedalmond;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.mobile{
+    display: flex;
+    gap: 0.2rem;
+    align-items: center;
+}
+.mobile p{
+    /* border: 2px solid black; */
+    background-color: rgb(201, 199, 197);
+    border-radius: 4px;
+    padding: 5px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
+
 .bill{
     display: flex;
 }

@@ -61,3 +61,6 @@ function total(price){
     total_Price.innerText=`Total: ${t}`
 
 }
+document.querySelector('.print').addEventListener('click',function(){
+    window.print();
+});
