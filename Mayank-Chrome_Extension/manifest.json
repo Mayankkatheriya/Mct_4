@@ -16,18 +16,9 @@
 
   "host_permissions": ["https://*.youtube.com/*"],
 
-  "icons": {
-    "64" : "Assets/extn-icon.png",
-    "128" : "Assets/extn-icon.png"
-  },
-
-  "action": {
-    "default_popup": "popup.html",
-    "default_title": "My YT Extension"
-  },
-
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "type": "module"
   },
 
   "content_scripts": [
@@ -47,5 +38,13 @@
       ],
       "matches": ["https://*.youtube.com/*"]
     }
-  ]
+  ],
+  "action": {
+    "default_title": "My YT Bookmarks",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "64": "Assets/extn-icon.png",
+    "128": "Assets/extn-icon.png"
+  }
 }
