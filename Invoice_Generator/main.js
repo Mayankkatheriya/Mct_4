@@ -2,6 +2,22 @@ let bill = document.querySelectorAll('.bill');
 let first = document.querySelector('.page')
 let total_Price = document.querySelector('.total')
 let print = document.querySelector('.print');
+const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+let date = new Date();
+let time = date.toTimeString().slice(0, 8)
+let month = date.getMonth()
+let dat = date.getDate()
+let year = date.getFullYear();
+let day = weekday[date.getDay()];
+let amount =0;
+
+// console.log(time,month,dat,year,day);
+
+let tim = document.querySelector('.date');
+tim.innerHTML = `
+    Time: ${time} (${day})
+    <p>Date: ${dat}-${month}-${year}</p>
+`
 // console.log(first);
 // console.log(bill);
 
@@ -28,6 +44,8 @@ function add_Entery() {
                 alert('Enter prododut name');
             }
             else if (e.key === 'Enter' && element.value.length > 0) {
+                element.disabled=true
+                element.parentElement.children[3].classList.remove('del-non')
                 new_listAppend();
 
             }
@@ -44,9 +62,12 @@ function total(price) {
     // console.log(price);
 
     price.forEach((ele) => {
+        // console.log(typeof(ele));
+        if(typeof(ele) === 'object' || typeof(ele)=== 'string')
         t += parseInt(ele.value)
 
     })
+    amount=t;
     // console.log(t);
     total_Price.innerHTML = `Total: ${t}
     <span class="items">items:${bill.length-1}</span>
@@ -54,6 +75,29 @@ function total(price) {
     delete_Items();
     
 
+}
+function delete_Items() {
+    let del = document.querySelectorAll('.delete');
+    
+    del.forEach((ele) => {
+        ele.addEventListener('click', function (e) {
+            e.target.parentElement.remove();
+            let price = document.querySelectorAll('.price');
+            // console.log(price);
+            // console.log(price[0,price.length-2]);
+            let newArr= Array.from(price).map((ele)=>{
+                if(ele.value.length>0){
+                    return ele;
+                }
+                return;
+                
+            })
+            total(newArr);
+            
+        })
+    })
+    
+    
 }
 
 print.addEventListener('click', function () {
@@ -95,31 +139,9 @@ print.addEventListener('click', function () {
 
 
 
-const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-let date = new Date();
-let time = date.toTimeString().slice(0, 8)
-let month = date.getMonth()
-let dat = date.getDate()
-let year = date.getFullYear();
-let day = weekday[date.getDay()];
 
-// console.log(time,month,dat,year,day);
 
-let tim = document.querySelector('.date');
-tim.innerHTML = `
-    Time: ${time} (${day})
-    <p>Date: ${dat}-${month}-${year}</p>
-`
-function delete_Items() {
-    let del = document.querySelectorAll('.delete');
-    del.forEach((ele) => {
-        ele.addEventListener('click', function (e) {
-            e.target.parentElement.remove();
-        })
-    })
-    // total()
-}
-delete_Items();
+// delete_Items();
 function new_listAppend() {
     let price = document.querySelectorAll('.price');
     let newDiv = document.createElement('li')
@@ -128,7 +150,7 @@ function new_listAppend() {
             <p>*</p>
             <input type="text"  class="name">
             <input type="number" class="price">
-            <i class="fa-solid fa-trash delete"></i>
+            <i class="fa-solid fa-trash delete del-non"></i>
             `
 
     first.append(newDiv)
