@@ -28,6 +28,7 @@ function openCartPage() {
     updateCart();
     const cartPage = document.getElementById('cart-page');
     cartPage.style.display = 'flex';
+
 }
 
 // Function to close the cart page
@@ -56,8 +57,8 @@ async function renderProducts() {
                 <p>${product.rating}</p>
                 <p class="shades">${product.shades} shades</p>
                 <span class="special"> Rs. ${product.specialPrice}<p class="price">Rs. ${product.price}</p></span>
-                <button onclick="handlePayment('${product.title}', ${product.specialPrice}, '${product.image}')">Buy Now</button>
-                <button class="cart" onclick="addToCart('${product.title}', ${product.specialPrice})">Add to Cart <i class="fa-solid fa-cart-shopping" id="cart-icons"></i></button>
+                <button class="pay-now" onclick="handlePayment('${product.title}', ${product.specialPrice}, '${product.image}')">Buy Now</button>
+                <button class="cart" onclick="addToCart('${product.title}', ${product.specialPrice})"><i class="fa-solid fa-cart-shopping" id="cart-icons"> Add to Cart</i></button>
             `;
 
             productsContainer.appendChild(container);
@@ -70,7 +71,7 @@ async function renderProducts() {
 // Function to handle payment using Razorpay
 function handlePayment(productTitle, productPrice, productImage) {
     const options = {
-        key: 'rzp_test_DhnX2ljNSBBudR', // Replace with your Razorpay API key
+        key: 'rzp_test_DhnX2ljNSBBudR', // Razorpay API key
         amount: productPrice * 100, // Amount in paisa
         currency: 'INR',
         name: productTitle,
@@ -97,5 +98,7 @@ function handlePayment(productTitle, productPrice, productImage) {
     rzp.open();
 }
 
+
 // Call the renderProducts function to display product containers
 renderProducts();
+

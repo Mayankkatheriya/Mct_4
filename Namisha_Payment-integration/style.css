@@ -15,12 +15,11 @@ h1 {
 p {
   font-family: Georgia;
   font-style: italic;
-  text-shadow: 1px 1px #000;
+  text-shadow: 1px 2px #000;
 }
 
 .exclusions {
   font-family: Georgia;
-  font-size: 8pt;
   letter-spacing: 1px;
   text-shadow: none;
   font-style: normal;
@@ -33,6 +32,7 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  height: 100%;
 }
 
 .hero-text {

@@ -11,11 +11,27 @@
     padding: 20px;
 
 }
+.product-container:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); /* Add a shadow on hover */
+    transform: scale(1.05); /* Scale up the container on hover */
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Add smooth transition */
+    
+}
+
+.product-container img:hover {
+    filter: brightness(80%); /* Adjust brightness on image hover */
+    transition: filter 0.3s ease-in-out; /* Add smooth transition */
+}
+
 
 .product-container {
     box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.7);
     padding: 20px;
     text-align: center;
+    position: relative; 
+    border-radius: 5px;
+    animation: bounceInUp; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
 }
 
 .product-container img {
@@ -23,7 +39,7 @@
     height: auto;
 }
 
-button {
+.pay-now {
     background-color: rgba(207, 96, 96, 0.7);
     color: rgb(0, 0, 0);
     padding: 10px 90px;
@@ -31,11 +47,11 @@ button {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 1rem;
-    /* margin-bottom: 2rem; */
+    transition: background-color 0.3s ease;
     text-align: center;
 
 }
-button:hover{
+.pay-now:hover{
 background-color: rgb(183, 25, 25);
 color: white;
 border: none;
@@ -43,6 +59,7 @@ border: none;
 h2{
     font-size:1rem;
     font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .price{
     font-weight:500;
@@ -73,6 +90,8 @@ h2{
             justify-content: space-between;
             text-align: center;
             align-items: center;
+            padding-left: 40px;
+            padding-right: 40px;
         }
         #cart-icon {
             cursor: pointer;
@@ -99,23 +118,30 @@ h2{
             
         }
         .cart{
-          padding: 2px;
-          background-color: transparent;
-         
+            display: none; /* Hide the cart button by default */
+            position: absolute;
+            bottom: 17%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255);
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px 0 0 0;
+            cursor: pointer;
         }
-        .cart:hover{
-            padding: 2px;
-            background-color: white;
-            color: black;
-           
-          }
         #cart-icons{
-          color: black;
+          color: rgb(170, 163, 38);
           cursor: pointer;
           text-align: center;
         }
-        #cart-icons:hover{
-            background-color:white;
-            color: black;
+        .product-container:hover .cart {
+            display: block; /* Show the cart button on hover */
         }
+        .icon{
+          border-radius: 50px;
+          width: 50px;
+        }
+        
+        
         
