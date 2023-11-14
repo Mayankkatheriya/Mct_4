@@ -23,9 +23,12 @@ function add_Entery(){
     let price=document.querySelectorAll('.price');
     price.forEach(element => {
         element.addEventListener('keyup',function(e){
-            if(e.key === 'Enter' && element.value.length>0){
+            if(e.key === 'Enter' && element.parentElement.children[1].value.length==0){
+                alert('Enter prododut name');
+            }
+            else if(e.key === 'Enter' && element.value.length>0){
                 element.disabled=true
-                let newDiv=document.createElement('div')
+                let newDiv=document.createElement('li')
                 newDiv.classList.add('bill')
             newDiv.innerHTML=`
             <p>${c}</p>
@@ -61,6 +64,30 @@ function total(price){
     total_Price.innerText=`Total: ${t}`
 
 }
-document.querySelector('.print').addEventListener('click',function(){
+let print =document.querySelector('.print');
+print.addEventListener('click',function(){
+    print.style.display='none'
+    
+    let inp =document.querySelectorAll('input');
+    
     window.print();
+    
+
 });
+
+    
+const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+let date =new Date();
+let time=date.toTimeString().slice(0,8)
+let month= date.getMonth()
+let dat= date.getDate()
+let year=date.getFullYear();
+let day = weekday[date.getDay()];
+
+console.log(time,month,dat,year,day);
+
+let tim =document.querySelector('.date');
+tim.innerHTML=`
+    Time: ${time} (${day})
+    <p>Date: ${dat}-${month}-${year}</p>
+`

@@ -9,6 +9,8 @@ body{
     align-items: center;
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+    position: relative;
 }
 .customer-Detail{
     display: flex;
@@ -35,9 +37,77 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-
-
-
-.bill{
+.bill-head{
     display: flex;
+    width: 50%;
+    justify-content: space-between;
+    padding: 0 7%;
+}
+
+.page{
+    width: 50%;
+    padding: 1% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 1rem; */
+    background-color: greenyellow;
+    border-radius: 5px;
+    
+    
+
+}
+.bill:nth-of-type(odd){
+    background-color: blue;
+}
+.bill{
+    width: 90%;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 5px 7px;
+    /* border-radius: 5px; */
+    color: white;
+    background-color: blueviolet;
+}
+
+
+.name{
+    height: 30px;
+    width: 80%;
+    font-size: 1rem;
+    text-transform: capitalize;
+    padding: 0 5px;
+    border-radius: 3px;
+    border: none;
+}
+.name:focus,.price:focus{
+    outline: none;
+    text-align: center;
+
+}
+
+
+.price{
+    height: 30px;
+    width: 20%;
+    text-align: right;
+    font-size: 1rem;
+}
+input:disabled{
+    color: black;
+    background-color: #fff;
+    /* border: 1px solid black; */
+}
+.print{
+    position: absolute;
+    top:180px;
+    height: 30px;
+    left: 90%;
+    z-index: 9999;
+    margin: auto;
+    width: 90px;
+}
+.print-inp{
+    border: none;
 }
