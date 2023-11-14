@@ -1,3 +1,8 @@
+const timeCountEl = document.querySelector("#timeCount");
+let timer = false;
+let counter = 0;
+let settimeStart = null;
+
 let ROWS = 9;
 let COLS = 9;
 let SIZE = 40;
@@ -57,6 +62,9 @@ function createButtons() {
 }
 
 function startGame() {
+  counter = 0;
+  timer = false
+  clearTimeout(timeCountStatr);
   failedBombKey = null;
   revealedKeys = new Set();
   flaggedKeys = new Set();
@@ -210,3 +218,38 @@ function generateMap(seedBombs) {
 }
 
 startGame();
+
+
+
+canvas.addEventListener("click", () => {
+  if (timer == false) {
+    timer = true;
+    timeCountStatr();
+  }
+});
+
+
+
+function timeCountStatr() {
+  counter++;
+  // Format the counter to always have three digits
+  const formattedCounter = ("000" + counter).slice(-3);
+  timeCountEl.innerText = formattedCounter;
+
+  // setInterval(timeCountStatr, 1000);
+  settineStart = setTimeout(timeCountStatr, 1000);
+  // timer == true;
+}
+
+// Update the counter every second (1000 milliseconds)
+
+const flafCountEl = document.querySelector("#flafCount");
+
+let fleg = 9;
+
+canvas.addEventListener("contextmenu", (e) => {
+  // console.log("sonu");
+  fleg--;
+
+  flafCountEl.innerText = fleg;
+});
