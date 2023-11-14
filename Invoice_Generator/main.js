@@ -28,7 +28,7 @@ function shift_Price() {
     name.forEach((ele) => {
         ele.addEventListener('keyup', function (e) {
             if (e.key === 'Enter' && ele.value.length > 0) {
-                ele.parentElement.children[2].focus();
+                ele.parentElement.children[3].focus();
             }
 
         })
@@ -45,7 +45,7 @@ function add_Entery() {
             }
             else if (e.key === 'Enter' && element.value.length > 0) {
                 element.disabled=true
-                element.parentElement.children[3].classList.remove('del-non')
+                element.parentElement.children[4].classList.remove('del-non')
                 new_listAppend();
 
             }
@@ -96,6 +96,7 @@ function new_listAppend() {
     newDiv.innerHTML = `
             <p>*</p>
             <input type="text"  class="name">
+            <input type="number" value="1" class="piece">
             <input type="number" class="price">
             <i class="fa-solid fa-trash delete del-non"></i>
             `
@@ -132,9 +133,11 @@ function total(price) {
     // console.log(price);
 
     price.forEach((ele) => {
+        let count= parseInt(ele.parentElement.children[2].value);
+        console.log(count,typeof(count));
         // console.log(typeof(ele));
         if(typeof(ele) === 'object' || typeof(ele)=== 'string')
-        t += parseInt(ele.value)
+        t += (parseInt(ele.value)*count)
 
     })
     amount=t;

@@ -31,8 +31,8 @@ body{
     border-radius: 4px;
     padding: 5px;
 }
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+.price::-webkit-outer-spin-button,
+.price::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -160,3 +160,4 @@ input:disabled{
     align-items: center;
     /* border: 2px solid black; */
 }
+
