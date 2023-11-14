@@ -10,6 +10,7 @@ let dat = date.getDate()
 let year = date.getFullYear();
 let day = weekday[date.getDay()];
 let amount =0;
+let number=document.querySelector('.number'),btn = document.querySelector('.btn')
 
 // console.log(time,month,dat,year,day);
 
@@ -18,8 +19,6 @@ tim.innerHTML = `
     Time: ${time} (${day})
     <p>Date: ${dat}-${month}-${year}</p>
 `
-// console.log(first);
-// console.log(bill);
 
 
 
@@ -34,7 +33,7 @@ function shift_Price() {
         })
     })
 }
-shift_Price();
+
 
 function add_Entery() {
     let price = document.querySelectorAll('.price');
@@ -53,7 +52,7 @@ function add_Entery() {
         })
     });
 }
-add_Entery()
+
 
 
 function total(price) {
@@ -76,6 +75,8 @@ function total(price) {
     
 
 }
+
+
 function delete_Items() {
     let del = document.querySelectorAll('.delete');
     
@@ -110,8 +111,6 @@ print.addEventListener('click', function () {
     })
 
     let bill = document.querySelectorAll('.bill');
-
-    console.log(bill[bill.length - 1]);
     bill[bill.length - 1].remove()
 
 
@@ -120,14 +119,14 @@ print.addEventListener('click', function () {
     })
 
 
-    total_Price.classList.add('while-print')
+    btn.classList.add('while-print')
 
     window.print();
     new_listAppend();
     del.forEach(element => {
         element.classList.remove('del-non')
     })
-    total_Price.classList.remove('while-print')
+    btn.classList.remove('while-print')
     print.style.display = 'block'
     bill.forEach((ele) => {
         ele.classList.remove('list-whilePrint')
@@ -163,3 +162,12 @@ function new_listAppend() {
     shift_Price();
     print.style.display = 'block'
 }
+
+
+number.addEventListener('keyup',()=>{
+    if (number.value.length==10){
+        number.disabled=true
+    }
+})
+add_Entery()
+shift_Price()

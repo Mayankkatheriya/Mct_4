@@ -94,6 +94,7 @@ input::-webkit-inner-spin-button {
     text-align: right;
     font-size: 1rem;
     border: none;
+    padding: 0 5px;
 }
 input:disabled{
     /* color: black; */
@@ -113,23 +114,45 @@ input:disabled{
 .del-non{
     visibility: hidden;
 }
-.total{
+.btn{
     position: relative;
     top: 0px;
-    left: 495px;
+    left: 465px;
     right: 0px;
     bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
     
     border: 1px solid black;
     width: 300px;
     font-size: 1.5rem;
     padding: 10px;
     text-align: center;
-    height: 50px;
+    height: auto;
+
+}
+.btn p{
+    border: 1px solid #801313;
 }
 .while-print{
-    left:280px
+    left:140px;
+    top: 10px;
 }
 .list-whilePrint{
     border-bottom: 2px solid black;
+}
+.costomer-Name input{
+    text-transform: capitalize;
+}
+.pay button{
+    width: 80%;
+    height: 40px;
+}
+.bill-detail{
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    /* border: 2px solid black; */
 }

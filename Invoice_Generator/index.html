@@ -9,36 +9,51 @@
 </head>
 
 <body>
-    <div class="customer-Detail">
-        <div class="costomer-Name"><label for="">Customer Name</label>
-            <input type="text">
-        </div>
-        <div class="mobile">
-            <label for="">Mobile No:</label>
-            <p>+91</p>
-            <input type="number" maxlength="10" >
-            
-        </div>
-        <div class="date">
-            
-        </div>
 
+
+
+    <div class="bill-detail">
+        <div class="customer-Detail">
+            <div class="costomer-Name"><label for="">Customer Name</label>
+                <input type="text">
+            </div>
+            <div class="mobile">
+                <label for="">Mobile No:</label>
+                <p>+91</p>
+                <input class="number" type="number" pattern="[1-9]{1}[0-9]{9}"> 
+                
+            </div>
+            <div class="date">
+                
+            </div>
+    
+        </div>
+        <div class="bill-head">
+            <h2>Product Details</h2>
+            <h2 style="position: relative; left: 0;">price</h2>
+        </div>
+        <ol class="page">
+            <li class="bill">
+                <p>*</p>
+                <input type="text" class="name">
+                <input type="number" class="price">
+                <i class="fa-solid fa-trash delete del-non"></i>
+            </li>
+        </ol>
+        <div class="btn ">
+            <p class="total">Total:0  <span class="items">items:0</span></p>
+            <select name="" id="">
+                <option value="">case</option>
+                <option value="">UPI</option>
+                <option value="">Card <select name="" id="">
+                    
+                </select></option>
+            </select>
+            <a href="" class="pay"><button value="">pay</button></a>
+        </div>
+        <button class="print">print</button>
     </div>
-    <div class="bill-head">
-        <h2>Product Details</h2>
-        <h2 style="position: relative; left: 55px;">price</h2>
-    </div>
-    <ol class="page">
-        <li class="bill">
-            <p>*</p>
-            <input type="text" class="name">
-            <input type="number" class="price">
-            <i class="fa-solid fa-trash delete del-non"></i>
-        </li>
-    </ol>
-    <p class="total">Total:0  <span class="items">items:0</span></p>
-    <button class="print">print</button>
-    <a href=""><button value="">pay</button></a>
+    
     <script src="https://kit.fontawesome.com/54ac71e1b5.js" crossorigin="anonymous"></script>
     <script src="./main.js"></script>
 </body>
