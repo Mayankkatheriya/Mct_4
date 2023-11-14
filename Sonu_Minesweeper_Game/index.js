@@ -63,8 +63,9 @@ function createButtons() {
 
 function startGame() {
   counter = 0;
-  timer = false
-  clearTimeout(timeCountStatr);
+  timer = false;
+  timeCountEl.innerText = "000"
+  clearTimeout(settimeStart);
   failedBombKey = null;
   revealedKeys = new Set();
   flaggedKeys = new Set();
@@ -237,7 +238,7 @@ function timeCountStatr() {
   timeCountEl.innerText = formattedCounter;
 
   // setInterval(timeCountStatr, 1000);
-  settineStart = setTimeout(timeCountStatr, 1000);
+  settimeStart = setTimeout(timeCountStatr, 1000);
   // timer == true;
 }
 

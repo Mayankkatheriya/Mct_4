@@ -64,7 +64,7 @@
     }
   });
 
-  newVideoLoaded();
+  // newVideoLoaded();
 })();
 
 const getTime = t => {
