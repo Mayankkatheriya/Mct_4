@@ -87,7 +87,11 @@ input::-webkit-inner-spin-button {
 
 }
 
-
+.piece{
+    height: 30px;
+    width: 30px;
+    text-align: center;
+}
 .price{
     height: 30px;
     width: 20%;

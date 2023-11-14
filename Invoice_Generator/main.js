@@ -10,7 +10,8 @@ let dat = date.getDate()
 let year = date.getFullYear();
 let day = weekday[date.getDay()];
 let amount =0;
-let number=document.querySelector('.number'),btn = document.querySelector('.btn')
+let number=document.querySelector('.number'),btn = document.querySelector('.btn');
+let edit=document.querySelector('.edit')
 
 // console.log(time,month,dat,year,day);
 
@@ -55,26 +56,7 @@ function add_Entery() {
 
 
 
-function total(price) {
-    bill = document.querySelectorAll('.bill');
-    let t = 0;
-    // console.log(price);
 
-    price.forEach((ele) => {
-        // console.log(typeof(ele));
-        if(typeof(ele) === 'object' || typeof(ele)=== 'string')
-        t += parseInt(ele.value)
-
-    })
-    amount=t;
-    // console.log(t);
-    total_Price.innerHTML = `Total: ${t}
-    <span class="items">items:${bill.length-1}</span>
-    `
-    delete_Items();
-    
-
-}
 
 
 function delete_Items() {
@@ -101,40 +83,6 @@ function delete_Items() {
     
 }
 
-print.addEventListener('click', function () {
-    print.style.display = 'none'
-
-    let del = document.querySelectorAll('.delete');
-    // console.log(del);
-    del.forEach(element => {
-        element.classList.add('del-non')
-    })
-
-    let bill = document.querySelectorAll('.bill');
-    bill[bill.length - 1].remove()
-
-
-    bill.forEach((ele) => {
-        ele.classList.add('list-whilePrint')
-    })
-
-
-    btn.classList.add('while-print')
-
-    window.print();
-    new_listAppend();
-    del.forEach(element => {
-        element.classList.remove('del-non')
-    })
-    btn.classList.remove('while-print')
-    print.style.display = 'block'
-    bill.forEach((ele) => {
-        ele.classList.remove('list-whilePrint')
-    })
-
-
-
-});
 
 
 
@@ -167,7 +115,74 @@ function new_listAppend() {
 number.addEventListener('keyup',()=>{
     if (number.value.length==10){
         number.disabled=true
+        edit.style.display="block"
     }
 })
+edit.addEventListener('click',() =>{
+    number.disabled=false
+    number.value=""
+    edit.style.display=""
+})
+
+
+
+function total(price) {
+    bill = document.querySelectorAll('.bill');
+    let t = 0;
+    // console.log(price);
+
+    price.forEach((ele) => {
+        // console.log(typeof(ele));
+        if(typeof(ele) === 'object' || typeof(ele)=== 'string')
+        t += parseInt(ele.value)
+
+    })
+    amount=t;
+    // console.log(t);
+    total_Price.innerHTML = `Total: ${t}
+    <span class="items">items:${bill.length-1}</span>
+    `
+    delete_Items();
+    
+
+}
+print.addEventListener('click', function () {
+    print.style.display = 'none'
+
+    let del = document.querySelectorAll('.delete');
+    // console.log(del);
+    del.forEach(element => {
+        element.classList.add('del-non')
+    })
+
+    let bill = document.querySelectorAll('.bill');
+    bill[bill.length - 1].remove()
+
+
+    bill.forEach((ele) => {
+        ele.classList.add('list-whilePrint')
+    })
+
+
+    btn.classList.add('while-print')
+    edit.style.display="non"
+
+    window.print();
+    new_listAppend();
+    del.forEach(element => {
+        element.classList.remove('del-non')
+    })
+    btn.classList.remove('while-print')
+    print.style.display = 'block'
+    bill.forEach((ele) => {
+        ele.classList.remove('list-whilePrint')
+    })
+    edit.style.display="block"
+
+
+
+});
+
+
 add_Entery()
 shift_Price()
