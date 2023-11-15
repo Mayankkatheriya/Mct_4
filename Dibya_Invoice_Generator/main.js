@@ -165,7 +165,7 @@ function total(price) {
   amount = t;
   // console.log(t);
   total_Price.innerHTML = `Total: ${t}
-    <span class="items">items:${bill.length - 1}</span>
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; Items:${bill.length - 1}</span>
     `;
   delete_Items();
   Number_PieceIncrease();
@@ -209,3 +209,20 @@ print.addEventListener("click", function () {
 
 add_Entery();
 shift_Price();
+
+
+const checkbox = document.getElementById("checkbox")
+checkbox.addEventListener("change", () => {
+  document.body.classList.toggle("dark")
+});
+
+
+
+
+
+
+
+
+
+
+
