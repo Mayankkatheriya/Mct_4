@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Templates</title>
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+    <!-- START OF MY HTML BODY -->
+    <!-- THIS IS FOR DOWNLOAD PDF BUTTONS -->
+    <div class="downloads">
+    <span class="firstbox"></span>
+    <span class="secondbox"></span>
+    <span class="thirdbox"> <span>
+        <!-- FIRST generate pdf onclick dom  mouse event ,refer to jspdf functionality under my node file -->
+        <button id="download-button1" style="width:100%;height: 25%;" onclick="generatePDF1()">DOWNLOAD-1</button></span><span>
+            <!-- second download pdf button dom onclick event -->
+            <button id="download-button2"  style="width:100%;height: 15%;" onclick="generatePDF2()">DOWNLOAD-2</button></span></span>
+            </div>
+<!-- these are my start of containers, 1st one being form container or container1 -->
+    <div id="container1" class="container" >
+        <!-- ... (Container 1 content) ... -->
+        <h3>TEMPLATE TYPE</h3>
+        <!-- Move the select element into Container 1 -->
+        <span>
+        <select id="optionsSelect">
+            <option id="firstOne" value="option1">Two Column</option>
+            <!-- for first element choose first option or resume1 -->
+            <option id="secondOne" value="option2">Minimalist</option>
+            <!-- this one is for the second option where my second resume,resume 2 pops up with a small animation -->
+        </select>
+        </span>
+          <!-- ... (Container 1 content) ... --> 
+          <!-- color picker for header of my resume where my NAME APPEARS -->
+          <span class="color-picker">
+              <h4>HEADER COLOR</h4>
+              <input type="color" id="headerColorPicker">
+          </span>
+      <!-- TEXT COLOR PICKER FOR ALL RESUMES -->
+          <span class="color-picker">
+              <h4>TEXT COLOR</h4>
+              <input type="color" id="textColorPicker">
+          </span>
+          <!-- hey my form begins and i have added many input field, it should dynamically appear on my resume 1 and resume 2 -->
+          <form class="inputField " id="myForm"> 
+             <!-- my form starts here     -->
+              <!-- primary input details as required -->
+              <!-- <label for="nameInput">Enter your name:</label> -->
+              <h3>PERSONAL DETAILS :</h3>
+              <!-- this is my 1st input -->
+              <!-- here i enter my name -->
+              <input type="text" id="nameInput" placeholder=" ENTER NAME:YOUR NAME LIKE Akhil" >
+              <br>
+              <!-- <label for="exampleFormControlInput1" class="form-label">Email address :   </label> -->
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder=" ENTER EMAIL--name@example.com">
+              <br>
+              <!-- email input ends here -->
+                      <!-- <label for="exampleFormControlInput2" class="form-label">Phone</label> -->
+                      <input type="text" class="form-control" id="exampleFormControlInput2" placeholder=" ENTER YOUR 10 DIGIT NUMBER: 9****8**5*">
+                     <br>
+                     <!-- this one for contact number -->
+                     <!-- <label for="exampleFormControlInput3" class="form-label">City</label> -->
+                     <input type="text" class="form-control" id="exampleFormControlInput4" placeholder="ENTER YOUR CITY,COUNTRY WITH ADDRESS AND PINCODE PLEASE Bang********** In*****" >
+                     <br>
+                     <!-- this one for complete address -->
+                     <!-- address input ends here -->
+                     <br>
+                     <h3>LINKEDIN</h3>
+                     <input type="text" id="linkedin" name="linkedin" placeholder="Enter your LinkedIn profile URL" required>
+                     <h3>GITHUB </h3>
+                     <input type="text" id="github" name="github" placeholder="Enter your GitHub profile URL" required>
+                     <!-- main details or subject of resume starts here -->
+                     <h3>PROFESSIONAL DETAILS:</h3>
+                     <!-- this one for wanted job title appears on the resumes -->
+                     <input type="text" class="form-control" id="exampleFormControlInput5" placeholder=" WANTED JOB TITLE" >
+                      <br>
+                      <!-- a text area to eneter ur summary  -->
+                      <textarea id="professionalSummary1" name="professionalSummary" placeholder="ENTER YOUR SUMMARY[YOUR PROFESSIONAL SUMMARY HERE]"></textarea>
+                      <br>
+                      <!-- you can add your skills from here -->
+                      <input type="text" class="form-control" id="exampleFormControlInput7" placeholder="ENTER ALL YOUR TECHNICAL SKILLS HERE:">
+                <br>     
+                <!-- button for adding employment details here -->
+                <!-- WATCH OUT THE DOM EVENT -ON CLICK -->
+                                 
+                <button id="first" type="button" class="btn btn-secondary" onclick="addTextArea('employment', 'textAreasContainer1')">Add Employment</button>
+                    <!-- GIVE AN ID AND A DIVE FOR CEAETING TEXTAREAS UPON ON EACH BUTTON CLICK -->
+                <div id="textAreasContainer1" class="textAreaContainer1"></div>
+  <!-- this one for addding project details 
+  WATCH OUT FOR DOM ONCLICK EVENT -->
+    
+  <button id="second" type="button" class="btn btn-secondary" onclick="addTextArea('project', 'textAreasContainer2')">Add Project</button>
+    <!-- GIVE AN ID AND A DIVE FOR CREATING TEXTAREAS UPON ON EACH BUTTON CLICK -->
+    <div id="textAreasContainer2" class="textAreaContainer2"></div>
+  <!-- THIS ONE FOR ADDING EDUCATIONAL DETAILS AGAIN WATCH OUT DOM ONCLICK EVENT -->
+    <button id="third" type="button" class="btn btn-secondary" onclick="addTextArea('education', 'textAreasContainer3')">Add Educational Details</button>
+      <!-- GIVE AN ID AND A DIVE FOR CREATING TEXTAREAS UPON ON EACH BUTTON CLICK -->
+    <div id="textAreasContainer3" class="textAreaContainer3"></div>
+           
+               
+  </form>
+  <!-- END OF MY FORM -->
+      </div>      
+   <!-- END OF MY FIRST CONTAINER   -->
+    <!-- form ends here
+      -->
+      <!-- TWO COLUMN RESUME STARTS HERE -->
+  <div id="container2" class="container" >
+    <!-- START OF MY CONTAINER 2 IT CONTAINS RESUME 1 TWO COLUMN -->
+      <!-- ... (Container 3 content, initially hidden) ... -->
+     
+      <span id="resume1">
+        <!-- AN ID, AND SPAN TAG WAS CHOSEN FOR GENERATED PDF -->
+      <div id="header2">
+        <!-- HERE MY NAME SHOULD APPEAR -->
+
+        <h5>MY NAME:</h5>  
+        <p id="name3"></p>
+     
+       
+      </div>
+  <!-- IT CONTAINS MAIN RESUME DETAILS AND INFORMATION -->
+      <div class="row">
+<!-- IT CONTAINS SKILLS AND CONTACTS DEATLS -->
+          <div id="side">
+
+              <div> <h3>CONTACT DETAILS</h3>
+                  <p id="email"></p>
+                  <p id="phone"></p>
+                  <p id="country"></p>
+                  <span> <p id="linkedin1"></p>
+                    <p id="github1"></p></span>
+                </div>
+             
+              <div id="skills">
+                  <h3>SKILLS</h3>
+                  <p id="skills"></p>
+              </div>
+          </div>
+  
+  <!-- end of my side section of resume -->
+  
+  <!-- IT CONTAINS ALL REST OF MAIN INFORMATION -->
+          <div id="main">
+              <div class="mainc"> <h3>ALL INFORMATION</h3></div>
+              <!-- JOB TITLE TYPED APPEARS HERE -->
+             <div class="summ"><h3>WANTED JOB TITLE</h3>
+              <p id="wantedJobTitle"></p>
+              <h3>PROFESSIONAL SUMMARY</h3>
+              <!-- PROFESSIONAL SUMMARY HERE -->
+              <p id="professionalSummary"></p></div>
+  
+             <!-- all EMPLOYMENT details here -->
+              <div class="employ"><h3>EMPLOYMENT</h3>
+                  <p id="employment"></p></div>
+              <!-- ALL PROJECTS DETALS HERE -->
+              <div class="proj"> <h3>PROJECTS</h3>
+                  <p id="project"></p></div>
+             <!-- ALL EDUACTIONAL DETALS HERE -->
+              <div class="edu"> <h3>EDUCATIONAL DETAILS</h3>
+                  <p id="education"></p></div>
+               </span> 
+                 <!-- FOR PRINT /PDF ONLY  -->
+          </div>
+
+      </div>
+
+     </div>
+    
+      <!-- IMPORTANT TO NOTE THAT ITS DISPLAY IS NONE AND RESUME 2 OR MINIMALIST RESUME IS NOT VISIBLE INITIALLY -->
+    <div id="container3" class="container" style="display:none">
+     <!-- THIS CONTAINER , CONTAINER 3 WAS CHOSEN FOR THE RESUME 2 OR MINIMALIST RESUME ONLY   -->
+        <span id="resume2">
+      <!-- ITS CHOSEN AND GIVEN A ID FOR GENERATE PDF ONLY(SPAN TAG)
+           -->
+          <div id="header3">
+               <h3>My Name</h3>    
+           <!-- ALL MY NAME APPAEARS HERE      -->
+          </div>
+          <!-- THE MAIN IMPORTANT CONTENTS OF RESUME 2 APPAERS HERE -->
+          <div class="row2" id="row2">
+            <!-- ALL CONTACTS APPEARS HERE -->
+              <span class="contact">
+                  <h3>CONTACT</h3>
+                   <p id="email3"></p>
+                  <p id="phone3"></p>
+                  <p id="country3"></p>
+                 <p id="linkedin2"></p>
+                    <p id="github2"></p>
+              </span>
+                <!-- END OF MY CONTACT SECTION OF RESUME 2 -->
+          <div id="summary2">
+              <h3>SUMMARY</h3>
+              <p id="summary12"></p>
+              <p id="summary13"></p>
+  
+          </div>
+  <!-- SUMMARY OF RESUME 2 ENDS HERE -->
+          <div id="skills2">
+              <h3>SKILLS</h3>
+              <p id="skills2"></p>
+          </div>
+  <!-- ALL SKILLS OF RESUME 2 -->
+          <div id="experience2">
+              <h3>PROFESSIONAL EXPERIENCE</h3>
+              <p id="wexperience2"></p>
+              <!-- WORK EXPERIENCE GAINED CAN BE ADDED HERE -->
+              <p id="experience2"></p>
+          </div>
+  <!-- ALL MY PROJECTS STUFF APPEARS HERE -->
+          <div id="projects2">
+              <h3>PROJECTS</h3>
+              <p id="projects2"></p>
+             
+          </div>
+  <!-- ALL MY EDUCATIONAL DETAILS FOR RESUME2 -->
+          <div id="education2">
+              <h3>EDUCATION</h3>
+              <p id="education2"></p>
+              </div>
+           </span> 
+            </span>  
+            </div>   
+          </div>
+          </div>
+  
+  <!-- LINKS MY JAVASCRIPT VANILLA JS -->
+  <script src="./app.js"></script>
+<!-- Include this script in your HTML to use the library from CDN -->
+<!-- ALL THESE EXTRA STUFFS FOR PDF PRINTING ONLY -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+			integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+</body>
+</html>

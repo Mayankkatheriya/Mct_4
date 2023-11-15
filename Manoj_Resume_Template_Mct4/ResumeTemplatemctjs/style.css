@@ -1,0 +1,282 @@
+body {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(to right, #434343 0%, black 100%);
+   transition: background-color 0.5s;
+    background-attachment: fixed; 
+    font-family: Arial, Helvetica, sans-serif; 
+  
+} 
+/* FOR MY BODY I HAVE CHOSEN FLEXBOX MODEL  */
+h3{
+  text-shadow: 5px 5px 10px rgba(229, 16, 245, 0.4);
+}
+/* THIS ONE FOR ALL TEXT SHADOW EFFFECTS */
+textarea{
+    width:100%;
+}
+/* THE TEXT AREAS CREATED SHOULD OCCUPY 100 PERCENT WIDTH */
+/* NEXT WIDTH OF MY CONTAINER NAMELY FORM AND INPUT ELEMENT , RESUME 1 AND RESUME 2 SET THE WIIDTH TO 45 PERCENT */
+.container {
+    padding: 10px;
+    margin: 10px;
+    width: 45%;
+    box-sizing: border-box;
+}
+/* THIS ONE FOR TEXTAREA CREATED UPON EACH DOM EVENT AND WIDTH SHOULD BE 100 PERECENT OF THAT CONTAINER */
+.textAreaContainer {
+    margin-top: 10px;
+    width:100%;
+}
+/* THE OPTION DROP DOWN SHOULD TAKE THE FULL WIDTH 2 OPTION SELECTS */
+#optionsSelect{
+    width:100%;
+
+}
+/* MY FORM SHOULD TAKE FULL WIDTH OF THE CONTAINER */
+#myform{
+    width:100%;
+}
+/* SIMILARLY LET ALL INPUTS UNDER FORM TAKE FULL FULL WIDTH FOR BETTER VISIBILITY */
+#nameInput,#exampleFormControlInput1,#exampleFormControlInput2,#exampleFormControlInput3,#exampleFormControlInput4,
+#exampleFormControlInput5,#exampleFormControlInput6,#exampleFormControlInput7,#professionalSummary1{
+    width:100%;
+}
+#first,#second,#third{
+  width:100%;
+  background-color: green;
+}
+.textAreaContainer textarea {
+    display: block;
+   margin-bottom: 5px;
+}
+#textAreasContainer1,#textAreasContainer2,#textAreasContainer3{
+    width:auto;
+} */
+
+/* RESUME 2
+#container2 {
+  
+    display: flex;
+    flex-direction: column;
+}
+/* RESUME 3 */
+#container3{
+    display:flex;
+    flex-direction: column;
+}
+
+/* NAME APPEARS HERE I HAVE SET ITS WIDTH 2 25 PERCENT */
+#header2 {
+    width: 100%;
+    height: 33%;
+    background: #ff347f; /* Default color */
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* THIS ONE FOR THE OTHER MAIN CONTENT FLEXBOX WIDTH 75 PERCENT */
+.row {
+    width: 100%;
+    height: 83%;
+    display: flex;
+    flex-direction: row;
+}
+/* CONTACT AND SKILLS WIDTH */
+#side {
+    width: 25%;
+    height: 100%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+#main {
+    width: 75%;
+    height: 100%;
+    background-color: #e0e0e0;
+    padding: 20px;
+}
+#skills2,#education2,#experience2,#projects2,#summary2{
+background-color:white;
+width:100%;
+height:auto;
+
+}
+
+#linkedin,#github{
+  width:100%;
+}
+#header3 {
+    width: 100%;
+    height: 35%;
+    background-color:#db9e34; /* Default color */
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#row2{
+    width:100%;
+    height:85%;
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+}
+/* Animation styles */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .textAreaContainer1 {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .textAreaContainer2 {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .textAreaContainer3 {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes scaleIn {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  /* Apply animations to specific containers */
+  #container1 {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  #container2 {
+    animation: slideInRight 1s ease-in-out;
+  }
+  
+  #container3 {
+    animation: scaleIn 1s ease-in-out;
+  }
+  
+#container2,#container3{
+  overflow-wrap: anywhere;
+}
+.textAreaContainer1,
+.textAreaContainer2,
+.textAreaContainer3 {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+#textAreasContainer1,
+#textAreasContainer2,
+#textAreasContainer3 {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Template switch transition */
+.template-switch-container {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.template-switch-container.hide {
+  opacity: 0;
+}
+.thirdbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #download-button1,
+  #download-button2 {
+    width: 100%;
+    background: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114)); 
+    margin: 10px; /* Adjust the margin based on your preference */
+    padding: 10px; /* Adjust the padding based on your preference */
+    text-align:left;
+  }
+#container1 {
+/* Set your desired background color */
+background: radial-gradient(755px at 10.1% 95.3%, rgb(242, 188, 141) 0%, rgb(242, 159, 141) 100.2%); 
+   padding: 20px; /* Adjust the padding as needed */
+    animation: bounceAndRotate 1s ease; /* Add a stunning bounce and rotation animation */
+  }
+  
+  /* Add a stunning bounce and rotation animation to Container 1 */
+  @keyframes bounceAndRotate {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0) rotate(0);
+    }
+    40% {
+      transform: translateY(-30px) rotate(-5deg);
+    }
+    60% {
+      transform: translateY(-15px) rotate(5deg);
+    }
+  }
+  #container2,#container3{
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (min-width: 768px) {
+    .container {
+        width: 60%; /* Adjust width as needed */
+    }
+
+    /* Add any additional styles for tablet and desktop views */
+    .row {
+        flex-direction: row;
+    }
+
+    #side,
+    #main {
+        width: 50%; /* Adjust width as needed */
+    }
+
+    #header2,
+    #header3 {
+        height: 15%;
+    }
+    #download-button1,
+    #download-button2 {
+        width: auto;
+    }
+
+    /* Responsive styles for form elements */
+    #myForm {
+        width: 80%; /* Adjust width as needed */
+    }
+}
+
+/* Media Query for Desktops and Larger Screens */
+@media (min-width: 992px) {
+    .container {
+        width: 45%; /* Adjust width as needed */
+    }
+}
+
+/* Media Query for Large Desktops */
+@media (min-width: 1200px) {
+    .container {
+        width: 40%; /* Adjust width as needed */
+    }
+}
