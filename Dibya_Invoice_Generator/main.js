@@ -100,6 +100,11 @@ function Number_PieceIncrease() {
     });
   });
 }
+
+
+
+
+
 // Number_PieceIncrease();
 
 // delete_Items();
@@ -109,9 +114,9 @@ function new_listAppend() {
   newDiv.classList.add("bill");
   newDiv.innerHTML = `
             <p>*</p>
-            <input type="text"  class="name">
+            <input type="text"  class="name-sc name">
             <input type="number" value="1" class="piece">
-            <input type="number" class="price">
+            <input type="number" class="name-sc price">
             <i class="fa-solid fa-trash delete del-non"></i>
             `;
 
@@ -125,6 +130,10 @@ function new_listAppend() {
   shift_Price();
   print.style.display = "block";
 }
+
+
+
+
 
 number.addEventListener("keyup", () => {
   if (number.value.length == 10) {
@@ -161,6 +170,11 @@ function total(price) {
   delete_Items();
   Number_PieceIncrease();
 }
+
+
+
+
+
 print.addEventListener("click", function () {
   print.style.display = "none";
 

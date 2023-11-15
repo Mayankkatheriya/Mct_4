@@ -14,13 +14,12 @@
 
     <div class="bill-detail">
         <div class="customer-Detail">
-            <div class="costomer-Name"><label for="">Customer Name</label>
-                <input type="text">
+            <div class="costomer-Name">
+                <input type="text" class="cus-name" placeholder="Customer Name">
             </div>
             <div class="mobile">
-                <label for="">Mobile No:</label>
                 <p>+91</p>
-                <input class="number" type="number" pattern="[1-9]{1}[0-9]{9}"> <button class="edit" style="display: none;">edit</button>
+                <input class="number cus-name" type="number" placeholder="Mobile No"> <button class="edit" style="display: none;">edit</button>
                 
             </div>
             <div class="date">
@@ -28,6 +27,7 @@
             </div>
     
         </div>
+       <div>
         <div class="bill-head">
             <h2>Product Details</h2>
             <h2 style="position: relative; left: 0;">price</h2>
@@ -35,14 +35,15 @@
         <ol class="page">
             <li class="bill">
                 <p>*</p>
-                <input type="text" class="name">
+                <input type="text" class="name-sc name">
                 <input type="number" value="1" class="piece" min="1" max="10">
-                <input type="number" class="price">
+                <input type="number" class="name-sc price">
                 <i class="fa-solid fa-trash delete del-non"></i>
             </li>
         </ol>
-        <div class="btn ">
-            <p class="total">Total:0  <span class="items">items:0</span></p>
+       </div>
+        <div class="btn btn-css">
+            <p class="total">Total:0  <span class="items">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; Items:0</span></p>
             <select name="" id="">
                 <option value="">case</option>
                 <option value="">UPI</option>
@@ -50,9 +51,9 @@
                     
                 </select></option>
             </select>
-            <a href="" class="pay"><button value="">pay</button></a>
+            <a href="" class="pay "><button class="button-19" value="">pay</button></a>
         </div>
-        <button class="print">print</button>
+        <button class="print porint-sc ">print</button>
     </div>
     
     <script src="https://kit.fontawesome.com/54ac71e1b5.js" crossorigin="anonymous"></script>
