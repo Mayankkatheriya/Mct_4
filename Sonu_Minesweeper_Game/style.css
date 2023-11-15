@@ -15,6 +15,10 @@ html {
   width: 100vw;
   overflow: hidden;
   background-color: #212121;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .nav {
@@ -22,18 +26,25 @@ html {
   align-items: center;
   justify-content: space-around;
   height: 50px;
-  width: 100%;
-  background-color: #4a752c;
+  width: 90%;
+  border-radius: 10px;
+  box-shadow: -5px -5px 15px #181818, 5px 5px 15px #222, inset 5px 5px 10px #444,
+    inset -5px -5px 10px #222;
+  color: #222;
 }
 
 #gameMode {
   height: 30px;
   width: 100px;
-  /* padding: 0 5px; */
   font-size: 1rem;
-  /* background-color: aqua; */
   background: none;
   border: solid 0.5px;
+  color: aqua;
+  border: none;
+}
+
+.option {
+  background-color: #212121;
 }
 
 .gameTimeZone {
@@ -41,6 +52,7 @@ html {
   gap: 30px;
   align-items: center;
   justify-content: center;
+  color: aqua;
 }
 
 .gameTimeZone span {
@@ -54,17 +66,65 @@ html {
 .gameArea {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  margin-top: 20px;
+  /* justify-content: center; */
   align-items: center;
   height: 100%;
   width: 100%;
+  gap: 50px;
+}
+
+
+.popup {
+  position: fixed;
+  height: 250px;
+  width: 200px;
+  background-color: #fff;
+  display: none;
 }
 
 #restart {
+  padding: 20px 40px;
   border-radius: 50px;
+  text-decoration: none;
+  color: aqua;
+  position: relative;
+  overflow: hidden;
   border: none;
-  padding: 10px;
+  box-shadow: -5px -5px 15px #181818, 5px 5px 15px #222, inset 5px 5px 10px #444,
+    inset -5px -5px 10px #222;
+  background-color: #222;
   font-size: 1.2rem;
-  margin-top: 30px;
+  transform: 2s;
+  transition: 0.5s ease-in-out;
   display: none;
 }
+
+#restart:hover{
+  transition: 0.5s;
+  transform: translateY(10%) scale(0.9);
+}
+
+
+/* #restart span{
+  position: relative;
+  z-index: 1;
+} */
+
+/* #restart::before{
+  content: "";
+  position: absolute;
+  background-color: orangered;
+  width: 0px;
+  height: 0px;
+  left: var(--xPos);
+  top: var(--yPos);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transition: width 0.5s, height 0.5s;
+}
+
+#restart:hover::before{
+  height: 300px;
+  width: 300px;
+} */
