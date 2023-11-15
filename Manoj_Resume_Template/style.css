@@ -1,0 +1,214 @@
+
+body {
+    display: flex;
+    justify-content: space-between;
+   background-color: gray ;
+   transition: background-color 0.5s;
+	background-image: url('./alex-kotliarskyi-QBpZGqEMsKg-unsplash.jpg' );
+  
+    background-attachment: fixed; 
+    font-family: Arial, Helvetica, sans-serif; 
+   
+  
+} 
+
+.container {
+    border: 1px solid blue
+    padding: 10px;
+    margin: 10px;
+    width: 45%;
+    box-sizing: border-box;
+}
+.textAreaContainer {
+    margin-top: 10px;
+    width:100%;
+}
+#optionsSelect{
+    width:100%;
+
+}
+#myform{
+    width:100%;
+}
+#nameInput,#exampleFormControlInput1,#exampleFormControlInput2,#exampleFormControlInput3,#exampleFormControlInput4,
+#exampleFormControlInput5,#exampleFormControlInput6,#exampleFormControlInput7,#professionalSummary1{
+    width:100%;
+}
+#first,#second,#third{
+    background-color: forestgreen;
+    width:100%;
+    
+}
+.textAreaContainer{
+    width:auto;
+}
+.textAreaContainer textarea {
+    display: block; /* Set display to block to make them stack vertically */
+    margin-bottom: 5px; /* Added margin between text areas */
+}
+#textAreasContainer1,#textAreasContainer2,#textAreasContainer3{
+    width:auto;
+}
+#container2 {
+  
+    display: flex;
+    flex-direction: column;
+}
+#container3{
+    display:flex;
+    flex-direction: column;
+}
+#header2 {
+    width: 100%;
+    height: 25%;
+    background-color: #3498db; /* Default color */
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    flex-direction: row;
+}
+
+#side {
+    width: 30%;
+    height: 100%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+#main {
+    width: 70%;
+    height: 100%;
+    background-color: #e0e0e0;
+    padding: 20px;
+}
+#skills2,#education2,#experience2,#projects2,#summary2{
+background-color:white;
+width:100%;
+height:auto%;
+
+}
+
+
+#header3 {
+    width: 100%;
+    height: 25%;
+    background-color:#3498db;; /* Default color */
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#row2{
+    width:100%;
+    height:75%;
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+}
+
+
+  
+ 
+  /* Animation styles */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .textAreaContainer1 {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .textAreaContainer2 {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .textAreaContainer3 {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes scaleIn {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  /* Apply animations to specific containers */
+  #container1 {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  #container2 {
+    animation: slideInRight 1s ease-in-out;
+  }
+  
+  #container3 {
+    animation: scaleIn 1s ease-in-out;
+  }
+  
+
+
+.textAreaContainer1,
+.textAreaContainer2,
+.textAreaContainer3 {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+#textAreasContainer1,
+#textAreasContainer2,
+#textAreasContainer3 {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Template switch transition */
+.template-switch-container {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.template-switch-container.hide {
+  opacity: 0;
+}
+
+#container1 {
+    background-color:rgb(116,93,93);/* Set your desired background color */
+   padding: 20px; /* Adjust the padding as needed */
+    animation: bounceAndRotate 1s ease; /* Add a stunning bounce and rotation animation */
+  }
+  
+  /* Add a stunning bounce and rotation animation to Container 1 */
+  @keyframes bounceAndRotate {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0) rotate(0);
+    }
+    40% {
+      transform: translateY(-30px) rotate(-5deg);
+    }
+    60% {
+      transform: translateY(-15px) rotate(5deg);
+    }
+  }
