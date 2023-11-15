@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+  
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+   
+    
+    
+    <div id="container1" class="container" style="">
+
+      <!-- ... (Container 1 content) ... -->
+      <h3>Template Type</h3>
+      <!-- Move the select element into Container 1 -->
+      <select id="optionsSelect">
+          <option value="option1">Two Column</option>
+          <option value="option2">Minimalist</option>
+      </select>
+        <!-- ... (Container 1 content) ... --> 
+        <div class="color-picker">
+            <h3>Header Color</h3>
+            <input type="color" id="headerColorPicker">
+        </div>
+    
+        <div class="color-picker">
+            <h3>Text Color</h3>
+            <input type="color" id="textColorPicker">
+        </div>
+        <!-- hey my form begins and i have added many input field, it should dynamically appear on my resume 1 and resume 2 -->
+        <form class="inputField " id="myForm"> 
+               
+            <!-- primary input details as required -->
+            <!-- <label for="nameInput">Enter your name:</label> -->
+            <h3>Personal Details:</h3>
+            <!-- this is my 1st input -->
+            <input type="text" id="nameInput" placeholder=" ENTER NAME:YOUR NAME LIKE Akhil" >
+            <br>
+            <!-- <label for="exampleFormControlInput1" class="form-label">Email address :   </label> -->
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder=" ENTER EMAIL--name@example.com">
+            <br>
+            <!-- email input ends here -->
+                    <!-- <label for="exampleFormControlInput2" class="form-label">Phone</label> -->
+                    <input type="text" class="form-control" id="exampleFormControlInput2" placeholder=" ENTER YOUR 10 DIGIT NUMBER: 9****8**5*">
+                   <br>
+                   <!-- <label for="exampleFormControlInput3" class="form-label">City</label> -->
+                   <input type="text" class="form-control" id="exampleFormControlInput4" placeholder="ENTER YOUR CITY,COUNTRY WITH ADDRESS AND PINCODE PLEASE Bang********** In*****" >
+                   <br>
+                   <!-- address input ends here -->
+                   <br>
+                   <h3>Professional Details:</h3>
+                   <input type="text" class="form-control" id="exampleFormControlInput5" placeholder=" WANTED JOB TITLE" >
+                    <br>
+                    <textarea id="professionalSummary1" name="professionalSummary" placeholder="ENTER YOUR SUMMARY[YOUR PROFESSIONAL SUMMARY HERE]"></textarea>
+                    <br>
+                    <input type="text" class="form-control" id="exampleFormControlInput7" placeholder="ENTER ALL YOUR TECHNICAL SKILLS HERE:">
+              <br>     
+                                <button id="first" type="button" class="btn btn-secondary" onclick="addTextArea('employment', 'textAreasContainer1')">Add Employment</button>
+  <div id="textAreasContainer1" class="textAreaContainer1"></div>
+
+  <button id="second" type="button" class="btn btn-secondary" onclick="addTextArea('project', 'textAreasContainer2')">Add Project</button>
+  <div id="textAreasContainer2" class="textAreaContainer2"></div>
+
+  <button id="third" type="button" class="btn btn-secondary" onclick="addTextArea('education', 'textAreasContainer3')">Add Educational Details</button>
+  <div id="textAreasContainer3" class="textAreaContainer3"></div>
+         
+             
+</form>
+    </div>      
+   
+  <!-- form ends here
+    -->
+<div id="container2" class="container" >
+    <!-- ... (Container 3 content, initially hidden) ... -->
+
+   
+    <div id="header2">
+        <h3>MY NAME</h3>
+    </div>
+
+    <div class="row">
+        <div id="side">
+            <div> <h3>CONTACT DETAILS</h3>
+                <p id="email"></p>
+                <p id="phone"></p>
+                <p id="country"></p></div>
+           
+            <div id="skills">
+                <h3>SKILLS</h3>
+                <p id="skills"></p>
+            </div>
+        </div>
+
+
+
+
+        <div id="main">
+            <div class="mainc"> <h3>ALL INFORMATION</h3></div>
+           <div class="summ"><h3>WANTED JOB TITLE</h3>
+            <p id="wantedJobTitle"></p>
+            <h3>PROFESSIONAL SUMMARY</h3>
+            <p id="professionalSummary"></p></div>
+
+           
+            <div class="employ"><h3>EMPLOYMENT</h3>
+                <p id="employment"></p></div>
+            
+            <div class="proj"> <h3>PROJECTS</h3>
+                <p id="project"></p></div>
+           
+            <div class="edu"> <h3>EDUCATIONAL DETAILS</h3>
+                <p id="education"></p></div>
+           
+        </div>
+    </div>
+   </div>
+          
+    
+    <div id="container3" class="container" style="display:none">
+        <!-- ... (Container 3 content, initially hidden) ... -->
+
+      
+    
+        
+        <div id="header3">
+             <h3>My Name</h3> 
+             
+              
+        </div>
+        <div class="row2" id="row2">
+            <div class="contact">
+                <h3>CONTACT</h3>
+                 <p id="email3"></p>
+                <p id="phone3"></p>
+                <p id="country3"></p></div>
+           
+        
+        <div id="summary2">
+            <h3>SUMMARY</h3>
+            <p id="summary12"></p>
+            <p id="summary13"></p>
+
+           
+        </div>experience2
+
+        <div id="skills2">
+            <h3>SKILLS</h3>
+            <p id="skills2"></p>
+        </div>
+
+        <div id="experience2">
+            <h3>PROFESSIONAL EXPERIENCE</h3>
+            <p id="wexperience2"></p>
+            <p id="experience2"></p>
+        </div>
+
+        <div id="projects2">
+            <h3>PROJECTS</h3>
+            <p id="projects2"></p>
+           
+        </div>
+
+        <div id="education2">
+            <h3>EDUCATION</h3>
+            <p id="education2"></p>
+            
+        </div>
+        </div>
+</div>
+
+        <!-- <h2>Container 3</h2>
+        <p>This is the content of Container 3.</p> -->
+        <!-- <div class="col-lg-12 text-center mt-2"> <a href="#" class="xs-btn quote-pop-btn" onclick="generatePdf(1)">Download</a> -->
+        <!-- </div> -->
+
+
+
+
+<script src="./app.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+</body>
+</html>
