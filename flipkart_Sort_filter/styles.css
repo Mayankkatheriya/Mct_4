@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    height: 1500px;
+  }
+  body {
+    font-family: "Roboto", sans-serif;
+    background-color: black;
+    
+  }
+  header {
+    background-color: white;
+    width: 100%;
+  }
+  header .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(40, 116, 240);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    position: sticky;
+    top: 0;
+    /* left: 0; */
+  }
+  .logo {
+    margin-right: 15px;
+    cursor: pointer;
+  }
+  .logo img {
+    width: 80px;
+    height: 35px;
+  }
+  .search-bar {
+    position: relative;
+    width: 450px;
+    margin-right: 20px;
+  }
+  .search-bar input {
+    width: 100%;
+    height: 35px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+  }
+  .search-bar button {
+    height: 28px;
+    background-color: white;
+    border: none;
+    margin-left: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 3px;
+    top: 4px;
+  }
+  .search-bar button i {
+    font-size: 28px;
+    color: rgb(40, 116, 240);
+  }
+  .login {
+    background-color: white;
+    color: rgb(89, 148, 243);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 40px;
+    cursor: pointer;
+    margin-right: 40px;
+  }
+  .seller {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 40px;
+    cursor: pointer;
+  }
+  .cart,
+  .more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .cart span,
+  .more span {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .cart i {
+    color: white;
+    font-size: 20px;
+  }
+  .more {
+    margin-right: 40px;
+  }
+  .more i {
+    color: rgb(177, 204, 249);
+    font-size: small;
+  }
+  .catagories {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 15px 0;
+  }
+  .catagory {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .catagory img {
+    width: 65px;
+    height: 65px;
+  }
+  .catagory .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .catagory .text span {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .catagory .text i {
+    font-size: 16px;
+  }
+  

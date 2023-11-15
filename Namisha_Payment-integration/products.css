@@ -9,6 +9,7 @@
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
+    /* border: 2px solid red; */
 
 }
 .product-container:hover {
@@ -23,13 +24,34 @@
     transition: filter 0.3s ease-in-out; /* Add smooth transition */
 }
 
-
+#top {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #466eff;
+    box-shadow: -2px -2px 5px 2px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    transition: all 1s;
+    z-index: 1000;
+  }
 .product-container {
+    /* border: 2px solid red; */
     box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.7);
     padding: 20px;
     text-align: center;
     position: relative; 
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     animation: bounceInUp; /* referring directly to the animation's @keyframe declaration */
     animation-duration: 2s; /* don't forget to set a duration! */
 }
@@ -41,7 +63,7 @@
 }
 
 .pay-now {
-    background-color: rgba(207, 96, 96, 0.7);
+    background-color: rgba(247, 138, 138, .7);
     color: rgb(0, 0, 0);
     padding: 10px 90px;
     border: none;
@@ -84,7 +106,12 @@ h2{
   }
   
         header {
-            background-color: #f56060;
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            background-color: rgb(250, 97, 97);
             color: white;
             text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
             padding: 10px;
@@ -121,10 +148,10 @@ h2{
         }
         .cart{
             display: none; /* Hide the cart button by default */
-            position: absolute;
-            bottom: 17%;
+            /* position: absolute;
+            bottom: 90px;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, 0); */
             background-color: rgba(255, 255, 255);
             color: white;
             padding: 10px;
@@ -140,13 +167,21 @@ h2{
         .product-container:hover .cart {
             display: block; /* Show the cart button on hover */
         }
+        .product-container:hover .rating {
+            display: none; /* Show the cart button on hover */
+        }
+        .product-container:hover .shades {
+            display: none; /* Show the cart button on hover */
+        }
         .icon{
-          border-radius: 50px;
-          width: 50px;
+            /* border: 2px solid red; */
+          /* border-radius: 50px; */
+          width: 100px;
+          height: 50px;
         }
         @media screen and (max-width: 700px) {
            .cart{
-            bottom: 16%;
+            /* bottom: 16%; */
            }
           }
         

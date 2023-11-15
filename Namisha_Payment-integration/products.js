@@ -1,5 +1,5 @@
 const cart = [];
-
+const productsContainer = document.getElementById('products-container');
 function addToCart(productTitle, productPrice) {
     cart.push({ title: productTitle, price: productPrice });
     updateCart();
@@ -39,7 +39,7 @@ function closeCartPage() {
 
 // Function to render product containers
 async function renderProducts() {
-    const productsContainer = document.getElementById('products-container');
+    
 
     try {
         // Fetch data from products.json
@@ -54,11 +54,12 @@ async function renderProducts() {
             container.innerHTML = `
                 <img src="${product.image}" alt="${product.title}">
                 <h2>${product.title}</h2>
-                <p>${product.rating}</p>
+                <button class="cart" onclick="addToCart('${product.title}', ${product.specialPrice})"><i class="fa-solid fa-cart-shopping" id="cart-icons"> Add to Cart</i></button>
+                <p class = "rating">${product.rating}</p>
                 <p class="shades">${product.shades} shades</p>
                 <span class="special"> Rs. ${product.specialPrice}<p class="price">Rs. ${product.price}</p></span>
                 <button class="pay-now" onclick="handlePayment('${product.title}', ${product.specialPrice}, '${product.image}')">Buy Now</button>
-                <button class="cart" onclick="addToCart('${product.title}', ${product.specialPrice})"><i class="fa-solid fa-cart-shopping" id="cart-icons"> Add to Cart</i></button>
+                
             `;
 
             productsContainer.appendChild(container);
@@ -102,3 +103,16 @@ function handlePayment(productTitle, productPrice, productImage) {
 // Call the renderProducts function to display product containers
 renderProducts();
 
+
+//Scroll Js
+let navbar= document.querySelector("header")
+let topBtn = document.querySelector("#top");
+document.addEventListener("scroll", (e) => {
+    if (e.target.scrollingElement.scrollTop > 150) {
+      navbar.style.backgroundColor = "rgba(250, 97, 97, 0.8)";
+      topBtn.style.display = "flex";
+    } else {
+      navbar.style.backgroundColor = "rgb(250, 97, 97)";
+      topBtn.style.display = "none";
+    }
+  });
