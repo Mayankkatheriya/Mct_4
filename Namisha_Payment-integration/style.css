@@ -10,7 +10,22 @@ h1 {
   font-style: italic;
   margin: 10px;
   text-shadow: 2px 2px #000;
+  animation: pulse 2s infinite;
+
 }
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.05);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+
 
 p {
   font-family: Georgia;
@@ -70,7 +85,27 @@ p {
   font-weight: bold;
   font-family: Geogia;
   font-style: italic;
+  animation: shake 1s infinite;
 }
+@keyframes shake {
+  0% {
+      transform: translateX(0);
+  }
+  25% {
+      transform: translateX(-5px);
+  }
+  50% {
+      transform: translateX(5px);
+  }
+  75% {
+      transform: translateX(-5px);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+
 
 .hero-text button:hover {
   background-color: transparent;
@@ -85,9 +120,20 @@ p {
   font-size: 8pt;
   letter-spacing: 1px;
   text-shadow: none;
+  animation: pulse 2s infinite;
   font-style: normal;
 }
-
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
 .box {
   width: 40%;
   margin: 0 auto;
