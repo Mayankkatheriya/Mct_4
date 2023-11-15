@@ -12,10 +12,12 @@
   };
 
   const addNewBookmarkEventHandler = async () => {
+    let details = window.prompt("Enter keyPoint")
     const currentTime = youtubePlayer.currentTime;
     const newBookmark = {
       time: currentTime,
       desc: "Bookmark at " + getTime(currentTime),
+      dels: details
     };
 
     currentVideoBookmarks = await fetchBookmarks();

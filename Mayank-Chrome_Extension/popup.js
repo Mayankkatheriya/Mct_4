@@ -2,12 +2,16 @@ import { getActiveTabURL } from "./utlis.js";
 
 const addNewBookmark = (bookmarks, bookmark) => {
   const bookmarkTitleElement = document.createElement("div");
+  const bookmarkdels = document.createElement("div")
   const controlsElement = document.createElement("div");
   const newBookmarkElement = document.createElement("div");
 
   bookmarkTitleElement.textContent = bookmark.desc;
   bookmarkTitleElement.className = "bookmark-title";
   controlsElement.className = "bookmark-controls";
+
+  bookmarkdels.textContent = bookmark.dels;
+  bookmarkdels.className = "bookmark-dels";
 
   setBookmarkAttributes("play", onPlay, controlsElement);
   setBookmarkAttributes("delete", onDelete, controlsElement);
@@ -17,6 +21,7 @@ const addNewBookmark = (bookmarks, bookmark) => {
   newBookmarkElement.setAttribute("timestamp", bookmark.time);
 
   newBookmarkElement.appendChild(bookmarkTitleElement);
+  newBookmarkElement.appendChild(bookmarkdels);
   newBookmarkElement.appendChild(controlsElement);
   bookmarks.appendChild(newBookmarkElement);
 };
