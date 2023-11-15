@@ -10,11 +10,14 @@ let bil_Detail = document.querySelector('.bill-detail');
 console.log(form);
 let bod=document.querySelector('body')
 let key=document.querySelector('.key');
+let billID=document.querySelector('.bill-Id')
+let pay =document.querySelector('.pay')
 
 let amount = 0;
 let number = document.querySelector(".number"),
   btn = document.querySelector(".btn");
 let edit = document.querySelector(".edit");
+let cus_de =document.querySelector('.customer-Detail')
 
 // console.log(time,month,dat,year,day);
 function dateTime(){
@@ -36,12 +39,36 @@ function dateTime(){
   let tim = document.querySelector(".date");
   // tim.classList.add('animate__animated animate__fadeInLeft')
 tim.innerHTML = `
-    Time: ${time} (${day})
-    <p>Date: ${dat}-${month}-${year}</p>
+    Time: ${time} <i style="color: #fff;">(${day.slice(0,3)})</i>
+    <p>Date: ${dat}-${month}-<i style="">${year}</i></p>
 `;
 }
 
 dateTime();
+function DateP(){
+  const weekday = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let date = new Date();
+  let time = date.toTimeString().slice(0, 8);
+  let month = date.getMonth();
+  let dat = date.getDate();
+  let year = date.getFullYear();
+  let day = weekday[date.getDay()];
+  return {
+    time: time,
+    month: month,
+    dat: dat,
+    year: year,
+    day: day,
+  };
+}
 
 
 function shift_Price() {
@@ -200,25 +227,37 @@ print.addEventListener("click", function () {
 
   let bill = document.querySelectorAll(".bill");
   bill[bill.length - 1].remove();
-
-  bill.forEach((ele) => {
-    ele.classList.add("list-whilePrint");
-  });
+  first.classList.add('list-whilePrint')
+  // bill.forEach((ele) => {
+  //   ele.classList.add("list-whilePrint");
+  // });
+  // page
 
   btn.classList.add("while-print");
   edit.style.display = "non";
+  key.style.display='none'
+  bill_btn.style.display ="none"
+bod.classList.add('body-border')
+cus_de.classList.add('while-print-de');
 
+pay.style.display='none'
   window.print();
   new_listAppend();
   del.forEach((element) => {
     element.classList.remove("del-non");
   });
+  pay.style.display='block'
   btn.classList.remove("while-print");
   print.style.display = "block";
   bill.forEach((ele) => {
     ele.classList.remove("list-whilePrint");
   });
   edit.style.display = "block";
+  key.style.display='block'
+  bill_btn.style.display ="block"
+  bod.classList.remove('body-border')
+  first.classList.remove('list-whilePrint')
+  cus_de.classList.remove('while-print-de');
 });
 
 add_Entery();
@@ -251,10 +290,10 @@ form.addEventListener('submit',function(e){
 shopDetail.innerHTML=""
 function sHop(){
   shopDetail.innerHTML=`
-<h1 class="animate__animated animate__backInDown">Shop Name:${form.children[1].children[0].value}</h1>
-<h1 class="animate__animated animate__backInDown">Contat No:${form.children[1].children[1].value}</h1>
-<h1 class="animate__animated animate__backInDown">Address:${form.children[1].children[2].value}</h1>
-<h1 class="animate__animated animate__backInDown">GSTNO:${form.children[1].children[3].value}</h1>
+<h1 class="animate__animated animate__backInDown">Shop Name:-    <i style="color: black;">${form.children[1].children[0].value}</i></h1>
+<h1 class="animate__animated animate__backInDown">Contat No:-    <i style="color: black;">${form.children[1].children[1].value}</i></h1>
+<h1 class="animate__animated animate__backInDown">Address:-    <i style="color: black;">${form.children[1].children[2].value}</i></h1>
+<h1 class="animate__animated animate__backInDown">GSTNO:-    <i style="color: black;">${form.children[1].children[3].value}</i></h1>
 `
 
 key.classList.add('key-bill')
@@ -277,6 +316,7 @@ bill_btn.addEventListener('click',function(){
 
 </div>
 <div>
+<h1 class="bill-Id">Bill Id:</h1>
 <div class="bill-head">
   <h2>Product Details</h2>
   <h2 style="position: relative; left: 0;">price</h2>
@@ -305,13 +345,36 @@ let print = document.querySelector(".print");
 formfill= document.querySelector('.main-block')
 form = document.querySelector('form');
 shopDetail =document.querySelector('.shop-detail'); bill_btn=document.querySelector('.bill-btn');
+billID=document.querySelector('.bill-Id')
  bil_Detail = document.querySelector('.bill-detail');
 console.log(form);
 let bod=document.querySelector('body')
   shift_Price()
   add_Entery();
   dateTime();
+  Bill_Id();
 })
+
+
+// Function to generate a random three-digit number
+function generateRandomThreeDigitNumber() {
+  // Generate a random number between 100 and 999
+  var randomNumber = Math.floor(Math.random() * 900) + 100;
+  return randomNumber;
+}
+
+// Example usage
+var randomThreeDigitNumber = generateRandomThreeDigitNumber();
+
+function Bill_Id(){
+  let num=generateRandomThreeDigitNumber();
+  let d=DateP();
+  console.log(d);
+  billID.textContent=`
+  Bill Id:${d.month}${d.dat}${d.year}${num}
+  `
+}
+Bill_Id()
 
 
 

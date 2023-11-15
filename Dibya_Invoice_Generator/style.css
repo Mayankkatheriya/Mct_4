@@ -15,16 +15,22 @@ body {
     /* flex-direction: column; */
     gap: 2rem;
     position: relative;
-    height: auto;
+    height: inherit;
+    /* border: 2px solid black; */
+    padding-bottom: 10px;
 
     
 }
+.body-border{
+    border: 2px solid black;
+}
 body::after{
-    content: "";
-    position: absolute;
-    inset: 0;
-    /* transform: skewY(10deg);
-    background: linear-gradient(to right, #b92b27, #1565c0); */
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     z-index: -1;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     background: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%);
@@ -55,6 +61,70 @@ body::after{
     border-radius: 10px;
 
 }
+.button-19 {
+    appearance: button;
+    background-color: #1899D6;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: din-round,sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 13px 16px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 100%;
+  }
+  
+  .button-19:after {
+    background-clip: padding-box;
+    background-color: #1CB0F6;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+  
+  .button-19:main,
+  .button-19:focus {
+    user-select: auto;
+  }
+  
+  .button-19:hover:not(:disabled) {
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
+  }
+  
+  .button-19:disabled {
+    cursor: auto;
+  }
+  
+  .button-19:active {
+    border-width: 4px 0 0;
+    background: none;
+  }
 
 .cus-name {
 
@@ -119,6 +189,7 @@ body::after{
 .page {
     width: 100%;
     padding: 1% 0;
+    margin-bottom: 30px;
     justify-self: center;
     display: flex;
     flex-direction: column;
@@ -240,7 +311,7 @@ input:disabled {
     */
     /* right: 10px;  */
     left: 85%;
-    bottom: 60px;
+    bottom: 0px;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -261,13 +332,17 @@ input:disabled {
 }
 
 .while-print {
-    left: 140px;
-    top: 10px;
+    left: 10px;
+    bottom: -50px;
+    width: 200px;
+    height: auto;
+}
+.while-print-de{
+    width: 330px;
 }
 
-.list-whilePrint {
-    border-bottom: 2px solid black;
-}
+
+
 
 .costomer-Name input {
     margin-top: 40px;
@@ -388,8 +463,7 @@ input:disabled {
 .print {
     display: none;
     position: absolute;
-    top: 168px;
-    ;
+    top: 352px;
     height: 30px;
     left: 90%;
     z-index: 9999;
@@ -405,13 +479,22 @@ body.dark {
 /* #9b59b6 */
 
 body.dark .bill-head,
-body.dark .btn,
 body.dark .main-block,
 body.dark .reg,
-body.dark #Layer_1 {
+body.dark #Layer_1,body.dark .bill-Id {
     color: #fff;
     fill: white;
 }
+body.dark::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+  }
 
 .checkbox {
     opacity: 0;
@@ -456,7 +539,9 @@ body.dark #Layer_1 {
 
 .key {
     position: relative;
-    top: -330px;
+    /* top: -330px;
+    left: -30px; */
+    top: -243px;
     left: -30px;
 }
 
@@ -483,6 +568,7 @@ background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
     width: 100px;
     position: relative;
     left: 90%;
+    top: 10px;
 }
 
 .key-bill {
@@ -503,4 +589,32 @@ background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
     font-size: 1.5rem;
     font-weight: bolder;
     color: black;
+}
+
+.bill-Id{
+    position: relative;
+    top: -50px;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS */
+.list-whilePrint {
+    position: relative;
+    border-bottom: 2px solid black;
+    /* left: 99%; */
+    left: 50px;
+
 }
