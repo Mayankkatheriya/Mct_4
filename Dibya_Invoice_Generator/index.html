@@ -28,9 +28,8 @@
             <input type="text" placeholder="GSTNO">
           </div>
           
-          <button type="submit" href="/">Submit</button>
+          <button type="submit" href="">Submit</button>
         </form>
-      </div>
 
 
 
@@ -48,16 +47,34 @@
 
 
 
-
+        <div class="shop-detail">
+            <h1 style="font-weight: 900;">Shop Name:</h1>
+            <h1>Contat No</h1>
+            <h1>Address</h1>
+            <h1>GSTNO</h1>
+        </div>
+        <div>
+            <button class="bill-btn"> new Bill</button>
+        <button class="print porint-sc ">print</button>
+        </div>
+        <div class="key">
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox" class="checkbox-label">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+              <span class="ball"></span>
+            </label>
+          </div>
 
     <div class="bill-detail ">
+
         <div class="customer-Detail">
             <div class="costomer-Name">
                 <input type="text" class="cus-name" placeholder="Customer Name">
             </div>
             <div class="mobile">
-                <p>+91</p>
-                <input class="number cus-name" type="number" placeholder="Mobile No"> <button class="edit" style="display: none;">edit</button>
+                <p style="position: relative; top: -10px; font-size: 1.5rem; font-weight: 400;">+91</p>
+                <input class="number cus-name" type="number" placeholder="Mobile No"> <button class="edit" style="display: none;"><i class="fa-solid fa-pen-to-square"></i></button>
                 
             </div>
             <div class="date">
@@ -72,7 +89,7 @@
         </div>
         <ol class="page">
             <li class="bill">
-                <p>*</p>
+                <p style="display: none;">*</p>
                 <input type="text" class="name-sc name">
                 <input type="number" value="1" class="piece" min="1" max="10">
                 <input type="number" class="name-sc price">
@@ -81,28 +98,21 @@
         </ol>
        </div>
         <div class="btn btn-css">
-            <p class="total">Total:0  <span class="items">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; Items:0</span></p>
-            <select name="" id="">
-                <option value="">case</option>
-                <option value="">UPI</option>
-                <option value="">Card <select name="" id="">
-                    
-                </select></option>
-            </select>
+            <p class="total">Total:0  <span class="items">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; Items:0</span></p>
             <a href="" class="pay "><button class="button-19" value="">pay</button></a>
         </div>
-        <button class="print porint-sc ">print</button>
+        
     </div>
 
 
-    <div class="key">
+    <!-- <div class="key">
         <input type="checkbox" class="checkbox" id="checkbox">
         <label for="checkbox" class="checkbox-label">
           <i class="fas fa-moon"></i>
           <i class="fas fa-sun"></i>
           <span class="ball"></span>
         </label>
-      </div>
+      </div> -->
     
     <script src="https://kit.fontawesome.com/54ac71e1b5.js" crossorigin="anonymous"></script>
     <script src="./main.js"></script>

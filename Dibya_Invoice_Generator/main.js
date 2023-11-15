@@ -2,6 +2,14 @@ let bill = document.querySelectorAll(".bill");
 let first = document.querySelector(".page");
 let total_Price = document.querySelector(".total");
 let print = document.querySelector(".print");
+let formfill= document.querySelector('.main-block')
+let form = document.querySelector('form');
+let shopDetail =document.querySelector('.shop-detail')
+let bill_btn=document.querySelector('.bill-btn');
+let bil_Detail = document.querySelector('.bill-detail');
+console.log(form);
+let bod=document.querySelector('body')
+let key=document.querySelector('.key');
 const weekday = [
   "Sunday",
   "Monday",
@@ -113,7 +121,7 @@ function new_listAppend() {
   let newDiv = document.createElement("li");
   newDiv.classList.add("bill");
   newDiv.innerHTML = `
-            <p>*</p>
+            <p style="display: none;">*</p>
             <input type="text"  class="name-sc name">
             <input type="number" value="1" class="piece">
             <input type="number" class="name-sc price">
@@ -165,7 +173,7 @@ function total(price) {
   amount = t;
   // console.log(t);
   total_Price.innerHTML = `Total: ${t}
-&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; Items:${bill.length - 1}</span>
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; Items:${bill.length - 1}</span>
     `;
   delete_Items();
   Number_PieceIncrease();
@@ -219,7 +227,89 @@ checkbox.addEventListener("change", () => {
 
 
 
+form.addEventListener('submit',function(e){
+  e.preventDefault();
+  formfill.style.display='none'
 
+  form.style.display='none'
+  bod.style.display="block"
+  bil_Detail.style.display='flex';
+  shopDetail.style.display='flex';bill_btn.style.display="block"
+
+  sHop();
+  
+  
+});
+console.log(form.children[1].children[0].value);
+
+shopDetail.innerHTML=""
+function sHop(){
+  shopDetail.innerHTML=`
+<h1>Shop Name:${form.children[1].children[0].value}</h1>
+<h1>Contat No:${form.children[1].children[1].value}</h1>
+<h1>Address:${form.children[1].children[2].value}</h1>
+<h1>GSTNO:${form.children[1].children[3].value}</h1>
+`
+
+key.classList.add('key-bill')
+}
+bill_btn.addEventListener('click',function(){
+  bil_Detail.innerHTML=`
+  <div class="customer-Detail">
+  <div class="costomer-Name">
+      <input type="text" class="cus-name" placeholder="Customer Name">
+  </div>
+  <div class="mobile">
+      <p>+91</p>
+      <input class="number cus-name" type="number" placeholder="Mobile No"> <button class="edit" style="display: none;">edit</button>
+      
+  </div>
+  <div class="date">
+      
+  </div>
+
+</div>
+<div>
+<div class="bill-head">
+  <h2>Product Details</h2>
+  <h2 style="position: relative; left: 0;">price</h2>
+</div>
+<ol class="page">
+  <li class="bill">
+      <p>*</p>
+      <input type="text" class="name-sc name">
+      <input type="number" value="1" class="piece" min="1" max="10">
+      <input type="number" class="name-sc price">
+      <i class="fa-solid fa-trash delete del-non"></i>
+  </li>
+</ol>
+</div>
+<div class="btn btn-css">
+  <p class="total">Total:0  <span class="items">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; Items:0</span></p>
+  <select name="" id="">
+      <option value="">case</option>
+      <option value="">UPI</option>
+      <option value="">Card <select name="" id="">
+          
+      </select></option>
+  </select>
+  <a href="" class="pay "><button class="button-19" value="">pay</button></a>
+</div>
+<button class="print porint-sc ">print</button>
+  `
+ bill = document.querySelectorAll(".bill");
+first = document.querySelector(".page");
+total_Price = document.querySelector(".total");
+let print = document.querySelector(".print");
+formfill= document.querySelector('.main-block')
+form = document.querySelector('form');
+shopDetail =document.querySelector('.shop-detail'); bill_btn=document.querySelector('.bill-btn');
+ bil_Detail = document.querySelector('.bill-detail');
+console.log(form);
+let bod=document.querySelector('body')
+  shift_Price()
+  add_Entery()
+})
 
 
 
