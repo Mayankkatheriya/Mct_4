@@ -10,33 +10,39 @@ let bil_Detail = document.querySelector('.bill-detail');
 console.log(form);
 let bod=document.querySelector('body')
 let key=document.querySelector('.key');
-const weekday = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let date = new Date();
-let time = date.toTimeString().slice(0, 8);
-let month = date.getMonth();
-let dat = date.getDate();
-let year = date.getFullYear();
-let day = weekday[date.getDay()];
+
 let amount = 0;
 let number = document.querySelector(".number"),
   btn = document.querySelector(".btn");
 let edit = document.querySelector(".edit");
 
 // console.log(time,month,dat,year,day);
-
-let tim = document.querySelector(".date");
+function dateTime(){
+  const weekday = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let date = new Date();
+  let time = date.toTimeString().slice(0, 8);
+  let month = date.getMonth();
+  let dat = date.getDate();
+  let year = date.getFullYear();
+  let day = weekday[date.getDay()];
+  let tim = document.querySelector(".date");
+  // tim.classList.add('animate__animated animate__fadeInLeft')
 tim.innerHTML = `
     Time: ${time} (${day})
     <p>Date: ${dat}-${month}-${year}</p>
 `;
+}
+
+dateTime();
+
 
 function shift_Price() {
   let name = document.querySelectorAll(".name");
@@ -240,20 +246,21 @@ form.addEventListener('submit',function(e){
   
   
 });
-console.log(form.children[1].children[0].value);
+// console.log(form.children[1].children[0].value);
 
 shopDetail.innerHTML=""
 function sHop(){
   shopDetail.innerHTML=`
-<h1>Shop Name:${form.children[1].children[0].value}</h1>
-<h1>Contat No:${form.children[1].children[1].value}</h1>
-<h1>Address:${form.children[1].children[2].value}</h1>
-<h1>GSTNO:${form.children[1].children[3].value}</h1>
+<h1 class="animate__animated animate__backInDown">Shop Name:${form.children[1].children[0].value}</h1>
+<h1 class="animate__animated animate__backInDown">Contat No:${form.children[1].children[1].value}</h1>
+<h1 class="animate__animated animate__backInDown">Address:${form.children[1].children[2].value}</h1>
+<h1 class="animate__animated animate__backInDown">GSTNO:${form.children[1].children[3].value}</h1>
 `
 
 key.classList.add('key-bill')
 }
 bill_btn.addEventListener('click',function(){
+  sHop();
   bil_Detail.innerHTML=`
   <div class="customer-Detail">
   <div class="costomer-Name">
@@ -264,7 +271,7 @@ bill_btn.addEventListener('click',function(){
       <input class="number cus-name" type="number" placeholder="Mobile No"> <button class="edit" style="display: none;">edit</button>
       
   </div>
-  <div class="date">
+  <div class="date animate__animated animate__fadeInLeft">
       
   </div>
 
@@ -286,13 +293,7 @@ bill_btn.addEventListener('click',function(){
 </div>
 <div class="btn btn-css">
   <p class="total">Total:0  <span class="items">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; Items:0</span></p>
-  <select name="" id="">
-      <option value="">case</option>
-      <option value="">UPI</option>
-      <option value="">Card <select name="" id="">
-          
-      </select></option>
-  </select>
+  
   <a href="" class="pay "><button class="button-19" value="">pay</button></a>
 </div>
 <button class="print porint-sc ">print</button>
@@ -308,7 +309,8 @@ shopDetail =document.querySelector('.shop-detail'); bill_btn=document.querySelec
 console.log(form);
 let bod=document.querySelector('body')
   shift_Price()
-  add_Entery()
+  add_Entery();
+  dateTime();
 })
 
 
