@@ -2,15 +2,14 @@ const timeCountEl = document.querySelector("#timeCount");
 
 const gameModeEl = document.querySelector("#gameMode");
 
-const closeEl = document.querySelector("#close");
+const reTryEl = document.querySelector("#reTry");
+console.log(reTryEl);
 
-const popupEl = document.querySelector(".popup");
 
-console.log(popupEl);
-console.log(closeEl);
-
-closeEl.addEventListener("click",()=>{
-popupEl.style.display = "block";
+reTryEl.addEventListener("click",()=>{
+  
+  canvas.innerHTML = "";
+  gameSelect(9,9,40);
 })
 
 
@@ -69,6 +68,8 @@ function gameSelect(ROWS, COLS, SIZE) {
         cell.style.float = "left";
         cell.style.width = SIZE + "px";
         cell.style.height = SIZE + "px";
+        cell.style.backgroundColor="orangered"
+
 
         cell.oncontextmenu = (e) => {
           if (failedBombKey !== null) {
@@ -123,8 +124,8 @@ function gameSelect(ROWS, COLS, SIZE) {
         let key = toKey(i, j);
         let cell = cells.get(key);
 
-        cell.style.backgroundColor = "";
-        cell.style.color = "black";
+        cell.style.backgroundColor = "aqua";
+        cell.style.color = "black";// ----------------
         cell.textContent = "";
         cell.disabled = false;
 
@@ -277,3 +278,4 @@ function gameSelect(ROWS, COLS, SIZE) {
     // timer == true;
   }
 }
+
