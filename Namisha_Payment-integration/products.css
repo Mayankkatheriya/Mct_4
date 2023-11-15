@@ -122,7 +122,7 @@ h2{
         .cart{
             display: none; /* Hide the cart button by default */
             position: absolute;
-            bottom: 20%;
+            bottom: 17%;
             left: 50%;
             transform: translate(-50%, -50%);
             background-color: rgba(255, 255, 255);
