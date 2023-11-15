@@ -160,6 +160,8 @@ function gameSelect(ROWS, COLS, SIZE) {
     if (failedBombKey !== null) {
       canvas.style.pointerEvents = "none";
       restartButton.style.display = "block";
+      clearTimeout(settimeStart)
+      
     } else {
       canvas.style.pointerEvents = "";
       restartButton.style.display = "";
