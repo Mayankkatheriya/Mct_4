@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 #products-container {
     display: grid;
@@ -184,5 +187,6 @@ h2{
             /* bottom: 16%; */
            }
           }
+          
         
         

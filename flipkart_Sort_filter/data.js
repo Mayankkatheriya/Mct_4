@@ -2,9 +2,9 @@ const products = [
 
     {
     
-    image: "product1.jpg",
+    image: "https://rukminim2.flixcart.com/image/416/416/kxz0pe80/memory-card/microsdxc/q/2/w/mb-mc128ka-in-samsung-original-imagab3xxgjzgyr5.jpeg?q=70",
     
-    title: "Product 1",
+    title: "SAMSUNG Evo Plus 128 GB MicroSDXC Class 10 130 MB/s Memory Card  (With Adapter)1",
     
     rating: 4.5,
     
@@ -26,9 +26,9 @@ const products = [
     
     {
     
-    image: "product2.jpg",
+    image: "https://rukminim2.flixcart.com/image/416/416/jwfa5jk0/pendrive/pendrive/z/f/p/sandisk-sdcz50-128g-i35-original-imafh3xkevktvq4w.jpeg?q=70",
     
-    title: "Product 2",
+    title: "SanDisk Cruze Blade SDCZ50 64 GB Pen Drive  (Red, Black)",
     
     rating: 4.2,
     
@@ -50,9 +50,9 @@ const products = [
     
     {
     
-    image: "product3.jpg",
+    image: "https://rukminim2.flixcart.com/image/416/416/l2jcccw0/memory-card/sdxc-uhs-i-card/s/w/y/sdsqua4-064g-gn6mn-sandisk-original-imagdv2wy6qub3az.jpeg?q=70",
     
-    title: "Product 3",
+    title: "SanDisk Ultra 64 GB MicroSDXC Class 10 140 MB/s Memory Card",
     
     rating: 3.9,
     
@@ -74,9 +74,9 @@ const products = [
     
     {
     
-    image: "product4.jpg",
+    image: "https://rukminim2.flixcart.com/image/612/612/khz693k0-0/pendrive/pendrive/i/r/x/v236w-hp-original-imafxvf93gh7axat.jpeg?q=70",
     
-    title: "Product 4",
+    title: "HP V236w 64 GB Pen Drive  (Silver)",
     
     rating: 4.7,
     
@@ -98,9 +98,9 @@ const products = [
     
     {
     
-    image: "product5.jpg",
+    image: "https://rukminim2.flixcart.com/image/416/416/kdxfc7k0/pendrive/type-a-to-type-c/6/u/v/sandisk-sdddc4-064g-i35-original-imafupgsauueespn.jpeg?q=70",
     
-    title: "Product 5",
+    title: "SanDisk SDDDC4-128G-I35 128 GB OTG Drive  (Silver, Type A to Type C)",
     
     rating: 4.3,
     
@@ -120,9 +120,9 @@ const products = [
     
     {
     
-    image: "product6.jpg",
+    image: "https://rukminim2.flixcart.com/image/416/416/kjd6nww0-0/memory-card/microsdxc/p/a/2/mx310-hp-original-imafyy4wbzzfgbdc.jpeg?q=70",
     
-    title: "Product 6",
+    title: "HP UHS-I U1 128 GB MicroSDHC Class 10 100 MB/s Memory Card",
     
     rating: 4.0,
     
@@ -144,9 +144,9 @@ const products = [
     
     {
     
-    image: "product7.jpg",
+    image: "https://rukminim2.flixcart.com/image/416/416/jwfa5jk0/pendrive/pendrive/z/f/p/sandisk-sdcz50-128g-i35-original-imafh3xkevktvq4w.jpeg?q=70",
     
-    title: "Product 7",
+    title: "https://rukminim2.flixcart.com/image/416/416/jwfa5jk0/pendrive/pendrive/z/f/p/sandisk-sdcz50-128g-i35-original-imafh3xkevktvq4w.jpeg?q=70",
     
     rating: 4.8,
     
@@ -167,9 +167,9 @@ const products = [
     
     {
     
-    image: "product8.jpg",
+    image: "https://rukminim2.flixcart.com/image/416/416/kr2e3680/pendrive/type-a-to-type-c/u/u/6/dual-drive-goupto-150mb-s-sandisk-original-imag4xq6t2ayfnhy.jpeg?q=70",
     
-    title: "Product 8",
+    title: "SanDisk Dual Drive Go 128 GB OTG Drive  (Blue, Type A to Type C)",
     
     rating: 4.1,
     
@@ -190,9 +190,9 @@ const products = [
     
     {
     
-    image: "product9.jpg",
+    image: "SanDisk SDDDC2-128G-I35 128 GB OTG Drive  (Silver, Black, Type A to Type C)",
     
-    title: "Product 9",
+    title: "https://rukminim2.flixcart.com/image/416/416/khxqt8w0-0/pendrive/type-a-to-type-c/c/g/g/sdddc2-064g-i35-sandisk-original-imafxubtqtxahat2.jpeg?q=70",
     
     rating: 3.8,
     
@@ -213,9 +213,9 @@ const products = [
     
     {
     
-    image: "product10.jpg",
+    image: "https://rukminim2.flixcart.com/image/416/416/jwfa5jk0/pendrive/pendrive/j/v/g/sandisk-sdcz48-128g-i35-original-imafh3xh2gcccxff.jpeg?q=70",
     
-    title: "Product 10",
+    title: "SanDisk SDCZ48-128G-I35 128 GB Pen Drive  (Black)",
     
     rating: 4.6,
     
@@ -235,9 +235,9 @@ const products = [
     
     {
     
-    image: "product11.jpg",
+    image: "https://rukminim2.flixcart.com/image/416/416/l3bx5e80/pendrive/o/t/l/-original-imagegvzrmuhzsws.jpeg?q=70",
     
-    title: "Product 11",
+    title: "SanDisk Ultra Shift™ USB 3.0 128 GB Pen Drive  (Black)#JustHere",
     
     rating: 4.4,
     
@@ -258,9 +258,9 @@ const products = [
     
     {
     
-    image: "product12.jpg",
+    image: "https://rukminim2.flixcart.com/image/416/416/kxnl6kw0/pendrive/type-a-to-micro-usb/i/b/x/ultra-dual-drive-m3-0-sandisk-original-imaga2fazedzep6n.jpeg?q=70",
     
-    title: "Product 12",
+    title: "SanDisk Ultra Dual Drive M3.0 32 GB OTG Drive ",
     
     rating: 4.9,
     
@@ -281,9 +281,9 @@ const products = [
     
     {
     
-    image: "product13.jpg",
+    image: "https://rukminim2.flixcart.com/image/416/416/xif0q/pendrive/type-a-to-type-c/b/3/0/sdddc3-128g-i35pc-sandisk-original-imaghfgfngecfarh.jpeg?q=70",
     
-    title: "Product 13",
+    title: "SanDisk SDDDC3-128G-I35PC 128 GB OTG Drive  (Peach, Type A to Type C)",
     
     rating: 4.2,
     
@@ -304,9 +304,9 @@ const products = [
     
     {
     
-    image: "product14.jpg",
+    image: "https://rukminim2.flixcart.com/image/416/416/k7assy80/pendrive/type-a-to-type-c/v/f/f/sandisk-sdddc3-128g-i35-original-imafpkherdksq95g.jpeg?q=70",
     
-    title: "Product 14",
+    title: "SanDisk SDDDC3-128G-I35 128 OTG Drive  (Black, Type A to Type C)",
     
     rating: 4.3,
     
@@ -327,9 +327,9 @@ const products = [
     
     {
     
-    image: "product15.jpg",
+    image: "https://rukminim2.flixcart.com/image/416/416/xif0q/pendrive/pendrive/b/g/z/16gb-2-0-usb-pen-drive-with-metal-body-external-storage-device-original-imagj7ecbzfxyaz8.jpeg?q=70",
     
-    title: "Product 15",
+    title: "MOREBYTE 16gb 2.0 USB Pen Drive with Metal Body External Storage Device mb-fb-1016 16 GB Pen Drive  (Silver)",
     
     rating: 4.7,
     
@@ -351,9 +351,9 @@ const products = [
     
     {
     
-    image: "product16.jpg",
+    image: "https://rukminim2.flixcart.com/image/416/416/xif0q/pendrive/pendrive/b/e/7/tiny-metal-flash-drive-usb-m-2-0-type-a-pendrive-with-10-years-original-imagqug8gb8j7gsk.jpeg?q=70",
     
-    title: "Product 16",
+    title: "BRYT Tiny Metal Flash Drive USB M 2.0 Type A Pendrive with 10 Years Warranty 16 GB Pen Drive  (Silver)",
     
     rating: 4.0,
     
@@ -373,9 +373,9 @@ const products = [
     
     {
     
-    image: "product17.jpg",
+    image: "https://rukminim2.flixcart.com/image/416/416/jwfa5jk0/pendrive/pendrive/z/f/p/sandisk-sdcz50-128g-i35-original-imafh3xkevktvq4w.jpeg?q=70",
     
-    title: "Product 17",
+    title: "SanDisk Cruze Blade SDCZ50 128 GB Pen Drive  (Red, Black)",
     
     rating: 3.9,
     
@@ -396,9 +396,9 @@ const products = [
     
     {
     
-    image: "product18.jpg",
+    image: "https://rukminim2.flixcart.com/image/416/416/kdxfc7k0/pendrive/type-a-to-type-c/6/u/v/sandisk-sdddc4-064g-i35-original-imafupgsauueespn.jpeg?q=70",
     
-    title: "Product 18",
+    title: "SanDisk SDDDC4-128G-I35 128 GB OTG Drive  (Silver, Type A to Type C)",
     
     rating: 4.5,
     
@@ -419,9 +419,9 @@ const products = [
     
     {
     
-    image: "product19.jpg",
+    image: "https://rukminim2.flixcart.com/image/416/416/l2jcccw0/memory-card/sdxc-uhs-i-card/f/x/z/sdsqua4-128g-gn6mn-sandisk-original-imagdv3y9ejqmzrz.jpeg?q=70",
     
-    title: "Product 19",
+    title: "SanDisk Ultra 128 GB MicroSDXC Class 10 140 MB/s Memory Card",
     
     rating: 4.6,
     
@@ -442,9 +442,9 @@ const products = [
     
     {
     
-    image: "product20.jpg",
+    image: "https://rukminim2.flixcart.com/image/416/416/xif0q/memory-card/sdhc/v/9/j/sdsdunb-064g-gn6in-sandisk-original-imagkzr4h36wmywa.jpeg?q=70",
     
-    title: "Product 20",
+    title: "SanDisk Ultra 64 GB SDHC UHS-I Card Class 10 120 Mbps Memory Card",
     
     rating: 3.8,
     
