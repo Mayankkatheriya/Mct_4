@@ -15,7 +15,7 @@ The project is organized into several key directories:
 
 - **vendor:** Holds external libraries and stylesheets, such as `animate.css`, `toastr.min.css`, and `font-awesome.min.css`.
 
-- **![Clipart Image](png-clipart-person-s-lip-illustration-make-up-for-ever-cosmetics-make-up-artist-eye-shadow-logo-forever-miscellaneous-angle.png):** Incorporates an eye-catching clipart image in the header for a visually appealing introduction.
+- **!Clipart Image(png-clipart-person-s-lip-illustration-make-up-for-ever-cosmetics-make-up-artist-eye-shadow-logo-forever-miscellaneous-angle.png):** Incorporates an eye-catching clipart image in the header for a visually appealing introduction.
 
 
 ## Introduction
