@@ -1,26 +1,30 @@
 const cart = [];
-const productsContainer = document.getElementById('products-container');function addToCart(productTitle, productPrice, containerId) {
-    // Check if the item is already in the cart
+const productsContainer = document.getElementById('products-container');
+toastr.options = {
+    "closeButton": true,
+    "progressBar": true,
+    "positionClass": "toast-top-right",
+    "preventDuplicates": true,
+    "onclick": null,
+    "timeOut": "2000",
+    "showEasing": "swing",
+    "hideEasing": "linear",
+    "showMethod": "fadeIn",
+    "hideMethod": "fadeOut"
+  }
+  function addToCart(productTitle, productPrice, containerId) {
     const isAlreadyAdded = cart.some(item => item.title === productTitle);
 
     if (isAlreadyAdded) {
-        alert(`${productTitle} is already in the cart!`);
+        toastr.warning(`${productTitle} is already in the cart!`);
     } else {
-        // If not already in the cart, add it
         cart.push({ title: productTitle, price: productPrice });
         updateCart();
 
-        // Display "Added to Cart" text within the clicked product container
-        const container = document.getElementById(containerId);
-        const addedToCartText = container.querySelector('.added-to-cart-text');
-        
-        addedToCartText.style.display = 'block';
-        setTimeout(() => {
-            addedToCartText.style.display = 'none';
-        }, 2000); // Adjust the delay (in milliseconds) as needed
+        // Display the toastr notification for item added to cart
+        toastr['success'](`${productTitle} added to cart!`);
     }
-}
-
+  }
 
 function updateCart() {
     const cartCount = document.getElementById('cart-count');

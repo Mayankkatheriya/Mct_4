@@ -255,10 +255,50 @@ h2{
     border-radius: 5px;
     display: none;
     z-index: 1005;
-   
-   
-
 }
+/* Toastr Styles */
+
+#toast-container {
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.toast {
+    position: relative;
+    margin: 0.3em;
+    pointer-events: auto;
+    overflow: hidden;
+    margin-bottom: 15px;
+    padding: 15px;
+    width: 300px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    background-color: #fff;
+    color: #333;
+}
+
+.toast-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.toast-warning {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.toast-close-button {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+/* ... (your existing code) ... */
+
 @media screen and (max-width: 700px) {
     .notification {
         bottom: 20px;
