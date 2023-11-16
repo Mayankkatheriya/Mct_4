@@ -2,6 +2,19 @@
 
 Welcome to the Beauty Products website! Select your shade and explore a wide range of beauty products. This website provides a user-friendly interface to view and purchase beauty products with ease.
 
+## Project Structure
+The project is organized into several key directories:
+
+- **css:** Contains the stylesheets used for styling the website. `products.css` handles the styling of product-related elements.
+
+- **img:** Houses images used in the project. The beauty product images are stored here.
+
+- **js:** Contains JavaScript files. `products.js` includes functions for handling product-related interactions, while `razorpay-script.js` holds the Razorpay integration script.
+
+- **sounds:** Includes sound files for a delightful user experience. The `thank-you-for-shopping-garvins.mp3` file plays when a successful purchase occurs.
+
+- **vendor:** Holds external libraries and stylesheets, such as `animate.css`, `toastr.min.css`, and `font-awesome.min.css`.
+
 ## Introduction
 This HTML, CSS, and JavaScript-based website allows users to browse various beauty products, add them to the cart, and make secure payments using the Razorpay API. The website is designed with a responsive layout and features a modern and attractive design.
 
@@ -18,7 +31,9 @@ This HTML, CSS, and JavaScript-based website allows users to browse various beau
 
 - **Smooth Scroll Functionality:** The website features smooth scroll functionality for a better user experience. When users scroll, the navigation bar's background color changes, providing a subtle visual effect.
 
+- **Notification for Added Items:** When a product is added to the cart, a green notification bar (`#added`) appears at the top, providing a clear indication to the user.
+
 ## Getting Started
 1. Clone this repository to your local machine.
    ```bash
-   git clone https://github.com/Mayankkatheriya/Mct_4/tree/main/Namisha_Payment-integration
+   git clone https://github.com/Mayankkatheriya/Mct_4.git
