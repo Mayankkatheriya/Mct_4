@@ -109,10 +109,10 @@ let navbar= document.querySelector("header")
 let topBtn = document.querySelector("#top");
 document.addEventListener("scroll", (e) => {
     if (e.target.scrollingElement.scrollTop > 150) {
-      navbar.style.backgroundColor = "rgba(250, 97, 97, 0.8)";
+      navbar.style.backgroundColor = "rgba(3, 47, 93, 0.8)";
       topBtn.style.display = "flex";
     } else {
-      navbar.style.backgroundColor = "rgb(250, 97, 97)";
+      navbar.style.backgroundColor = "rgb(3, 47, 93)";
       topBtn.style.display = "none";
     }
   });

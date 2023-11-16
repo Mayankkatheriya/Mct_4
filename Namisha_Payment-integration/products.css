@@ -12,6 +12,7 @@ html{
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
+    background-color: #a4b8d4;
     /* border: 2px solid red; */
 
 }
@@ -55,6 +56,7 @@ html{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: white;
     animation: bounceInUp; /* referring directly to the animation's @keyframe declaration */
     animation-duration: 2s; /* don't forget to set a duration! */
 }
@@ -66,8 +68,8 @@ html{
 }
 
 .pay-now {
-    background-color: rgba(247, 138, 138, .7);
-    color: rgb(0, 0, 0);
+    background-color: rgb(24, 67, 156);
+    color: rgb(255, 255, 255);
     padding: 10px 90px;
     border: none;
     border-radius: 5px;
@@ -79,9 +81,10 @@ html{
 
 }
 .pay-now:hover{
-background-color: rgb(183, 25, 25);
-color: white;
-border: none;
+background-color: transparent;
+color: rgb(0, 0, 0);
+border: 3px solid  rgb(24, 67, 156);
+font-weight: 700;
 }
 h2{
     font-size:1rem;
@@ -114,7 +117,7 @@ h2{
             left: 0;
             right: 0;
             z-index: 999;
-            background-color: rgb(250, 97, 97);
+            background-color: rgb(3 47 93);
             color: white;
             text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
             padding: 10px;
@@ -166,7 +169,7 @@ h2{
             Helvetica, sans-serif; 
         background: linear-gradient( 
             to right, #f32170, #ff6b08, 
-             #cf23cf, #eedd44); 
+             #d857c1); 
         -webkit-text-fill-color: transparent; 
         -webkit-background-clip: text; 
     } 
