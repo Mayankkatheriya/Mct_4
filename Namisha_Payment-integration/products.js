@@ -79,8 +79,9 @@ async function renderProducts() {
 // Function to handle payment using Razorpay
 function handlePayment(productTitle, productPrice, productImage) {
     // Preload the audio
-    const successSound = new Audio('Paytm Payment Successful Sound.mp3');
+    const successSound = new Audio('thank-you-for-shopping-garvins.mp3');
     successSound.preload = 'auto';
+
     const options = {
         key: 'rzp_test_DhnX2ljNSBBudR', // Razorpay API key
         amount: productPrice * 100, // Amount in paisa
@@ -92,6 +93,7 @@ function handlePayment(productTitle, productPrice, productImage) {
             alert(`Payment successful for ${productTitle}!`);
             // Play the preloaded success sound
             successSound.play();
+            
             
           
         },
@@ -110,6 +112,7 @@ function handlePayment(productTitle, productPrice, productImage) {
 
     const rzp = new Razorpay(options);
     rzp.open();
+    
 }
 
 
