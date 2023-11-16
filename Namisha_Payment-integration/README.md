@@ -25,16 +25,12 @@ The project is organized into several key directories:
 
 - **clipart image:** `png-clipart-person-s-lip-illustration-make-up-for-ever-cosmetics-make-up-artist-eye-shadow-logo-forever-miscellaneous-angle.png` Incorporates an eye-catching clipart image in the header for a visually appealing introduction.
 
-![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/9265bf56-80a6-4339-852d-073e2b7a29b8)
-
-
-
-
-
 ## Features
 - **Responsive Design:** The website is designed to be accessible and visually appealing on various devices, ensuring a seamless experience for users.
 
 - **Dynamic Rendering:** JavaScript is used to dynamically render product containers on the main page. The `renderProducts` function fetches product data from `products.json` and creates product containers dynamically, allowing for easy addition of new products without modifying the HTML code.
+
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/9265bf56-80a6-4339-852d-073e2b7a29b8)
 
 - **Interactive Hover Effects:** Product containers have interactive hover effects, providing a visually pleasing experience for users. The CSS styles for `:hover` enhance the appearance of product containers when users interact with them.
 
