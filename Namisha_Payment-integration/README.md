@@ -1,6 +1,14 @@
 # Beauty Products Website
 
-Welcome to the Beauty Products website! Select your shade and explore a wide range of beauty products. This website provides a user-friendly interface to view and purchase beauty products with ease.
+Welcome to the Beauty Products website! Select your shade and explore a wide range of beauty products. This website provides a user-friendly interface to view and purchase beauty products with ease
+.
+## Shop Now
+Explore our beauty products now! Click the "Shop Now" button below to view the available products.
+
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/161afa9f-8dba-4763-8b52-1e07ad99a8cb)
+
+## Introduction
+This HTML, CSS, and JavaScript-based website allows users to browse various beauty products, add them to the cart, and make secure payments using the Razorpay API. The website is designed with a responsive layout and features a modern and attractive design.
 
 ## Project Structure
 The project is organized into several key directories:
@@ -17,9 +25,7 @@ The project is organized into several key directories:
 
 - **clipart image:** `png-clipart-person-s-lip-illustration-make-up-for-ever-cosmetics-make-up-artist-eye-shadow-logo-forever-miscellaneous-angle.png` Incorporates an eye-catching clipart image in the header for a visually appealing introduction.
 
-
-## Introduction
-This HTML, CSS, and JavaScript-based website allows users to browse various beauty products, add them to the cart, and make secure payments using the Razorpay API. The website is designed with a responsive layout and features a modern and attractive design.
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/9265bf56-80a6-4339-852d-073e2b7a29b8)
 
 ## Features
 - **Responsive Design:** The website is designed to be accessible and visually appealing on various devices, ensuring a seamless experience for users.
@@ -35,12 +41,6 @@ This HTML, CSS, and JavaScript-based website allows users to browse various beau
 - **Smooth Scroll Functionality:** The website features smooth scroll functionality for a better user experience. When users scroll, the navigation bar's background color changes, providing a subtle visual effect.
 
 - **Notification for Added Items:** When a product is added to the cart, a green notification bar (`#added`) appears at the top, providing a clear indication to the user.
-
-## Shop Now
-
-Explore our beauty products now! Click the `Shop Now` button below to view the available products.
-
-[![Shop Now](./Screenshot 2023-11-17 035638.png)](#products-container)
 
 ## Getting Started
 1. Clone this repository to your local machine.
