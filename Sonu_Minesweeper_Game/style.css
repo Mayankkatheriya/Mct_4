@@ -106,6 +106,19 @@ html {
 }
 
 
+.retryBtn:hover{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: orangered;
+  transition: 0.8s;
+  transform: translateY(10%) scale(0.9);
+  cursor: pointer;
+}
+
 /* #restart span{
   position: relative;
   z-index: 1;

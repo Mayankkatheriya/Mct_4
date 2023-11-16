@@ -85,9 +85,10 @@ p {
   font-weight: bold;
   font-family: Geogia;
   font-style: italic;
-  animation: shake 1s infinite;
+  /* animation: shake 1s infinite; */
+  
 }
-@keyframes shake {
+/* @keyframes shake {
   0% {
       transform: translateX(0);
   }
@@ -103,7 +104,7 @@ p {
   100% {
       transform: translateX(0);
   }
-}
+} */
 
 
 

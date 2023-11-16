@@ -1,10 +1,12 @@
 let start=document.querySelector(".start");
 let start_btn=document.querySelector(".strt-btn");
 let wrapper=document.querySelector(".wrapper");
+let share_btn=document.querySelector(".share_btn");
 start_btn.addEventListener("click",mainArea);
+
 function mainArea(){
-    console.log("Hello world");
     start.style.display="none";
+    share_btn.style.display="none";
     wrapper.style.display="block";
     const paragraphs = [
     "One dollar and eighty-seven cents. That was all. And sixty cents of it was in pennies. Pennies saved one and two at a time by bulldozing the grocer and the vegetable man and the butcher until one’s cheeks burned with the silent imputation of parsimony that such close dealing implied. One dollar and eighty-seven cents. And the next day would be Christmas...",
@@ -81,10 +83,16 @@ function initTimer() {
         let wpm = Math.round(((charIndex - errors) / 5) / (maxTime - timeLeft) * 60);
         wpmTag.innerText = wpm;
     } else {
+        
+        document.style.display="block";
         clearInterval(timer);
+    }
+    if(timeLeft == 0){
+        share_btn.style.display="block";
     }
 }
 function resetTest() {
+    share_btn.style.display="none";
     loadParagraph();
     clearInterval(timer);
     timeLeft = maxTime;
@@ -98,5 +106,4 @@ function resetTest() {
 loadParagraph();
 inpField.addEventListener("input", initTyping);
 tryAgainBtn.addEventListener("click", resetTest);
-
 }
