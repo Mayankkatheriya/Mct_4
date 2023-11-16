@@ -40,8 +40,7 @@ This HTML, CSS, and JavaScript-based website allows users to browse various beau
 
 Explore our beauty products now! Click the "Shop Now" button below to view the available products.
 
-[![Shop Now](![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/451911c2-0174-4dc2-b80d-a49dff3057a8)
-)](#products-container)
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/161afa9f-8dba-4763-8b52-1e07ad99a8cb)
 
 ## Getting Started
 1. Clone this repository to your local machine.
