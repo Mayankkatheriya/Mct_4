@@ -40,7 +40,7 @@ This HTML, CSS, and JavaScript-based website allows users to browse various beau
 
 Explore our beauty products now! Click the "Shop Now" button below to view the available products.
 
-[![Shop Now](Screenshot 2023-11-17 035638.png)](#products-container)
+[![Shop Now](./Screenshot 2023-11-17 035638.png)](#products-container)
 
 ## Getting Started
 1. Clone this repository to your local machine.
