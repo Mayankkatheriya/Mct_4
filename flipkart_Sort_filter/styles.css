@@ -399,6 +399,8 @@ div label{
   cursor: pointer;
 }
 
+/* ------------------content------------------- */
+
 .content{
   width: 80%;
   height: 100%;
@@ -494,6 +496,8 @@ div label{
   cursor: pointer;
 }
 
+/* --------------------------products------------------------- */
+
 .product-list{
   width: 100%;
   display: flex;
@@ -505,13 +509,19 @@ div label{
   flex-direction: column;
   align-items: flex-start;
   width: 25%;
-  height: 31.25rem;
+  height: 28rem;
   padding: 1rem;
   gap: 0.5rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-
+.productName{
+  max-width: 150ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+}
 .product-card:hover{
   box-shadow: 0 0 5px 0 rgb(0, 0, 0, 0.3);
 }
@@ -527,10 +537,8 @@ div label{
 
 .productImage{
   width: 100%;
-  height: 60%;
+  height: 50%;
   object-fit: contain;
-  /* max-width: 100%;
-  height: auto; */
 }
 
 .productName{

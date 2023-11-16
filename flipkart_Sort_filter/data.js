@@ -6,7 +6,7 @@ const products = [
     
     title: "SAMSUNG Evo Plus 128 GB MicroSDXC Class 10 130 MB/s Memory Card  (With Adapter)1",
     
-    rating: 4.5,
+    rating: "4.5★",
     
     flipkartAssured: true,
     
@@ -30,7 +30,7 @@ const products = [
     
     title: "SanDisk Cruze Blade SDCZ50 64 GB Pen Drive  (Red, Black)",
     
-    rating: 4.2,
+    rating: "4.2★",
     
     flipkartAssured: false,
     
@@ -54,7 +54,7 @@ const products = [
     
     title: "SanDisk Ultra 64 GB MicroSDXC Class 10 140 MB/s Memory Card",
     
-    rating: 3.9,
+    rating: "3.9★",
     
     flipkartAssured: true,
     
@@ -78,7 +78,7 @@ const products = [
     
     title: "HP V236w 64 GB Pen Drive  (Silver)",
     
-    rating: 4.7,
+    rating: "4.7★",
     
     flipkartAssured: true,
     
@@ -102,7 +102,7 @@ const products = [
     
     title: "SanDisk SDDDC4-128G-I35 128 GB OTG Drive  (Silver, Type A to Type C)",
     
-    rating: 4.3,
+    rating: "4.3★",
     
     flipkartAssured: true,
     
@@ -124,7 +124,7 @@ const products = [
     
     title: "HP UHS-I U1 128 GB MicroSDHC Class 10 100 MB/s Memory Card",
     
-    rating: 4.0,
+    rating: "4.0★",
     
     flipkartAssured: false,
     
@@ -146,9 +146,9 @@ const products = [
     
     image: "https://rukminim2.flixcart.com/image/416/416/jwfa5jk0/pendrive/pendrive/z/f/p/sandisk-sdcz50-128g-i35-original-imafh3xkevktvq4w.jpeg?q=70",
     
-    title: "https://rukminim2.flixcart.com/image/416/416/jwfa5jk0/pendrive/pendrive/z/f/p/sandisk-sdcz50-128g-i35-original-imafh3xkevktvq4w.jpeg?q=70",
+    title: "SanDisk Cruze Blade SDCZ50 128 GB Pen Drive  (Red, Black)",
     
-    rating: 4.8,
+    rating: "4.8★",
     
     flipkartAssured: true,
     
@@ -171,7 +171,7 @@ const products = [
     
     title: "SanDisk Dual Drive Go 128 GB OTG Drive  (Blue, Type A to Type C)",
     
-    rating: 4.1,
+    rating: "4.1★",
     
     flipkartAssured: true,
     
@@ -194,7 +194,7 @@ const products = [
     
     title: "SanDisk Ultra Dual Drive Go Type C 64 GB OTG Drive  (Green, Type A to Type C)",
     
-    rating: 3.8,
+    rating: "3.8★",
     
     flipkartAssured: true,
     
@@ -217,7 +217,7 @@ const products = [
     
     title: "SanDisk SDCZ48-128G-I35 128 GB Pen Drive  (Black)",
     
-    rating: 4.6,
+    rating: "4.6★",
     
     flipkartAssured: false,
     
@@ -239,7 +239,7 @@ const products = [
     
     title: "SanDisk Ultra Shift™ USB 3.0 128 GB Pen Drive  (Black)#JustHere",
     
-    rating: 4.4,
+    rating: "4.4★",
     
     flipkartAssured: true,
     
@@ -262,7 +262,7 @@ const products = [
     
     title: "SanDisk Ultra Dual Drive M3.0 32 GB OTG Drive ",
     
-    rating: 4.9,
+    rating: "4.9★",
     
     flipkartAssured: true,
     
@@ -285,7 +285,7 @@ const products = [
     
     title: "SanDisk SDDDC3-128G-I35PC 128 GB OTG Drive  (Peach, Type A to Type C)",
     
-    rating: 4.2,
+    rating: "4.2★",
     
     flipkartAssured: true,
     
@@ -308,7 +308,7 @@ const products = [
     
     title: "SanDisk SDDDC3-128G-I35 128 OTG Drive  (Black, Type A to Type C)",
     
-    rating: 4.3,
+    rating: "4.3★",
     
     flipkartAssured: false,
     
@@ -331,7 +331,7 @@ const products = [
     
     title: "MOREBYTE 16gb 2.0 USB Pen Drive with Metal Body External Storage Device mb-fb-1016 16 GB Pen Drive  (Silver)",
     
-    rating: 4.7,
+    rating: "4.7★",
     
     flipkartAssured: true,
     
@@ -355,7 +355,7 @@ const products = [
     
     title: "BRYT Tiny Metal Flash Drive USB M 2.0 Type A Pendrive with 10 Years Warranty 16 GB Pen Drive  (Silver)",
     
-    rating: 4.0,
+    rating: "4.0★",
     
     flipkartAssured: true,
     
@@ -377,7 +377,7 @@ const products = [
     
     title: "SanDisk Cruze Blade SDCZ50 128 GB Pen Drive  (Red, Black)",
     
-    rating: 3.9,
+    rating: "3.9★",
     
     flipkartAssured: true,
     
@@ -400,7 +400,7 @@ const products = [
     
     title: "SanDisk SDDDC4-128G-I35 128 GB OTG Drive  (Silver, Type A to Type C)",
     
-    rating: 4.5,
+    rating: "4.5★",
     
     flipkartAssured: false,
     
@@ -423,7 +423,7 @@ const products = [
     
     title: "SanDisk Ultra 128 GB MicroSDXC Class 10 140 MB/s Memory Card",
     
-    rating: 4.6,
+    rating: "4.6★",
     
     flipkartAssured: true,
     
@@ -446,7 +446,7 @@ const products = [
     
     title: "SanDisk Ultra 64 GB SDHC UHS-I Card Class 10 120 Mbps Memory Card",
     
-    rating: 3.8,
+    rating: "3.8★",
     
     flipkartAssured: true,
     

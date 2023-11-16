@@ -69,10 +69,13 @@ body {
   position: absolute;
 }
 .wrapper .content-box {
+  display: flex;
+  flex-direction: column;
   padding: 1rem 2rem;
   border-radius: 1.5rem;
   border: 4px double #bfbfbf;
   box-shadow: 1px 1px 4px #bfbfbf;
+  flex-wrap: wrap;
 }
 .content-box .typing-text {
   overflow: scroll;
@@ -123,6 +126,7 @@ body {
   border-top: 1px solid #bfbfbf;
   line-break: auto;
   flex-wrap: wrap;
+  /* visibility: hidden; */
 }
 .content button {
   outline: none;
@@ -158,6 +162,20 @@ button:hover{
   list-style: none;
   position: relative;
   align-items: center;
+}
+.share_btn button{
+  margin-left: 17rem;
+  align-items: center;
+  outline: none;
+  border: none;
+  width: 105px;
+  padding: 8px 0;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: cyan;
+  color:white;
+  transition: transform 0.5s ease;
 }
 .result-details li:not(:first-child) {
   padding-left: 22px;
