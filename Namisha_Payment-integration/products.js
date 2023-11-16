@@ -1,20 +1,24 @@
 const cart = [];
-const productsContainer = document.getElementById('products-container');
-function addToCart(productTitle, productPrice) {
-    cart.push({ title: productTitle, price: productPrice });
-    updateCart();
-    // Display and animate the notification
-    const notification = document.getElementById('notification');
-    notification.textContent = `${productTitle} added to cart`;
-    notification.style.display = 'block';
-    notification.classList.add('animate__fadeInUp');
+const productsContainer = document.getElementById('products-container');function addToCart(productTitle, productPrice, containerId) {
+    // Check if the item is already in the cart
+    const isAlreadyAdded = cart.some(item => item.title === productTitle);
 
-    // Hide the notification and remove animation class after a delay
-    setTimeout(() => {
-        notification.classList.remove('animate__fadeInUp');
-        notification.style.display = 'none';
-        notification.textContent = ''; // Clear the notification text
-    }, 2000); // Adjust the delay (in milliseconds) as needed
+    if (isAlreadyAdded) {
+        alert(`${productTitle} is already in the cart!`);
+    } else {
+        // If not already in the cart, add it
+        cart.push({ title: productTitle, price: productPrice });
+        updateCart();
+
+        // Display "Added to Cart" text within the clicked product container
+        const container = document.getElementById(containerId);
+        const addedToCartText = container.querySelector('.added-to-cart-text');
+        
+        addedToCartText.style.display = 'block';
+        setTimeout(() => {
+            addedToCartText.style.display = 'none';
+        }, 2000); // Adjust the delay (in milliseconds) as needed
+    }
 }
 
 

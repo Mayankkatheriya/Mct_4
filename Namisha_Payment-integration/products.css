@@ -147,6 +147,7 @@ h2{
             align-items: center;
             z-index: 1000;
             overflow-y: scroll;
+            /* text-overflow: clip; */
             
         }
 
