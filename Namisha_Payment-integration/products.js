@@ -3,7 +3,20 @@ const productsContainer = document.getElementById('products-container');
 function addToCart(productTitle, productPrice) {
     cart.push({ title: productTitle, price: productPrice });
     updateCart();
+    // Display and animate the notification
+    const notification = document.getElementById('notification');
+    notification.textContent = `${productTitle} added to cart`;
+    notification.style.display = 'block';
+    notification.classList.add('animate__fadeInUp');
+
+    // Hide the notification and remove animation class after a delay
+    setTimeout(() => {
+        notification.classList.remove('animate__fadeInUp');
+        notification.style.display = 'none';
+        notification.textContent = ''; // Clear the notification text
+    }, 2000); // Adjust the delay (in milliseconds) as needed
 }
+
 
 function updateCart() {
     const cartCount = document.getElementById('cart-count');

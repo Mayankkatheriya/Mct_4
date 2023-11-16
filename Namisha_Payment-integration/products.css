@@ -240,3 +240,29 @@ h2{
         }
        
         
+/* ... (your existing code) ... */
+
+.notification {
+    position: fixed;
+    bottom: 400px;
+    left: 36%;
+    transform: translateX(-50%);
+    background-color: #2865a7; /* Adjust the background color as needed */
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1005;
+   
+   
+
+}
+@media screen and (max-width: 700px) {
+    .notification {
+        bottom: 400px;
+        right: 30%;
+    }
+
+  }
+  
+/* ... (your existing code) ... */
