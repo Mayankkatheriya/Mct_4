@@ -1,4 +1,4 @@
-const productData = [
+const products = [
 
     {
     
@@ -190,9 +190,9 @@ const productData = [
     
     {
     
-    image: "SanDisk SDDDC2-128G-I35 128 GB OTG Drive  (Silver, Black, Type A to Type C)",
+    image: "https://rukminim2.flixcart.com/image/416/416/xif0q/pendrive/r/i/h/-original-imagngukzgufyyrv.jpeg?q=70",
     
-    title: "https://rukminim2.flixcart.com/image/416/416/khxqt8w0-0/pendrive/type-a-to-type-c/c/g/g/sdddc2-064g-i35-sandisk-original-imafxubtqtxahat2.jpeg?q=70",
+    title: "SanDisk Ultra Dual Drive Go Type C 64 GB OTG Drive  (Green, Type A to Type C)",
     
     rating: 3.8,
     
@@ -464,3 +464,5 @@ const productData = [
     },
     
     ];
+    
+export default products;

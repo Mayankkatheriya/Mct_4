@@ -14,6 +14,7 @@ body{
   align-items: center;
   width: 100%;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 
@@ -528,6 +529,8 @@ div label{
   width: 100%;
   height: 60%;
   object-fit: contain;
+  /* max-width: 100%;
+  height: auto; */
 }
 
 .productName{
