@@ -10,6 +10,7 @@ reTryEl.addEventListener("click",()=>{
   
   canvas.innerHTML = "";
   gameSelect(9,9,40);
+  gameModeEl.selectedIndex=0
 })
 
 
