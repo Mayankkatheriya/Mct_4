@@ -158,9 +158,14 @@ function new_listAppend() {
   shift_Price();
   print.style.display = "block";
 }
+number.addEventListener('click',function(){
+  number.value='91'
+})
 // MOBILE NO COUNT FUNCTION============
 number.addEventListener("keyup", () => {
-  if (number.value.length == 10) {
+  
+
+  if (number.value.length == 12) {
     number.disabled = true;
     edit.style.display = "block";
   }
@@ -169,7 +174,7 @@ number.addEventListener("keyup", () => {
 edit.addEventListener("click", () => {
   number.disabled = false;
   number.value = "";
-  edit.style.display = "";
+  edit.style.display = "none";
 });
 // COUNT TOTAL PRICE ANS TOTAL ITEMS==================
 function total(price) {
@@ -278,8 +283,9 @@ function sHop() {
 <h1 class="animate__animated animate__backInDown">Contat No:-    <i style="color: black;">${form.children[1].children[1].value}</i></h1>
 <h1 class="animate__animated animate__backInDown">Address:-    <i style="color: black;">${form.children[1].children[2].value}</i></h1>
 <h1 class="animate__animated animate__backInDown">GSTNO:-    <i style="color: black;">${form.children[1].children[3].value}</i></h1>
+<div class="date animate__animated animate__fadeInLeft"></div>
 `;
-
+dateTime();
   key.classList.add("key-bill");
 }
 
@@ -292,7 +298,6 @@ bill_btn.addEventListener("click", function () {
       <input type="text" class="cus-name" placeholder="Customer Name">
   </div>
   <div class="mobile">
-      <p>+91</p>
       <input class="number cus-name" type="number" placeholder="Mobile No"> <button class="edit" style="display: none;">edit</button>
       
   </div>
@@ -334,12 +339,14 @@ bill_btn.addEventListener("click", function () {
   bill_btn = document.querySelector(".bill-btn");
   billID = document.querySelector(".bill-Id");
   bil_Detail = document.querySelector(".bill-detail");
-  console.log(form);
+  // console.log(form);
+  btn = document.querySelector(".btn");
   let bod = document.querySelector("body");
   shift_Price();
   add_Entery();
   dateTime();
   Bill_Id();
+  print.style.display="none"
 });
 
 // Function to generate a random three-digit number

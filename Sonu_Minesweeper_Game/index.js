@@ -3,14 +3,41 @@ const timeCountEl = document.querySelector("#timeCount");
 const gameModeEl = document.querySelector("#gameMode");
 
 const reTryEl = document.querySelector("#reTry");
-console.log(reTryEl);
+// console.log(reTryEl);
 
+const upCoverEl = document.querySelector(".upCover");
+const gameCoverOpenEl = document.querySelector(".gameCoverOpen");
+const downCoverEl = document.querySelector(".downCover");
+
+
+gameCoverOpenEl.addEventListener("click",(e)=>{
+upCoverEl.style.height = "0%";
+upCoverEl.style.transition = "all 1.2s linear";
+//  for downCoverEl 
+downCoverEl.style.height = "0%";
+downCoverEl.style.transition = "all 1.2s linear";
+
+gameCoverOpenEl.style.display = "none"
+gameCoverOpenEl.style.transition = "all 0.2s linear";
+
+// setTimeout(()=>{
+//   gameCoverOpenEl.style.transform = "scale(0)"
+// // gameCoverOpenEl.style.transition = "transform 0.5s linear";
+// },500)
+});
+
+function audio(){
+  let gameAudio = new Audio();
+  gameAudio.src ="./Asset/game-ball-tap.mp3";
+} 
 
 reTryEl.addEventListener("click",()=>{
   
   canvas.innerHTML = "";
   gameSelect(9,9,40);
-  gameModeEl.selectedIndex=0
+  gameModeEl.selectedIndex=0;
+  console.log("d");
+  // audio();
 })
 
 
@@ -96,6 +123,7 @@ function gameSelect(ROWS, COLS, SIZE) {
       }
     }
     restartButton.onclick = startGame;
+    audio();
   }
 
   function startGame() {
