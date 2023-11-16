@@ -1,6 +1,7 @@
 # Beauty Products Website
 
-Welcome to the Beauty Products website! Select your shade and explore a wide range of beauty products. This website provides a user-friendly interface to view and purchase beauty products with ease.
+Welcome to the Beauty Products website! Select your shade and explore a wide range of beauty products. This website provides a user-friendly interface to view and purchase beauty products with ease
+.
 ## Shop Now
 Explore our beauty products now! Click the "Shop Now" button below to view the available products.
 
