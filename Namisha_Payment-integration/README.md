@@ -27,6 +27,9 @@ The project is organized into several key directories:
 
 ## Features
 - **Responsive Design:** The website is designed to be accessible and visually appealing on various devices, ensuring a seamless experience for users.
+ 
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/e153c986-011b-4e69-bed4-545c3c1dea9d) ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/8f2dc25b-e766-48ac-87f3-dcbf01175e8d)
+
 
 - **Dynamic Rendering:** JavaScript is used to dynamically render product containers on the main page. The `renderProducts` function fetches product data from `products.json` and creates product containers dynamically, allowing for easy addition of new products without modifying the HTML code.
 
