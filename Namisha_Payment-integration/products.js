@@ -12,7 +12,7 @@ toastr.options = {
     "showMethod": "fadeIn",
     "hideMethod": "fadeOut"
   }
-  function addToCart(productTitle, productPrice, containerId) {
+  function addToCart(productTitle, productPrice) {
     const isAlreadyAdded = cart.some(item => item.title === productTitle);
 
     if (isAlreadyAdded) {
