@@ -34,6 +34,8 @@ The project is organized into several key directories:
 
 - **Interactive Hover Effects:** Product containers have interactive hover effects, providing a visually pleasing experience for users. The CSS styles for `:hover` enhance the appearance of product containers when users interact with them.
 
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/434dccca-5d1a-46c0-9e1b-1932aa8bc0f5)
+
 - **Real-time Cart Updates:** The Toastr library is employed to show real-time cart updates and notifications. When a user adds a product to the cart, Toastr displays a notification, enhancing the user experience by providing feedback on their actions.
 
 ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/90d28793-9672-4c9c-a782-9fc9ac949409)
