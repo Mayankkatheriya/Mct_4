@@ -1,0 +1,36 @@
+body{
+    background-image: url(https://www.moma.org/wp/inside_out/wp-content/uploads/2013/03/Applied_Design1A-643x445.jpg);
+    background-size: cover;
+}
+
+#btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20%;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+    border: 2px solid cyan;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: black;
+}
+
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1f1f1f;
+    width: 100%;
+    color: white;
+    padding: 0 10px;
+    
+}
+
+#nav i{
+    padding-right: 14px;
+}

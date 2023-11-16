@@ -1,45 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Editor</title>
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
-
 <body>
 
-    <nav id="nav">
-        <i class="fa-solid fa-code"></i>
-        <h1>Code Zone</h1>
-        <button>Log In</button>
-
+    <nav>
+        <div id="nav"><i class="fa-solid fa-code"></i>
+            <h1>Code Zone</h1></div>
     </nav>
-
-    <div class="container">
-        <div class="left">
-            <label id="html"><i class="fa-brands fa-html5"></i>HTML</label>
-            <textarea id="html-code" onkeyup="run()"></textarea>
-            <label id="css"><i class="fa-brands fa-css3-alt"></i>CSS</label>
-            <textarea id="css-code" onkeyup="run()"></textarea>
-            <label id="js"><i class="fa-brands fa-js"></i>JavaScript</label>
-            <textarea id="javascript-code" onkeyup="run()"></textarea>
-        </div>
-        <div class="right">
-            <label><i class="fa-solid fa-play"></i>Output</label>
-            <iframe id="output"></iframe>
-        </div>
+    <div id="btn">
+       <a href="home.html"> Click to Get Started</a>
     </div>
-
-    <script src="script.js"></script>
+    
 </body>
-
-
 </html>
