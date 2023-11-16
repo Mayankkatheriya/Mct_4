@@ -146,6 +146,7 @@ h2{
             justify-content: center;
             align-items: center;
             z-index: 1000;
+            overflow-y: scroll;
             
         }
 
@@ -244,8 +245,8 @@ h2{
 
 .notification {
     position: fixed;
-    bottom: 400px;
-    left: 36%;
+    bottom: 20px;
+    left: 68%;
     transform: translateX(-50%);
     background-color: #2865a7; /* Adjust the background color as needed */
     color: #fff;
@@ -259,8 +260,8 @@ h2{
 }
 @media screen and (max-width: 700px) {
     .notification {
-        bottom: 400px;
-        right: 30%;
+        bottom: 20px;
+        right: 20%;
     }
 
   }
