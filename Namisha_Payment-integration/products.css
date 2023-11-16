@@ -14,8 +14,10 @@ html{
     padding: 20px;
     background-color: #a4b8d4;
     /* border: 2px solid red; */
+    position: relative;
 
 }
+
 .product-container:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); /* Add a shadow on hover */
     transform: scale(1.05); /* Scale up the container on hover */
@@ -144,14 +146,58 @@ h2{
             background-color: rgba(0, 0, 0, 0.5);
             justify-content: center;
             align-items: center;
+            z-index: 1000;
+            
         }
 
         #cart-content {
-            background-color: #fff;
-            padding: 20px;
+            background-color: #ffffff;
+            padding: 20px 50px;
             border-radius: 5px;
             
+            
         }
+        /* Your existing CSS code */
+
+#cart-content h2 {
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+}
+.special {
+    margin-top: 5px;
+}
+#cart-items .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    margin-top: 5px; /* Adjust the margin-top as needed */
+}
+#cart-items h2 {
+    max-width: 300px; /* Adjust the max-width as needed */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#cart-content button {
+    background-color: darkblue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto;
+    transition: background-color 0.3s ease;
+  
+}
+
+#cart-content button:hover {
+    background-color: rgb(86, 86, 195)
+}
+
         .cart{
             display: none; 
             background-color: rgba(255, 255, 255);
@@ -162,8 +208,8 @@ h2{
             cursor: pointer;
         }
            h1 {  
-        top: 20%;  */
-        text-align: center;
+        top: 20%;  
+    text-align: center;
         font-size: 40px; 
         font-family: Arial,  
             Helvetica, sans-serif; 

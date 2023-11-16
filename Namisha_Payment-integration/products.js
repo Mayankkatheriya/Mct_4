@@ -18,16 +18,23 @@ function updateCart() {
     // Display cart items in the cart page
     cart.forEach(item => {
         const li = document.createElement('li');
-        li.textContent = `${item.title} - Rs. ${item.price}`;
+        li.innerHTML = `
+            <div class="cart-item">
+                <h2>${item.title}</h2>
+                <p class="special-price">Rs. ${item.price}</p>
+            </div>
+        `;
         cartItems.appendChild(li);
     });
 }
+
 
 // Function to open the cart page
 function openCartPage() {
     updateCart();
     const cartPage = document.getElementById('cart-page');
     cartPage.style.display = 'flex';
+    
 
 }
 
@@ -116,3 +123,4 @@ document.addEventListener("scroll", (e) => {
       topBtn.style.display = "none";
     }
   });
+  
