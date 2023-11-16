@@ -78,6 +78,9 @@ async function renderProducts() {
 
 // Function to handle payment using Razorpay
 function handlePayment(productTitle, productPrice, productImage) {
+    // Preload the audio
+    const successSound = new Audio('Paytm Payment Successful Sound.mp3');
+    successSound.preload = 'auto';
     const options = {
         key: 'rzp_test_DhnX2ljNSBBudR', // Razorpay API key
         amount: productPrice * 100, // Amount in paisa
@@ -87,12 +90,10 @@ function handlePayment(productTitle, productPrice, productImage) {
         image: productImage,
         handler: function (response) {
             alert(`Payment successful for ${productTitle}!`);
-            // Play the success sound using the Web Audio API
-            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-            const successSound = new Audio('Paytm Payment Successful Sound.mp3');
-            const source = audioContext.createMediaElementSource(successSound);
-            source.connect(audioContext.destination);
+            // Play the preloaded success sound
             successSound.play();
+            
+          
         },
         prefill: {
             name: 'Customer Name',
