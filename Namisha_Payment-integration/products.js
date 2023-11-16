@@ -87,7 +87,12 @@ function handlePayment(productTitle, productPrice, productImage) {
         image: productImage,
         handler: function (response) {
             alert(`Payment successful for ${productTitle}!`);
-            // Implement logic to update cart, etc.
+            // Play the success sound using the Web Audio API
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            const successSound = new Audio('Paytm Payment Successful Sound.mp3');
+            const source = audioContext.createMediaElementSource(successSound);
+            source.connect(audioContext.destination);
+            successSound.play();
         },
         prefill: {
             name: 'Customer Name',
