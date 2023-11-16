@@ -3,7 +3,7 @@
 Welcome to the Beauty Products website! Select your shade and explore a wide range of beauty products. This website provides a user-friendly interface to view and purchase beauty products with ease
 .
 ## Shop Now
-Explore our beauty products now! Click the "Shop Now" button below to view the available products.
+Explore our beauty products now! Click the `Shop Now` button below to view the available products.
 
 ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/161afa9f-8dba-4763-8b52-1e07ad99a8cb)
 
