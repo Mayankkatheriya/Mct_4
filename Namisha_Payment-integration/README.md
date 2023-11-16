@@ -28,7 +28,7 @@ The project is organized into several key directories:
 ## Features
 - **Responsive Design:** The website is designed to be accessible and visually appealing on various devices, ensuring a seamless experience for users.
  
-[![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/dc5cd807-a290-4c37-861a-a55cc29461fb) ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/77810dcf-3c1f-4b24-b6e5-1a2ad2bce132)]
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/dc5cd807-a290-4c37-861a-a55cc29461fb) ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/77810dcf-3c1f-4b24-b6e5-1a2ad2bce132)
 
 
 
