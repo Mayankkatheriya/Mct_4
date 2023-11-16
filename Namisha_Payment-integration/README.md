@@ -26,6 +26,8 @@ The project is organized into several key directories:
 - **clipart image:** `png-clipart-person-s-lip-illustration-make-up-for-ever-cosmetics-make-up-artist-eye-shadow-logo-forever-miscellaneous-angle.png` Incorporates an eye-catching clipart image in the header for a visually appealing introduction.
 
 ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/9265bf56-80a6-4339-852d-073e2b7a29b8)
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/e32f625f-5052-4028-ad22-c50337e32d82)
+
 
 ## Features
 - **Responsive Design:** The website is designed to be accessible and visually appealing on various devices, ensuring a seamless experience for users.
