@@ -36,6 +36,12 @@ This HTML, CSS, and JavaScript-based website allows users to browse various beau
 
 - **Notification for Added Items:** When a product is added to the cart, a green notification bar (`#added`) appears at the top, providing a clear indication to the user.
 
+## Shop Now
+
+Explore our beauty products now! Click the "Shop Now" button below to view the available products.
+
+[![Shop Now](index.html)](#products-container)
+
 ## Getting Started
 1. Clone this repository to your local machine.
    ```bash
