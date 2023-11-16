@@ -43,6 +43,8 @@ The project is organized into several key directories:
  
 ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/30763ffa-4f88-4074-9ff8-b88edd3719b0)
 - **Smooth Scroll Functionality:** The website features smooth scroll functionality for a better user experience. When users scroll, the navigation bar's background color changes, providing a subtle visual effect.
+ 
+  ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/7191ed55-69da-4efb-93b1-3df004aa9e71)
 
 - **Notification for Added Items:** When a product is added to the cart, a green notification bar (`#added`) appears at the top, providing a clear indication to the user.
 
