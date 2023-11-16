@@ -3,14 +3,21 @@ const timeCountEl = document.querySelector("#timeCount");
 const gameModeEl = document.querySelector("#gameMode");
 
 const reTryEl = document.querySelector("#reTry");
-console.log(reTryEl);
+// console.log(reTryEl);
 
+
+function audio(){
+  let gameAudio = new Audio();
+  gameAudio.src ="./Asset/game-ball-tap.mp3";
+} 
 
 reTryEl.addEventListener("click",()=>{
   
   canvas.innerHTML = "";
   gameSelect(9,9,40);
-  gameModeEl.selectedIndex=0
+  gameModeEl.selectedIndex=0;
+  console.log("d");
+  audio();
 })
 
 
@@ -96,6 +103,7 @@ function gameSelect(ROWS, COLS, SIZE) {
       }
     }
     restartButton.onclick = startGame;
+    audio();
   }
 
   function startGame() {
