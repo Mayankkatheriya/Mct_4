@@ -15,6 +15,9 @@ The project is organized into several key directories:
 
 - **vendor:** Holds external libraries and stylesheets, such as `animate.css`, `toastr.min.css`, and `font-awesome.min.css`.
 
+- **![Clipart Image](./clipart.png):** Incorporates an eye-catching clipart image in the header for a visually appealing introduction.
+
+
 ## Introduction
 This HTML, CSS, and JavaScript-based website allows users to browse various beauty products, add them to the cart, and make secure payments using the Razorpay API. The website is designed with a responsive layout and features a modern and attractive design.
 
