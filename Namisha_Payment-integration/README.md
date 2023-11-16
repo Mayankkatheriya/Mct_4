@@ -26,7 +26,8 @@ The project is organized into several key directories:
 - **clipart image:** `png-clipart-person-s-lip-illustration-make-up-for-ever-cosmetics-make-up-artist-eye-shadow-logo-forever-miscellaneous-angle.png` Incorporates an eye-catching clipart image in the header for a visually appealing introduction.
 
 ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/9265bf56-80a6-4339-852d-073e2b7a29b8)
-![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/52933b47-b6c6-4a61-bf8f-df781aaf59ee)
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/a6d1f105-5a05-4eb0-802c-a9f98c2c41db)
+
 
 
 ## Features
