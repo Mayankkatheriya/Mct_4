@@ -4,8 +4,11 @@ let sortingBtn = [...document.querySelectorAll(".sort-item")];
 let fAssuredbox = document.querySelector("#fassured");
 let deliverybox = document.querySelector("#delivery");
 let emiBox = document.querySelector("#noCost");
-let offerFilter = document.querySelector("name");
-console.log(offerFilter);
+let offerFilter = [...document.querySelectorAll('input[name="discount"]')];
+let ratingFilter = [...document.querySelectorAll('input[name="rating"]')];
+let minPrice = document.querySelector(".min")
+let maxPrice = document.querySelector(".max")
+
 
 // -------------------display-items----------------
 const displayProducts = (data = productData) => {
@@ -13,7 +16,7 @@ const displayProducts = (data = productData) => {
   data.forEach((product) => {
     let fAssured = "";
     let freeDelivery = "";
-    let BankOffer = ""
+    let BankOffer = "";
     if (product.flipkartAssured) {
       fAssured = "./Assests/251-2512713_best-offer-best-offer-icon-png.png";
     }
@@ -21,8 +24,8 @@ const displayProducts = (data = productData) => {
       freeDelivery = "Delivery in 1 Day";
     }
     if (product.noCostEMI == true) {
-        BankOffer = "Bank Offer";
-      }
+      BankOffer = "Bank Offer";
+    }
     const div = document.createElement("div");
     div.classList.add("product-card");
     div.innerHTML = `
@@ -97,13 +100,73 @@ deliverybox.addEventListener("change", (e) => {
   displayProducts(filteredProduct);
 });
 
-// -----------no codt EMI filter------------
+// -----------no cost EMI filter------------
 emiBox.addEventListener("change", (e) => {
-    let filteredProduct = productData;
-    if (e.target.checked) {
-      filteredProduct = productData.filter((item) => item.noCostEMI == true);
+  let filteredProduct = productData;
+  if (e.target.checked) {
+    filteredProduct = productData.filter((item) => item.noCostEMI == true);
+  }
+  displayProducts(filteredProduct);
+});
+
+// -----------discount filter------------
+offerFilter.forEach((ele)=>{
+    ele.addEventListener('click',(e)=>{
+        let filtervalue = e.target.value;
+        let filteredProduct=[];
+        filteredProduct = productData.filter((item) => item.discountPrice >= filtervalue);
+        displayProducts(filteredProduct);
+    })
+})
+
+// -----------rating filter------------
+ratingFilter.forEach((ele)=>{
+    ele.addEventListener('click',(e)=>{
+        let filtervalue = e.target.value;
+        let filteredProduct=[];
+        filteredProduct = productData.filter((item) => item.rating >= filtervalue);
+        displayProducts(filteredProduct);
+    })
+})
+
+
+// ----------------price range filter----------------
+let rangeMin = 100;
+const rangeInput = document.querySelectorAll(".range-input input");
+const rangePrice = document.querySelectorAll(".range-price input");
+
+// Function for changing price on sliding the price bar
+rangeInput.forEach((input) => {
+  input.addEventListener("input", (e) => {
+    let minRange = parseInt(rangeInput[0].value);
+    let maxRange = parseInt(rangeInput[1].value);
+    if (maxRange - minRange < rangeMin) {
+      if (e.target.className === "min") {
+        rangeInput[0].value = maxRange - rangeMin;
+      } else {
+        rangeInput[1].value = minRange + rangeMin;
+      }
+    } else {
+      rangePrice[0].value = minRange;
+      rangePrice[1].value = maxRange;
     }
-    displayProducts(filteredProduct);
+    minRange = parseInt(rangePrice[0].value);
+    maxRange = parseInt(rangePrice[1].value);
+        let filteredProduct=[];
+        filteredProduct = productData.filter((item) => item.specialPrice >= minRange && item.specialPrice <= maxRange );
+        displayProducts(filteredProduct);
   });
+});
+
+// Filter on basis of price range input
+rangePrice.forEach((ele) => {
+    ele.addEventListener("change", ()=>{
+        let minRange = parseInt(rangePrice[0].value);
+        let maxRange = parseInt(rangePrice[1].value);
+        let filteredProduct=[];
+        filteredProduct = productData.filter((item) => item.specialPrice >= minRange && item.specialPrice <= maxRange );
+        displayProducts(filteredProduct);
+    })
+})
 
 window.onload = () => displayProducts(productData);

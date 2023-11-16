@@ -106,27 +106,27 @@
                   type="range"
                   class="min"
                   min="0"
-                  max="900"
+                  max="800"
                   value="0"
-                  step="100"
+                  step="1"
                 />
                 <input
                   type="range"
                   class="max"
-                  min="100"
-                  max="5000"
-                  value="5000"
-                  step="100"
+                  min="0"
+                  max="800"
+                  value="800"
+                  step="1"
                 />
               </div>
               <div class="range-price">
                 <div class="minInput">
                   <label for="min">Min</label>
-                  <input type="number" class="min" name="min" value="0" />
+                  <input type="number" class="min" name="min" value="0" min="0" max="800"/>
                 </div>
                 <div class="maxInput">
                   <label for="max">Max</label>
-                  <input type="number" name="max" class="max" value="1000" />
+                  <input type="number" name="max" class="max" value="800" min="0" max="800"/>
                 </div>
               </div>
             </div>
@@ -140,22 +140,22 @@
             </div>
             <div class="discounts">
               <label for=""
-                ><input type="radio" value="50" name="discount" id="" /> ₹50
+                ><input type="radio" value="50" name="discount" id="" /> ₹50 & more
               </label>
             </div>
             <div class="discounts">
               <label for=""
-                ><input type="radio" value="40" name="discount" id="" /> ₹40
+                ><input type="radio" value="40" name="discount" id="" /> ₹40 & more
               </label>
             </div>
             <div class="discounts">
               <label for=""
-                ><input type="radio" value="30" name="discount" id="" /> ₹30
+                ><input type="radio" value="30" name="discount" id="" /> ₹30 & more
               </label>
             </div>
             <div class="discounts">
               <label for=""
-                ><input type="radio" value="20" name="discount" id="" /> ₹20
+                ><input type="radio" value="20" name="discount" id="" /> ₹20 & more
               </label>
             </div>
             <div class="discounts border-bottom">
@@ -231,6 +231,7 @@
             </div>
           </div>
           <hr />
+          <!-----------------rating-section--------------->
           <div class="ratingList toggleHeight">
             <div class="cRatings cRatingHeading">
               <p class="label">CUSTOMER RATINGS</p>
@@ -238,49 +239,49 @@
             </div>
             <div class="cRatings">
               <input
-                type="checkbox"
-                name="4andabove"
+                type="radio"
+                name="rating"
                 id="4andabove"
                 value="4"
               />
               <label for="4andabove"
-                >4 &nbsp; <i class="fa-solid fa-star rate"></i>&nbsp; &
+                >4 &nbsp;★&nbsp; &
                 above</label
               >
             </div>
             <div class="cRatings">
               <input
-                type="checkbox"
-                name="3andabove"
+                type="radio"
+                name="rating"
                 id="3andabove"
                 value="3"
               />
               <label for="3andabove"
-                >3 &nbsp; <i class="fa-solid fa-star rate"></i>&nbsp; &
+                >3 &nbsp; ★ &nbsp; &
                 above</label
               >
             </div>
             <div class="cRatings">
               <input
-                type="checkbox"
-                name="2andabove"
+                type="radio"
+                name="rating"
                 id="2andabove"
                 value="2"
               />
               <label for="2andabove"
-                >2 &nbsp; <i class="fa-solid fa-star rate"></i>&nbsp; &
+                >2 &nbsp; ★ &nbsp; &
                 above</label
               >
             </div>
             <div class="cRatings">
               <input
-                type="checkbox"
-                name="1andabove"
+                type="radio"
+                name="rating"
                 id="1andabove"
                 value="1"
               />
               <label for="1andabove"
-                >1 &nbsp; <i class="fa-solid fa-star rate"></i>&nbsp; &
+                >1 &nbsp; ★ &nbsp; &
                 above</label
               >
             </div>
