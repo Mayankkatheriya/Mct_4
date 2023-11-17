@@ -65,16 +65,22 @@ To enhance user experience and make the shopping cart persistent across page rel
  
 ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/ffbf0554-c945-4635-baed-cc7b0a6b639e)
 
-  - **Notification for remove item from cart:** When products removed from the cart, a blue notification bar (`#removed`) appears at the top, providing a clear indication to the user.
+  - **Notification for removed item from cart:** When products removed from the cart, a blue notification bar (`#removed`) appears at the top, providing a clear indication to the user.
 
 ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/c47afd9a-d2b5-49e8-b8bf-f2536c85f692)
+
+ - **Notification for clear whole cart items:** When whole products removed from the cart, a blue notification bar (`#cleared`) appears at the top and in cart some text 
+ will be visible `your cart is empty` providing a 
+ clear indication to the user.
+
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/f5021ea2-34b1-4ece-842c-1acebe57efa5)
 
 - **Razorpay Integration:** Secure payments are facilitated through the integration of the Razorpay API. The `handlePayment` function uses Razorpay to handle the payment process when a user clicks the "Buy Now" button.
  
 ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/30763ffa-4f88-4074-9ff8-b88edd3719b0)
 - **Smooth Scroll Functionality:** The website features smooth scroll functionality for a better user experience. When users scroll, the navigation bar's background color changes, providing a subtle visual effect.
  
-  ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/7191ed55-69da-4efb-93b1-3df004aa9e71)
+ ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/e0c9fa7e-b598-463d-b593-5e2f23a83b81)
 
 ## Getting Started
 1. Clone this repository to your local machine.
