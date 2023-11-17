@@ -26,12 +26,12 @@ function AddList() {
   let lis = document.createElement("li");
   lis.classList.add("item");
   lis.innerHTML = `
-  <input type="text" name=""required>
-  <input type="number" required>
-  <input type="number" required value="1">
-  <input class="total" type="number" id="total" value="" required>
-<button class="add">add</button>
-<div id="error-box"></div>
+                    <input type="text" name="" id="text" required>
+                <input type="number" id="number1" required>
+                <input type="number" id="number2" required value="1">
+                <input class="total" type="number" id="total" value="" required>
+        <button class="add">add</button>
+        <div id="error-box"></div>
     `;
   list_Item.appendChild(lis);
   add_Btn.style.display='none'
@@ -45,7 +45,10 @@ function addBtn(){
     if(validateForm(list_Item.children[list_Item.children.length - 1])){
       TotalCount(list_Item.children[list_Item.children.length - 1]);
       AddList_InVoice(list_Item.children[list_Item.children.length - 1])
-      addB.remove()
+      addB
+      addB.disabled=true
+
+      addB.classList.add('p')
       errorBox.remove()
       add_Btn.style.display='block'
     }
@@ -95,8 +98,8 @@ function AddList_InVoice(deta) {
   let lis = document.createElement("li");
   lis.classList.add("items");
   lis.innerHTML=`
-    <p style="width: 50%;text-transform: uppercase;">${deta.children[0].value}</p>
-                        <p style="border-left: 2px solid rgb(146, 139, 139);">${deta.children[1].value}</p>
+    <p style="width: 40%;text-transform: uppercase;text-align: left; padding-left: 50px">${deta.children[0].value}</p>
+                        <p>${deta.children[1].value}</p>
                         <p>${deta.children[2].value}</p>
                         <p>${deta.children[3].value}</p>
 
