@@ -83,7 +83,7 @@ document.querySelectorAll(".btns").forEach(button => {
     task.classList.add("text");
   task.setAttribute("draggable", "true");
   task.innerHTML = `
-  <p class="task" contenteditable="true" style="border:none; spellcheck="false""></p>
+  <p class="task" contenteditable="true"  spellcheck="false""></p>
     <i class="material-icons" style="font-size:18px;">delete</i>
 `;
 
@@ -106,14 +106,7 @@ document.querySelectorAll(".btns").forEach(button => {
     task.classList.remove("dragging");
   });
 
-  task.addEventListener("click",(e)=>{
-    Add_Desc();
-  })
-
 });
 });
 
 
-function Add_Desc(){
-    console.log("Desc o be added");
-}

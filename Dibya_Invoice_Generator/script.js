@@ -218,12 +218,23 @@ ne.addEventListener('keyup',function(){
 
 
 document.getElementById('pri-btn').addEventListener('click',()=>{
-  let inv =document.querySelector('.invoice')
+  let inv = document.getElementById('invo');
+  inv.classList.add('while-pr');
+  inv.classList.remove('while-pr');
+  
   document.querySelector('.details').style.display='none'
   inv.classList.add('while-pr');
   window.print();
   document.querySelector('.details').style.display='flex'
   // inv.style.width='50vw'
   inv.classList.remove('while-pr');
+  
+})
+document.getElementById('save').addEventListener('click',()=>{
+  let inv = document.getElementById('page');
+  // inv.classList.add('while-pr');
+  html2pdf()
+  .from(inv)
+  .save();
   
 })
