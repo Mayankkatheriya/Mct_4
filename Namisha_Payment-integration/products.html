@@ -12,7 +12,14 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
   <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Frijole|Josefin+Sans:300,400,400i,600,700|Viga" rel="stylesheet">
-
+  <link
+  href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"
+  rel="stylesheet"
+/>
+<link
+  href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css"
+  rel="stylesheet"
+/>
 </head>
 <body>
     <a href="#" id="top"
@@ -32,9 +39,14 @@
         <div id="cart-content">
             <h2 class="animate__animated animate__zoomInUp">Your Cart</h2>
             <ul id="cart-items"></ul>
-            <button onclick="closeCartPage()">Close</button>
+            <div class="cart-button">
+            <button onclick="closeCartPage()" style="background-color: green;">Close</button>
+            <button onclick="clearCart()" style="background-color: rgb(255, 0, 0);">Clear</button> <!-- clear cart button -->
+        </div>
         </div>
     </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <script src="products.js"></script>
     <script src="https://kit.fontawesome.com/bfe5da5748.js" crossorigin="anonymous"></script>
 </body>

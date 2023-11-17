@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <!-- Nav bar -->
+    <nav>
+        <div id="nav"><i class="fa-solid fa-code"></i>
+            <h1>Code Editor</h1></div>
+    </nav>
+
+    <!-- Main container for the text area and output screen -->
+    <div class="container">
+        <!-- Left container for code editor area -->
+        <div class="left">
+            <!-- HTML code editor -->
+            <div class="innerContainer">
+                <div>
+                    <label id="html"><i class="fa-brands fa-html5"></i>HTML</label>
+                </div>
+                <!-- Buttons for copy and clear -->
+                <div class="btnContainer">
+                    <button onclick="clearHtml()">Clear</button>
+                    <button onclick="copyToClipboard('html-code')">Copy to Clipboard</button>
+                </div>
+            
+            </div>
+            <textarea id="html-code" onkeyup="run()"></textarea>
+             
+            <!-- CSS code editor -->
+            <div class="innerContainer">
+                <div>
+                    <label id="css"><i class="fa-brands fa-css3-alt"></i>CSS</label>
+                </div>
+                <!-- Buttons for copy and clear -->
+                <div class="btnContainer">
+                    <button onclick="clearCss()">Clear</button>
+                    <button onclick="copyToClipboard('html-code')">Copy to Clipboard</button>
+                </div>
+            </div>
+            <textarea id="css-code" onkeyup="run()"></textarea>
+
+            <!-- Javascript code editor -->
+            <div class="innerContainer">
+                <div>
+                    <label id="js"><i class="fa-brands fa-js"></i>JavaScript</label>
+                </div>
+                <!-- Buttons for copy and clear -->
+                <div class="btnContainer">
+                    <button onclick="clearJs()">Clear</button>
+                    <button onclick="copyToClipboard('html-code')">Copy to Clipboard</button>
+                </div>
+            </div>
+            <textarea id="javascript-code" onkeyup="run()"></textarea>
+        </div>
+        <!-- Right container for displaying output -->
+        <div class="right">
+            <label><i class="fa-solid fa-play"></i>Output</label>
+            <iframe id="output"></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+
+</html>

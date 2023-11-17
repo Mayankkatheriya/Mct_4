@@ -60,7 +60,7 @@ html{
     align-items: center;
     background-color: white;
     animation: bounceInUp; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s; /* don't forget to set a duration! */
+    animation-duration: 2s; /* to set a duration! */
 }
 
 
@@ -73,14 +73,13 @@ html{
     background-color: rgb(24, 67, 156);
     color: rgb(255, 255, 255);
     padding: 10px 90px;
-    border: none;
+    border: 6px solid white;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 1rem;
     transition: background-color 0.3s ease;
     text-align: center;
     font-size: 12px;
-
 }
 .pay-now:hover{
 background-color: transparent;
@@ -122,13 +121,11 @@ h2{
             background-color: rgb(3 47 93);
             color: white;
             text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-            padding: 10px;
+            padding: 10px 40px;
             display: flex;
             justify-content: space-between;
             text-align: center;
             align-items: center;
-            padding-left: 40px;
-            padding-right: 40px;
         }
         #cart-icon {
             cursor: pointer;
@@ -147,23 +144,26 @@ h2{
             justify-content: center;
             align-items: center;
             z-index: 1000;
-            
+            overflow-y: scroll;
+            display: flex;
         }
 
         #cart-content {
             background-color: #ffffff;
             padding: 20px 50px;
             border-radius: 5px;
-            
-            
         }
-        /* Your existing CSS code */
 
 #cart-content h2 {
     margin-bottom: 10px;
     text-align: center;
     font-weight: 600;
     font-size: 1rem;
+}
+.cart-button{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
 }
 .special {
     margin-top: 5px;
@@ -176,7 +176,7 @@ h2{
     margin-top: 5px; /* Adjust the margin-top as needed */
 }
 #cart-items h2 {
-    max-width: 300px; /* Adjust the max-width as needed */
+    max-width: 290px; /* Adjust the max-width as needed */
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -189,9 +189,8 @@ h2{
     border-radius: 5px;
     cursor: pointer;
     display: block;
-    margin: 10px auto;
+    margin: 8px 0;
     transition: background-color 0.3s ease;
-  
 }
 
 #cart-content button:hover {
@@ -234,10 +233,58 @@ h2{
             display: none; /* Show the cart button on hover */
         }
         .icon{
-            /* border: 2px solid red; */
-          /* border-radius: 50px; */
           width: 100px;
           height: 50px;
         }
        
-        
+
+/* Toastr Styles */
+
+#toast-container {
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.toast {
+    position: relative;
+    margin: 0.3em;
+    pointer-events: auto;
+    overflow: hidden;
+    margin-bottom: 15px;
+    padding: 15px;
+    width: 300px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    background-color: #fff;
+    color: #333;
+}
+
+.toast-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.toast-warning {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.toast-close-button {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+    .notification {
+        bottom: 20px;
+        right: 20%;
+    }
+    
+  }
+  
+

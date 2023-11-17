@@ -1,4 +1,4 @@
-const products = [
+export const productData = [
 
     {
     
@@ -8,7 +8,9 @@ const products = [
     
     rating: "4.5★",
     
-    flipkartAssured: true,
+    ratingCount: "23",
+    
+    flipkartAssured: false,
     
     price: 499.99,
     
@@ -31,6 +33,8 @@ const products = [
     title: "SanDisk Cruze Blade SDCZ50 64 GB Pen Drive  (Red, Black)",
     
     rating: "4.2★",
+    
+    ratingCount: "45",
     
     flipkartAssured: false,
     
@@ -56,6 +60,8 @@ const products = [
     
     rating: "3.9★",
     
+    ratingCount: "67",
+    
     flipkartAssured: true,
     
     price: 699.99,
@@ -79,6 +85,8 @@ const products = [
     title: "HP V236w 64 GB Pen Drive  (Silver)",
     
     rating: "4.7★",
+    
+    ratingCount: "86",
     
     flipkartAssured: true,
     
@@ -104,7 +112,9 @@ const products = [
     
     rating: "4.3★",
     
-    flipkartAssured: true,
+    ratingCount: "98",
+    
+    flipkartAssured: false,
     
     price: 899.99,
     
@@ -125,6 +135,8 @@ const products = [
     title: "HP UHS-I U1 128 GB MicroSDHC Class 10 100 MB/s Memory Card",
     
     rating: "4.0★",
+    
+    ratingCount: "32",
     
     flipkartAssured: false,
     
@@ -150,6 +162,8 @@ const products = [
     
     rating: "4.8★",
     
+    ratingCount: "45",
+    
     flipkartAssured: true,
     
     price: 599.99,
@@ -173,7 +187,9 @@ const products = [
     
     rating: "4.1★",
     
-    flipkartAssured: true,
+    ratingCount: "65",
+    
+    flipkartAssured: false,
     
     price: 349.99,
     
@@ -195,6 +211,8 @@ const products = [
     title: "SanDisk Ultra Dual Drive Go Type C 64 GB OTG Drive  (Green, Type A to Type C)",
     
     rating: "3.8★",
+    
+    ratingCount: "66",
     
     flipkartAssured: true,
     
@@ -219,6 +237,8 @@ const products = [
     
     rating: "4.6★",
     
+    ratingCount: "76",
+    
     flipkartAssured: false,
     
     price: 249.99,
@@ -240,6 +260,8 @@ const products = [
     title: "SanDisk Ultra Shift™ USB 3.0 128 GB Pen Drive  (Black)#JustHere",
     
     rating: "4.4★",
+    
+    ratingCount: "87",
     
     flipkartAssured: true,
     
@@ -264,6 +286,8 @@ const products = [
     
     rating: "4.9★",
     
+    ratingCount: "98",
+    
     flipkartAssured: true,
     
     price: 179.99,
@@ -286,6 +310,8 @@ const products = [
     title: "SanDisk SDDDC3-128G-I35PC 128 GB OTG Drive  (Peach, Type A to Type C)",
     
     rating: "4.2★",
+    
+    ratingCount: "12",
     
     flipkartAssured: true,
     
@@ -310,6 +336,8 @@ const products = [
     
     rating: "4.3★",
     
+    ratingCount: "34",
+    
     flipkartAssured: false,
     
     price: 449.99,
@@ -332,6 +360,8 @@ const products = [
     title: "MOREBYTE 16gb 2.0 USB Pen Drive with Metal Body External Storage Device mb-fb-1016 16 GB Pen Drive  (Silver)",
     
     rating: "4.7★",
+    
+    ratingCount: "23",
     
     flipkartAssured: true,
     
@@ -357,6 +387,8 @@ const products = [
     
     rating: "4.0★",
     
+    ratingCount: "12",
+    
     flipkartAssured: true,
     
     price: 699.99,
@@ -378,6 +410,8 @@ const products = [
     title: "SanDisk Cruze Blade SDCZ50 128 GB Pen Drive  (Red, Black)",
     
     rating: "3.9★",
+    
+    ratingCount: "34",
     
     flipkartAssured: true,
     
@@ -402,6 +436,8 @@ const products = [
     
     rating: "4.5★",
     
+    ratingCount: "45",
+    
     flipkartAssured: false,
     
     price: 499.99,
@@ -424,6 +460,8 @@ const products = [
     title: "SanDisk Ultra 128 GB MicroSDXC Class 10 140 MB/s Memory Card",
     
     rating: "4.6★",
+    
+    ratingCount: "54",
     
     flipkartAssured: true,
     
@@ -448,6 +486,8 @@ const products = [
     
     rating: "3.8★",
     
+    ratingCount: "19",
+    
     flipkartAssured: true,
     
     price: 649.99,
@@ -464,5 +504,3 @@ const products = [
     },
     
     ];
-    
-export default products;
