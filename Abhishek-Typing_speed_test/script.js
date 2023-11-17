@@ -138,7 +138,7 @@ function shareText() {
       navigator
         .share({
           title: "HighScore",
-          text: wpmTag.innerText,
+          text: `Words Per Minute(Wpm): ${wpmTag.innerText} Character Per Minute(Cpm): ${cpmTag.innerText} Errors: ${errorTag.innerText}`,
         })
         .then(() => console.log("Shared successfully"))
         .catch((error) => console.error("Sharing failed", error));
