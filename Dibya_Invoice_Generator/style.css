@@ -186,6 +186,11 @@ body {
 
 }
 
+.l-img{
+    width: 200px;
+    height: 50px;
+    visibility:hidden;
+}
 
 .Add-de {
     padding-top: 30px;
