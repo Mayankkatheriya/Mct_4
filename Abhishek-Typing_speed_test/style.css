@@ -65,8 +65,10 @@ body {
 }
 .wrapper .input-field {
   opacity: 0;
-  
   position: absolute;
+}
+.input-field::-webkit-scrollbar{
+  display: none;
 }
 .wrapper .content-box {
   display: flex;
@@ -85,6 +87,9 @@ body {
   font-size: 22px;
   text-align: justify;
   letter-spacing: 1.5px;
+}
+.typing-text::-webkit-scrollbar{
+  display: none;
 }
 .typing-text p span {
   position: relative;
