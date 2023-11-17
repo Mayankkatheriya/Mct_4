@@ -1,4 +1,4 @@
-# Card_project
+# Invoice_Generator
 ## Hosted Link:  [Click Here](https://mayankkatheriya.github.io/Mct_4/Dibya_Invoice_Generator/)
 
 ## UI:
@@ -10,27 +10,22 @@
 
 `HTML:`
 
-* You have a basic HTML structure with a title, link to a CSS file, and two scripts, one for Font Awesome icons and one for your custom JavaScript.
-* The user interface consists of a button for toggling the dark theme and a card that displays user information fields.
+* You have a basic HTML structure with a title, link to a CSS file, and three scripts, one for Font Awesome icons,one for your custom JavaScript and one is Html2pdf.
+* The user interface consists of 5 button for generate invoice, add items, add list, print invoice and save invoice.
 
 `CSS:`
 
-* You've applied some styling to create a visually appealing user information card.
-* You have implemented a dark theme toggle feature with styles for both light and dark themes.
+* You've applied some styling to create two window one is crearing and other is preview.
 
 `JavaScript:`
 
-* You define an object called fields that contains labels for user information fields.
+* You have to fill some details such as number, logo and date.
 * You have functions to:
-* `fillDetails():` To populate the user details in the card, with the option to edit or add new details.
-* `changeField(key):` To change a specific field by removing it from localStorage.
-* `resetAll():` To clear all user details.
-* `toggleDarkTheme():` To toggle the dark theme and update the button icon.
-
-Your code is well-structured and functional, creating a user-friendly interface for managing user information with a toggleable dark theme. However, there's a minor issue with your dark theme button not properly updating the icon. I noticed you are trying to toggle the button content based on the flag variable, but it seems the toggle variable is not defined. To fix this, you should declare the toggle variable, which is the button element, at the beginning of your JavaScript code:
-
-`let toggle = document.querySelector("#toggle");`
-
-Once you make this adjustment, your dark theme toggle should work correctly.
-
-Overall, your code is nicely organized, and your user interface is visually appealing. It allows users to manage their information effectively and switch between light and dark themes.
+* `AddList()` To create a new list in list product.
+* `addBtn():` To check all the field in the item in filled or not.
+* `list_Detail():` To check the input and calculate total price.
+* `total(a, b):` To calculate the total money of the items.
+* `AddList_InVoice(deta):` To append the list in preview window.
+* `TotalCount(det):` To calculate final Amount.
+* `validateForm(det) & validData():` To check the mandatory fields.
+Your code is well-structured and functional, creating a user-friendly interface and to create an invoice as required.
