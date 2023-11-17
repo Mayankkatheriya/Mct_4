@@ -121,13 +121,11 @@ h2{
             background-color: rgb(3 47 93);
             color: white;
             text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-            padding: 10px;
+            padding: 10px 40px;
             display: flex;
             justify-content: space-between;
             text-align: center;
             align-items: center;
-            padding-left: 40px;
-            padding-right: 40px;
         }
         #cart-icon {
             cursor: pointer;
@@ -241,21 +239,7 @@ h2{
           height: 50px;
         }
        
-        
-/* ... (your existing code) ... */
 
-.notification {
-    position: fixed;
-    bottom: 20px;
-    left: 68%;
-    transform: translateX(-50%);
-    background-color: #2865a7; /* Adjust the background color as needed */
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    display: none;
-    z-index: 1005;
-}
 /* Toastr Styles */
 
 #toast-container {
@@ -297,14 +281,12 @@ h2{
     cursor: pointer;
 }
 
-/* ... (your existing code) ... */
-
 @media screen and (max-width: 700px) {
     .notification {
         bottom: 20px;
         right: 20%;
     }
-
+    
   }
   
-/* ... (your existing code) ... */
+
