@@ -32,18 +32,25 @@ function saveCartToStorage() {
 // Function to add a product to the cart
 function addToCart(productTitle, productPrice) {
     const isAlreadyAdded = cart.some(item => item.title === productTitle);
+    const alertSound = new Audio('error-126627.mp3');
+    alertSound.preload = 'auto';
+    const addToCartSound = new Audio('mixkit-software-interface-start-2574.wav');
+    addToCartSound.preload = 'auto';
+
+
 
     if (isAlreadyAdded) {
         toastr.warning(`${productTitle} is already in the cart!`);
+        alertSound.play();
     } else {
         cart.push({ title: productTitle, price: productPrice });
         updateCart();
-
         // Display the toastr notification for item added to cart
         toastr['success'](`${productTitle} added to cart!`);
 
         // Save the updated cart to local storage
         saveCartToStorage();
+        addToCartSound.play();
     }
 }
 
