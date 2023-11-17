@@ -1,8 +1,13 @@
+// Define a constant variable to store the key for the cart in local storage
 const cartKey = 'cart';
+
+// Initialize an empty array to store cart items
 let cart = [];
 
+// Get the container for displaying products
 const productsContainer = document.getElementById('products-container');
 
+// Configure Toastr (a library for displaying notifications)
 toastr.options = {
     "closeButton": true,
     "progressBar": true,
@@ -31,18 +36,23 @@ function saveCartToStorage() {
 
 // Function to add a product to the cart
 function addToCart(productTitle, productPrice) {
+
+     // Check if the product is already in the cart
     const isAlreadyAdded = cart.some(item => item.title === productTitle);
+
+    // Create audio elements for notification sounds
     const alertSound = new Audio('error-126627.mp3');
     alertSound.preload = 'auto';
     const addToCartSound = new Audio('mixkit-software-interface-start-2574.wav');
     addToCartSound.preload = 'auto';
 
 
-
+ // If the product is already in the cart, show a warning notification
     if (isAlreadyAdded) {
         toastr.warning(`${productTitle} is already in the cart!`);
         alertSound.play();
     } else {
+         // If the product is not in the cart, add it, update the display, and show a success notification
         cart.push({ title: productTitle, price: productPrice });
         updateCart();
         // Display the toastr notification for item added to cart
@@ -94,7 +104,7 @@ function updateCart() {
         });
     }
 }
-// Add this function to remove a specific item from the cart
+// Function to remove a specific item from the cart
 function removeCartItem(index) {
     const removedItem = cart[index].title;
     cart.splice(index, 1); // Remove the item from the cart array
@@ -123,6 +133,7 @@ function handlePayment(productTitle, productPrice, productImage) {
 
 // Call the function to retrieve cart data from local storage when the page loads
 getCartFromStorage();
+
 // Function to render product containers
 async function renderProducts() {
     
@@ -132,11 +143,12 @@ async function renderProducts() {
         const response = await fetch('products.json');
         const products = await response.json();
 
+       // Loop through each product and create a container
         products.forEach(product => {
             const container = document.createElement('div');
             container.classList.add('product-container');
 
-            // Add product details to the container
+            // Adding product details to the container
             container.innerHTML = `
                 <img src="${product.image}" alt="${product.title}">
                 <h2>${product.title}</h2>
@@ -147,7 +159,7 @@ async function renderProducts() {
                 <button class="pay-now" onclick="handlePayment('${product.title}', ${product.specialPrice}, '${product.image}')">Buy Now</button>
                 
             `;
-
+          // Append the container to the products container
             productsContainer.appendChild(container);
         });
     } catch (error) {
@@ -155,12 +167,13 @@ async function renderProducts() {
     }
 }
 
-// Function to handle payment using Razorpay
-function handlePayment(productTitle, productPrice, productImage) {
-    // Preload the audio
+   // Function to handle payment using Razorpay
+    function handlePayment(productTitle, productPrice, productImage) {
+   // Preload the audio for success notification
     const successSound = new Audio('thank-you-for-shopping-garvins.mp3');
     successSound.preload = 'auto';
 
+ // Configure options for Razorpay
     const options = {
         key: 'rzp_test_DhnX2ljNSBBudR', // Razorpay API key
         amount: productPrice * 100, // Amount in paisa
@@ -169,6 +182,7 @@ function handlePayment(productTitle, productPrice, productImage) {
         description: `Payment for ${productTitle}`,
         image: productImage,
         handler: function (response) {
+             // Show success notification and play the success sound
             toastr['success'](`Payment successful for${productTitle}!`);
             // Play the preloaded success sound
             successSound.play();
