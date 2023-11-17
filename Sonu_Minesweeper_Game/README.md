@@ -25,6 +25,13 @@ This project implements the classic Minesweeper game in JavaScript, ranging from
 - Continue until you successfully clear the minefield or trigger a mine.
 
 
+## Home Display
+
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/126500286/912c57e8-8560-4c81-8ca7-ca22c25bfc16)
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/126500286/af223bd3-f753-46cd-b5b5-98ecde5aba1e)
+
+
+
 ## Technologies Used
 - HTML5, CSS3
 - JavaScript
