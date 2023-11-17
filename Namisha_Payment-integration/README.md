@@ -61,7 +61,7 @@ To enhance user experience and make the shopping cart persistent across page rel
 
 ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/324d3c43-49e9-407c-9d2f-8f5175d01f6b)
 
-- **Notification for already item in cart:** When a user clicks again on the same item in the cart, a yellow notification bar (`#alreadyAdded`) appears at the top with alert sound,
+- **Notification for already item in cart:** When a user clicks again on the same item in the cart, a yellow notification bar (`#already`) appears at the top with alert sound,
  
 ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/ffbf0554-c945-4635-baed-cc7b0a6b639e)
 
