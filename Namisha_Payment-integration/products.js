@@ -57,7 +57,7 @@ function addToCart(productTitle, productPrice) {
 function clearCart() {
     cart = []; // Clear the cart array
     updateCart(); // Update the cart display
-    toastr.info('Cart cleared'); // Display toastr notification
+    toastr.warning(`No item in the cart!`); // Display toastr notification when cart is empty
     saveCartToStorage(); // Save the updated cart to local storage
 }
 
@@ -169,7 +169,6 @@ function handlePayment(productTitle, productPrice, productImage) {
         description: `Payment for ${productTitle}`,
         image: productImage,
         handler: function (response) {
-            // alert(`Payment successful for ${productTitle}!`);
             toastr['success'](`Payment successful for${productTitle}!`);
             // Play the preloaded success sound
             successSound.play();
