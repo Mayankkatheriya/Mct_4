@@ -65,9 +65,14 @@ To enhance user experience and make the shopping cart persistent across page rel
  
 ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/ffbf0554-c945-4635-baed-cc7b0a6b639e)
 
-  - **Notification for remove item from cart:** When products removed from the cart, a blue notification bar (`#removed`) appears at the top, providing a clear indication to the user.
+  - **Notification for removed item from cart:** When products removed from the cart, a blue notification bar (`#removed`) appears at the top, providing a clear indication to the user.
 
 ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/c47afd9a-d2b5-49e8-b8bf-f2536c85f692)
+
+ - **Notification for clear whole cart items:** When whole products removed from the cart, a blue notification bar (`#cleared`) appears at the top, providing a 
+ clear indication to the user.
+
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/f5021ea2-34b1-4ece-842c-1acebe57efa5)
 
 - **Razorpay Integration:** Secure payments are facilitated through the integration of the Razorpay API. The `handlePayment` function uses Razorpay to handle the payment process when a user clicks the "Buy Now" button.
  
