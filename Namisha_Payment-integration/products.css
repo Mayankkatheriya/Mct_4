@@ -284,7 +284,38 @@ h2{
         bottom: 20px;
         right: 20%;
     }
-    
+
   }
-  
+  @media screen and (max-width: 700px) {
+    header {
+        padding: 5px;
+    }
+
+    #cart-content {
+        padding: 20px;
+
+    }
+
+    .cart-button {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #cart-items .cart-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #cart-content button {
+        padding: 5px;
+    }
+
+    #products-container {
+        padding: 5px;
+    }
+
+    .product-container {
+        padding: 5px;
+    }
+}
 
