@@ -73,14 +73,13 @@ html{
     background-color: rgb(24, 67, 156);
     color: rgb(255, 255, 255);
     padding: 10px 90px;
-    border: none;
+    border: 6px solid white;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 1rem;
     transition: background-color 0.3s ease;
     text-align: center;
     font-size: 12px;
-
 }
 .pay-now:hover{
 background-color: transparent;
@@ -122,13 +121,11 @@ h2{
             background-color: rgb(3 47 93);
             color: white;
             text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-            padding: 10px;
+            padding: 10px 40px;
             display: flex;
             justify-content: space-between;
             text-align: center;
             align-items: center;
-            padding-left: 40px;
-            padding-right: 40px;
         }
         #cart-icon {
             cursor: pointer;
@@ -147,6 +144,8 @@ h2{
             justify-content: center;
             align-items: center;
             z-index: 1000;
+            overflow-y: scroll;
+            /* text-overflow: clip; */
             
         }
 
@@ -240,4 +239,54 @@ h2{
           height: 50px;
         }
        
-        
+
+/* Toastr Styles */
+
+#toast-container {
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.toast {
+    position: relative;
+    margin: 0.3em;
+    pointer-events: auto;
+    overflow: hidden;
+    margin-bottom: 15px;
+    padding: 15px;
+    width: 300px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    background-color: #fff;
+    color: #333;
+}
+
+.toast-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.toast-warning {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.toast-close-button {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+    .notification {
+        bottom: 20px;
+        right: 20%;
+    }
+    
+  }
+  
+

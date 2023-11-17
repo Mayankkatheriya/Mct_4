@@ -13,6 +13,7 @@
     />
 
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="./Assests/Flipkart-Logo-removebg-preview-300x300.png">
     <title>Flipkart</title>
   </head>
   <body>
@@ -47,6 +48,7 @@
         </ul>
       </nav>
     </header>
+    <!-- -----------------nav-2---------------- -->
     <section class="nav">
       <div class="Items">
         <span class="secItem"
@@ -68,8 +70,11 @@
         ><a class="secItem" href="">Offer Zone</a>
       </div>
     </section>
-
+    <!-- -----------------------main--------------------------- -->
     <main>
+      <!-- ---------back to op button------------- -->
+      <a href="#" id="backToTop"><i class="material-icons">expand_less</i> Back to Top</a>
+      <!-- -----------------aside-------------- -->
       <section class="aside">
         <div class="data-card">
           <img
@@ -98,76 +103,96 @@
           <div class="priceRange">
             <p class="label">PRICE</p>
             <div class="range">
-              <div class="range-slider">
-              </div>
+              <div class="range-slider"></div>
               <div class="range-input">
                 <input
                   type="range"
                   class="min"
                   min="0"
-                  max="900"
+                  max="800"
                   value="0"
-                  step="100"
+                  step="1"
                 />
                 <input
                   type="range"
                   class="max"
-                  min="100"
-                  max="1000"
-                  value="1000"
-                  step="100"
+                  min="0"
+                  max="800"
+                  value="800"
+                  step="1"
                 />
               </div>
               <div class="range-price">
                 <div class="minInput">
                   <label for="min">Min</label>
-                  <input type="number" class="min" name="min" value="0" />
+                  <input type="number" class="min" name="min" value="0" min="0" max="800"/>
                 </div>
                 <div class="maxInput">
                   <label for="max">Max</label>
-                  <input type="number" name="max" class="max" value="1000" />
+                  <input type="number" name="max" class="max" value="800" min="0" max="800"/>
                 </div>
               </div>
             </div>
           </div>
           <hr />
+          <!-----------------discount-section--------------->
           <div class="discountsList">
             <div class="discounts discountsHeading">
               <p class="label">DISCOUNT</p>
               <i class="material-icons toggleArrow">expand_more</i>
             </div>
             <div class="discounts">
-              <input type="checkbox" name="" id="" />
-              <label for="">50% or more</label>
+              <label for=""
+                ><input type="radio" value="50" name="discount" id="" /> ₹50 & more
+              </label>
             </div>
             <div class="discounts">
-              <input type="checkbox" name="" id="" />
-              <label for="">40% or more</label>
+              <label for=""
+                ><input type="radio" value="40" name="discount" id="" /> ₹40 & more
+              </label>
             </div>
             <div class="discounts">
-              <input type="checkbox" name="" id="" />
-              <label for="">30% or more</label>
+              <label for=""
+                ><input type="radio" value="30" name="discount" id="" /> ₹30 & more
+              </label>
             </div>
             <div class="discounts">
-              <input type="checkbox" name="" id="" />
-              <label for="">20% or more</label>
+              <label for=""
+                ><input type="radio" value="20" name="discount" id="" /> ₹20 & more
+              </label>
             </div>
             <div class="discounts border-bottom">
-              <input type="checkbox" name="" id="" />
-              <label for="">10% or more</label>
+              <label for=""
+                ><input type="radio" value="10" name="discount" id="" /> ₹10 or
+                more</label
+              >
             </div>
           </div>
           <hr />
+          <!-- ------------------f-assured filter------------------ -->
           <div class="fAssuredCheckbox">
             <input
               type="checkbox"
+              value=""
               name="fassured"
               id="fassured"
               value="fassured"
             />
             <label for="fassured"
-              ><img src="./Assests/251-2512713_best-offer-best-offer-icon-png.png" alt=""
+              ><img
+                src="./Assests/251-2512713_best-offer-best-offer-icon-png.png"
+                alt=""
             /></label>
+          </div>
+          <!-- ------------------one day delivery filter------------------ -->
+          <div class="deliveryCheckbox">
+            <input
+              type="checkbox"
+              name="delivery"
+              id="delivery"
+              value="delivery"
+            />
+            <label for="delivery">Delivery in 1 Day</label>
           </div>
           <hr />
           <div class="typeList toggleHeight">
@@ -175,36 +200,9 @@
               <p class="label">TYPE</p>
               <i class="material-icons toggleArrow">expand_more</i>
             </div>
-            <div class="types">
-              <input type="checkbox" name="" id="" />
-              <label for="">Bluetooth</label>
-            </div>
-            <div class="types">
-              <input type="checkbox" name="" id="" />
-              <label for="">Expansion Card</label>
-            </div>
-            <div class="types">
-              <input type="checkbox" name="" id="" />
-              <label for="">HDMI Connector</label>
-            </div>
-            <div class="types">
-              <input type="checkbox" name="" id="" />
-              <label for="">Laptop Accessory</label>
-            </div>
-            <div class="types">
-              <input type="checkbox" name="" id="" />
-              <label for="">USB Hub</label>
-            </div>
-            <div class="types">
-              <input type="checkbox" name="" id="" />
-              <label for="">USB LAN Card</label>
-            </div>
-            <div class="types">
-              <input type="checkbox" name="" id="" />
-              <label for="">USB Cable</label>
-            </div>
           </div>
           <hr />
+          <!-- ----------------offer-list filter--------------- -->
           <div class="offerList toggleHeight">
             <div class="offers offerHeading">
               <p class="label">OFFERS</p>
@@ -215,7 +213,12 @@
               <label for="noCost">No Cost EMI</label>
             </div>
             <div class="offers">
-              <input type="checkbox" name="specialPrice" id="specialPrice" />
+              <input
+                type="checkbox"
+                name="specialPrice"
+                id="specialPrice"
+                disabled
+              />
               <label for="specialPrice">Special Price</label>
             </div>
             <div class="offers">
@@ -229,60 +232,9 @@
               <p class="label">BRAND</p>
               <i class="material-icons toggleArrow">expand_more</i>
             </div>
-            <div class="brands">
-              <input type="checkbox" name="AMEKETTE" id="AMEKETTE" />
-              <label for="AMEKETTE">AMEKETTE</label>
-            </div>
-            <div class="brands">
-              <input type="checkbox" name="LAPCARE" id="LAPCARE" />
-              <label for="LAPCARE">LAPCARE</label>
-            </div>
-            <div class="brands">
-              <input type="checkbox" name="Logitech" id="Logitech" />
-              <label for="Logitech">Logitech</label>
-            </div>
-            <div class="brands">
-              <input type="checkbox" name="QHMPL" id="QHMPL" />
-              <label for="QHMPL">QHMPL</label>
-            </div>
-            <div class="brands">
-              <input type="checkbox" name="QUANTUM" id="QUANTUM" />
-              <label for="QUANTUM">QUANTUM</label>
-            </div>
-            <div class="brands">
-              <input type="checkbox" name="RAPOO" id="RAPOO" />
-              <label for="RAPOO">RAPOO</label>
-            </div>
-            <div class="brands">
-              <input type="checkbox" name="Honeywell" id="Honeywell" />
-              <label for="Honeywell">Honeywell</label>
-            </div>
-            <div class="brands">
-              <input type="checkbox" name="NOVOO" id="NOVOO" />
-              <label for="NOVOO">NOVOO</label>
-            </div>
-            <div class="brands">
-              <input type="checkbox" name="PHILIPS" id="PHILIPS" />
-              <label for="PHILIPS">PHILIPS</label>
-            </div>
-            <div class="brands">
-              <input type="checkbox" name="Protonics" id="Protonics" />
-              <label for="Protonics">Protonics</label>
-            </div>
-            <div class="brands">
-              <input type="checkbox" name="TP-Link" id="TP-Link" />
-              <label for="TP-Link">TP-Link</label>
-            </div>
-            <div class="brands">
-              <input type="checkbox" name="ZEBRONICS" id="ZEBRONICS" />
-              <label for="ZEBRONICS">ZEBRONICS</label>
-            </div>
-            <div class="brands">
-              <input type="checkbox" name="Zoook" id="Zoook" />
-              <label for="Zoook">Zoook</label>
-            </div>
           </div>
           <hr />
+          <!-----------------rating-section--------------->
           <div class="ratingList toggleHeight">
             <div class="cRatings cRatingHeading">
               <p class="label">CUSTOMER RATINGS</p>
@@ -290,56 +242,56 @@
             </div>
             <div class="cRatings">
               <input
-                type="checkbox"
-                name="4andabove"
+                type="radio"
+                name="rating"
                 id="4andabove"
                 value="4"
               />
               <label for="4andabove"
-                >4 &nbsp; <i class="fa-solid fa-star rate"></i>&nbsp; &
+                >4 &nbsp;★&nbsp; &
                 above</label
               >
             </div>
             <div class="cRatings">
               <input
-                type="checkbox"
-                name="3andabove"
+                type="radio"
+                name="rating"
                 id="3andabove"
                 value="3"
               />
               <label for="3andabove"
-                >3 &nbsp; <i class="fa-solid fa-star rate"></i>&nbsp; &
+                >3 &nbsp; ★ &nbsp; &
                 above</label
               >
             </div>
             <div class="cRatings">
               <input
-                type="checkbox"
-                name="2andabove"
+                type="radio"
+                name="rating"
                 id="2andabove"
                 value="2"
               />
               <label for="2andabove"
-                >2 &nbsp; <i class="fa-solid fa-star rate"></i>&nbsp; &
+                >2 &nbsp; ★ &nbsp; &
                 above</label
               >
             </div>
             <div class="cRatings">
               <input
-                type="checkbox"
-                name="1andabove"
+                type="radio"
+                name="rating"
                 id="1andabove"
                 value="1"
               />
               <label for="1andabove"
-                >1 &nbsp; <i class="fa-solid fa-star rate"></i>&nbsp; &
+                >1 &nbsp; ★ &nbsp; &
                 above</label
               >
             </div>
           </div>
         </div>
       </section>
-
+      <!-- -------------------main-content-------------- -->
       <section class="content">
         <div class="top-details">
           <div class="path">
@@ -368,16 +320,16 @@
               >(Showing 1 – 20 products of 20 products)</span
             >
           </div>
+          <!-- ---------------sort-options-------------------- -->
           <div class="sortOptions">
             <span class="sortTitle">Sort By</span>
-            <span class="sort-item popularity" id="selected">Popularity</span>
+            <span class="sort-item popularity" id="">Popularity</span>
             <span class="sort-item low-to-high" id=""
               >Price -- Low to High</span
             >
             <span class="sort-item high-to-low" id=""
               >Price -- High to Low</span
             >
-            <span class="sort-item newest" id="">Newest First</span>
           </div>
         </div>
 

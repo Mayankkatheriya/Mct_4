@@ -3,13 +3,33 @@ const timeCountEl = document.querySelector("#timeCount");
 const gameModeEl = document.querySelector("#gameMode");
 
 const reTryEl = document.querySelector("#reTry");
-// console.log(reTryEl);
 
+const upCoverEl = document.querySelector(".upCover");
+const gameCoverOpenEl = document.querySelector(".gameCoverOpen");
+const downCoverEl = document.querySelector(".downCover");
+
+
+// landing page create kr raha he ye --------------------------
+gameCoverOpenEl.addEventListener("click",(e)=>{
+upCoverEl.style.height = "0%";
+upCoverEl.style.transition = "all 1.2s linear";
+//  for downCoverEl 
+downCoverEl.style.height = "0%";
+downCoverEl.style.transition = "all 1.2s linear";
+
+gameCoverOpenEl.style.display = "none"
+gameCoverOpenEl.style.transition = "all 0.2s linear";
+
+
+// landing page code end --------------------------
+
+});
 
 function audio(){
   let gameAudio = new Audio();
   gameAudio.src ="./Asset/game-ball-tap.mp3";
 } 
+// ye function X pe click krne se hme game ko again start kr deta he ----------------------------
 
 reTryEl.addEventListener("click",()=>{
   
@@ -17,22 +37,31 @@ reTryEl.addEventListener("click",()=>{
   gameSelect(9,9,40);
   gameModeEl.selectedIndex=0;
   console.log("d");
-  audio();
+  // audio();
 })
 
 
-// running time ke liye
+// running time ke liye  -----------------------------------------
 let timer = false;
 let counter = 0;
 let settimeStart = null;
 
 
+//  canvas game ki sara buttonBox esi me store he ------------------------------------
+
 let canvas = document.getElementById("canvas");
 
+
+
+
+// function  ko hm bahar global me esliye call kiya he taki jb mere pade lode ho to gage easy mode se pahle start ho--------------------
 gameSelect(9,9,40);
 
+
+//  gameMode esse hm apne game ki lavel ko change kr kre he --------------------------------
+
 gameModeEl.addEventListener("change", (e) => {
-  console.log(e);
+  // console.log(e);
   if (e.target.value == "easy") {
 
 
@@ -48,36 +77,51 @@ gameModeEl.addEventListener("change", (e) => {
   }
 });
 
+// gameMode end. -----------------------
+
+
+// define:-  ROW,COLS & SIZE:- canvas me kitne number of rows and cols and unke size hm diside kr rahe he --------------------
+
 function gameSelect(ROWS, COLS, SIZE) {
   let restartButton = document.getElementById("restart");
 
   let cells;
-
   let failedBombKey;
   let revealedKeys;
   let flaggedKeys;
   let map;
 
+
+  //  es function ko sumjhna he abhi -------------------------------------
   function toKey(row, col) {
     return row + "-" + col;
   }
+
+  //  es function ko sumjhna he abhi -------------------------------------
 
   function fromKey(key) {
     return key.split("-").map(Number);
   }
 
-  function createButtons() {
-    canvas.style.width = ROWS * SIZE + "px";
-    canvas.style.height = COLS * SIZE + "px";
-    for (let i = 0; i < ROWS; i++) {
-      for (let j = 0; j < COLS; j++) {
-        let cell = document.createElement("button");
 
+  //  createButtons function se hm apne canvas ke aonder button creat kre rahe ---------------------
+  function createButtons() {
+    canvas.style.width = ROWS * SIZE + "px";  // set the Row width-----------
+    canvas.style.height = COLS * SIZE + "px"; // set the Row height----------
+    for (let i = 0; i < ROWS; i++) {   // rows pe ek ek kr travel ck rahe he -----------
+      for (let j = 0; j < COLS; j++) {  // cols pe ek ek kr travel ck rahe he -----------
+
+        let cell = document.createElement("button"); // rows & cols pe travel kr ke hm button creat kre rahe he -------
+
+
+        //  cell ke ander jo button create huaa he use hm style provide krwa rahe he ---------
         cell.style.float = "left";
         cell.style.width = SIZE + "px";
         cell.style.height = SIZE + "px";
         cell.style.backgroundColor="orangered"
+//  cell style end ----------------------------------
 
+// yaha tk code understand 16-11-23 
 
         cell.oncontextmenu = (e) => {
           if (failedBombKey !== null) {
