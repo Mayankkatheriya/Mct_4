@@ -62,6 +62,7 @@ function clearCart() {
 }
 
 // Function to update the cart display
+// Function to updateCart function to include a message when the cart is empty
 function updateCart() {
     const cartCount = document.getElementById('cart-count');
     const cartItems = document.getElementById('cart-items');
@@ -72,19 +73,35 @@ function updateCart() {
     // Clear existing cart items
     cartItems.innerHTML = '';
 
-    // Display cart items in the cart page
-    cart.forEach(item => {
-        const li = document.createElement('li');
-        li.innerHTML = `
-            <div class="cart-item">
-                <h2>${item.title}</h2>
-                <p class="special-price">Rs. ${item.price}</p>
-            </div>
-        `;
-        cartItems.appendChild(li);
-    });
+    if (cart.length === 0) {
+        // include a message when the cart is empty
+        const emptyCartMessage = document.createElement('p');
+        emptyCartMessage.textContent = 'Your cart is empty.';
+        cartItems.appendChild(emptyCartMessage);
+        emptyCartMessage.style.textAlign ="center";
+    } else {
+        // Display cart items in the cart page
+        cart.forEach((item, index) => {
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <div class="cart-item">
+                    <h2>${item.title}</h2>
+                    <p class="special-price">Rs. ${item.price}</p>
+                    <button onclick="removeCartItem(${index})">Remove</button> <!-- New button -->
+                </div>
+            `;
+            cartItems.appendChild(li);
+        });
+    }
 }
-
+// Add this function to remove a specific item from the cart
+function removeCartItem(index) {
+    const removedItem = cart[index].title;
+    cart.splice(index, 1); // Remove the item from the cart array
+    updateCart(); // Update the cart display
+    toastr.info(`${removedItem} removed from the cart`); // Display toastr notification
+    saveCartToStorage(); // Save the updated cart to local storage
+}
 // Function to open the cart page
 function openCartPage() {
     updateCart();
