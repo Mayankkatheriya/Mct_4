@@ -53,19 +53,21 @@ To enhance user experience and make the shopping cart persistent across page rel
    ```javascript
    const cartKey = 'cart';
    let cart = [];
-- **Real-time Cart Updates:** The Toastr library is employed to show real-time cart updates and notifications. When a user adds a product to the cart, Toastr displays a notification, enhancing the user experience by providing feedback on their actions.
+- **Real-time Cart Updates:** The Toastr library is employed to show real-time cart updates and notifications. When a user adds a product to the cart, remove product from the cart Toastr displays a notification, enhancing the user experience by providing feedback on their actions.
 
-![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/90d28793-9672-4c9c-a782-9fc9ac949409)
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/22d09f13-862c-427d-8a24-e4caeb56d7d6)
 
 - **Notification for Added Items:** When a product is added to the cart, a green notification bar (`#added`) appears at the top with notification sound, providing a clear indication to the user.
 
 ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/324d3c43-49e9-407c-9d2f-8f5175d01f6b)
 
-- **Notification for already item in cart:** When a user clicks again on the same item in the cart, a yellow notification bar (`#added`) appears at the top with alert sound,
-
-  - **Notification for cart cleared:** When products cleared from the cart, a blue notification bar (`#added`) appears at the top, providing a   clear indication to the user.
-
+- **Notification for already item in cart:** When a user clicks again on the same item in the cart, a yellow notification bar (`#alreadyAdded`) appears at the top with alert sound,
+ 
 ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/ffbf0554-c945-4635-baed-cc7b0a6b639e)
+
+  - **Notification for remove item from cart:** When products removed from the cart, a blue notification bar (`#removed`) appears at the top, providing a clear indication to the user.
+
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/c47afd9a-d2b5-49e8-b8bf-f2536c85f692)
 
 - **Razorpay Integration:** Secure payments are facilitated through the integration of the Razorpay API. The `handlePayment` function uses Razorpay to handle the payment process when a user clicks the "Buy Now" button.
  
