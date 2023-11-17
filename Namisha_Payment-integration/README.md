@@ -53,9 +53,9 @@ To enhance user experience and make the shopping cart persistent across page rel
    ```javascript
    const cartKey = 'cart';
    let cart = [];
-- **Real-time Cart Updates:** The Toastr library is employed to show real-time cart updates and notifications. When a user adds a product to the cart, Toastr displays a notification, enhancing the user experience by providing feedback on their actions.
+- **Real-time Cart Updates:** The Toastr library is employed to show real-time cart updates and notifications. When a user adds a product to the cart, remove product from the cart, Toastr displays a notification, enhancing the user experience by providing feedback on their actions.
 
-![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/90d28793-9672-4c9c-a782-9fc9ac949409)
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/22d09f13-862c-427d-8a24-e4caeb56d7d6)
 
 - **Notification for Added Items:** When a product is added to the cart, a green notification bar (`#added`) appears at the top with notification sound, providing a clear indication to the user.
 
