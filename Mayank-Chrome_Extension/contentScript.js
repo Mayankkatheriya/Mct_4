@@ -3,6 +3,7 @@
   let currentVideo = "";
   let currentVideoBookmarks = [];
 
+  //TODO --------------function to fetch chrome storage-----------------------
   const fetchBookmarks = () => {
     return new Promise((resolve) => {
       chrome.storage.sync.get([currentVideo], (obj) => {
@@ -11,7 +12,10 @@
     });
   };
 
-  const addNewBookmarkEventHandler = async () => {
+  //TODO //----------event handler function for bookmark click-----------
+  const addNewBookmarkEventHandler = async (e) => {
+    
+
     let details = window.prompt("Enter keyPoint")
     const currentTime = youtubePlayer.currentTime;
     const newBookmark = {
@@ -27,11 +31,13 @@
     });
   };
 
+
+  //TODO ----------function for new video--------------
   const newVideoLoaded = async () => {
     const bookmarkBtnExists = document.getElementsByClassName("bookmark-btn")[0];
-
     currentVideoBookmarks = await fetchBookmarks();
 
+    //TODO   ----------trying to add all bookmarks-----------------
     if (!bookmarkBtnExists) {
       const bookmarkBtn = document.createElement("img");
 
@@ -45,7 +51,9 @@
       youtubeLeftControls = document.getElementsByClassName("ytp-left-controls")[0];
       youtubePlayer = document.getElementsByClassName('video-stream')[0];
 
+      //----------------adding boookmark button on video----------
       youtubeLeftControls.appendChild(bookmarkBtn);
+      //--------------creating a click event on bookmark btn------------------
       bookmarkBtn.addEventListener("click", addNewBookmarkEventHandler);
     }
   };
@@ -68,62 +76,10 @@
 
   // newVideoLoaded();
 })();
-
+//TODO covert timestamp(seconds) in ISO format
 const getTime = t => {
   var date = new Date(0);
   date.setSeconds(t);
 
   return date.toISOString().substr(11, 8);
 };
-
-
-// let elementParent = document.querySelector(".ytp-time-display");
-// elementParent.style.display = "flex";
-// elementParent.style.alignItems = "center";
-// let timeStamp = document.querySelector(".ytp-time-current");
-// let referenceElement = document.querySelector(
-//   ".ytp-clip-watch-full-video-button-separator"
-// );
-
-// let bookmarkIcon = document.createElement("img");
-// bookmarkIcon.src =
-//   "https://cdn.pixabay.com/photo/2012/04/02/16/07/plus-24844_1280.png";
-// bookmarkIcon.id = "bookmarkIcon";
-// bookmarkIcon.style.cssText =
-//   "width: 1.5rem; height: 1.5rem; cursor: pointer; padding: 0 2rem";
-// elementParent.insertBefore(bookmarkIcon, referenceElement);
-
-// bookmarkIcon.addEventListener("click", () => {
-//   let videoId = window.location.href.split("?")[1].substr(2);
-
-//   // Retrieve existing timestamps from storage
-//   chrome.storage.local.get({ bookmarks: {} }, function (result) {
-//     let timeStampArray = result.bookmarks[videoId] || [];
-
-//     // Add the current timestamp to the array
-//     if(timeStampArray.indexOf(timeStamp.innerText) === -1){
-//       timeStampArray.push(timeStamp.innerText);
-//     }
-
-//     // Save the updated array back to storage
-//     chrome.storage.local.set(
-//       { bookmarks: { ...result.bookmarks, [videoId]: timeStampArray } },
-//       () => {
-//         console.log("Data added to storage:", {
-//           bookmarks: { ...result.bookmarks, [videoId]: timeStampArray },
-//         });
-//       }
-//     );
-
-//     console.log("Timestamp added:", timeStamp.innerText);
-//     console.log("Video URL:", window.location.href);
-//     console.log("Video ID:", videoId);
-//   });
-// });
-
-// chrome.runtime.onMessage.addListener((data, sender, response)=>{
-//   if(data.type === 'PLAY'){
-//     let youtubePlayer = document.querySelector("video");
-//     youtubePlayer.currentTime = data.timeStampValue;
-//   }
-// });
