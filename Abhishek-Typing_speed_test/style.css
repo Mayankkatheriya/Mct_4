@@ -122,7 +122,7 @@ body {
   padding: 12px 0;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   border-top: 1px solid #bfbfbf;
   line-break: auto;
   flex-wrap: wrap;
@@ -188,7 +188,6 @@ button:hover{
   font-size: 19px;
 }
 .result-details li span {
-  /* display: block; */
   font-size: 20px;
   margin-left: 10px;
 }
@@ -221,7 +220,7 @@ li:not(:first-child) span {
   align-items: center;
   justify-content: space-evenly;
 }
-.instagram, .facebook, .linkedin{
+.instagram, .facebook, .linkedin, .twitter{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -241,6 +240,11 @@ li:not(:first-child) span {
   color: black;
 }
 .instagram:hover{
+  transition: .2s ease-in-out;
+  background-color: skyblue;
+  color: black;
+}
+.twitter:hover{
   transition: .2s ease-in-out;
   background-color: skyblue;
   color: black;

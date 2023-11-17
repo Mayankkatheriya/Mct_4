@@ -4,12 +4,13 @@ let wrapper=document.querySelector(".wrapper");
 let share_btn=document.querySelector(".share_btn");
 let rslt_detail=document.querySelector(".result-details");
 let social_icons=document.querySelector(".social-icons");
+let content=document.querySelector(".content");
 start_btn.addEventListener("click",mainArea);
 
 function mainArea(){
     start.style.display="none";
     share_btn.style.display="none";
-    rslt_detail.style.visibility="hidden";
+    rslt_detail.style.display="none";
     social_icons.style.display="none";
     wrapper.style.display="block";
     const paragraphs = [
@@ -92,14 +93,16 @@ function initTimer() {
     }
     if(timeLeft == 0){
         share_btn.style.display="block";
-        rslt_detail.style.visibility="visible";
+        rslt_detail.style.display="flex";
+        content.style.justifyContent="space-between";
         share_btn.addEventListener("click",()=>{
             social_icons.style.display="flex";
         })
     }
 }
 function resetTest() {
-    rslt_detail.style.visibility="hidden";
+    rslt_detail.style.display="none";
+    content.style.justifyContent="center";
     share_btn.style.display="none";
     social_icons.style.display="none";
     loadParagraph();
