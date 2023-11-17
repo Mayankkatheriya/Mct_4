@@ -53,6 +53,13 @@ function addToCart(productTitle, productPrice) {
         addToCartSound.play();
     }
 }
+// Add this function to clear the cart
+function clearCart() {
+    cart = []; // Clear the cart array
+    updateCart(); // Update the cart display
+    toastr.info('Cart cleared'); // Display toastr notification
+    saveCartToStorage(); // Save the updated cart to local storage
+}
 
 // Function to update the cart display
 function updateCart() {
@@ -93,8 +100,6 @@ function closeCartPage() {
 
 // Function to handle payment using Razorpay
 function handlePayment(productTitle, productPrice, productImage) {
-    // ... (unchanged code)
-
     // Save the current cart to local storage before processing payment
     saveCartToStorage();
 }
@@ -171,14 +176,6 @@ function handlePayment(productTitle, productPrice, productImage) {
     rzp.open();
     
 }
-// Add this function to clear the cart
-function clearCart() {
-    cart = []; // Clear the cart array
-    updateCart(); // Update the cart display
-    toastr.info('Cart cleared'); // Display toastr notification
-    saveCartToStorage(); // Save the updated cart to local storage
-}
-
 
 // Call the renderProducts function to display product containers
 renderProducts();
