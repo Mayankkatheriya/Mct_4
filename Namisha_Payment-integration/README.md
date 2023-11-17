@@ -55,7 +55,7 @@ The project is organized into several key directories:
 
 ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/324d3c43-49e9-407c-9d2f-8f5175d01f6b)
 
-- **Notification for already item in cart:** When user click again on same item's cart it's show item already in the cart, a yellow notification bar (`#added`) appears at the top, providing a clear indication to the user.
+- **Notification for already item in cart:** When a user clicks again on the same item in the cart, a yellow notification bar (`#added`) appears at the top,
   
 ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/ffbf0554-c945-4635-baed-cc7b0a6b639e)
 
