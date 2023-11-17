@@ -3,6 +3,7 @@ let start_btn=document.querySelector(".strt-btn");
 let wrapper=document.querySelector(".wrapper");
 let share_btn=document.querySelector(".share_btn");
 let rslt_detail=document.querySelector(".result-details");
+let high_score_text=document.querySelector(".high-score-text");
 // let social_icons=document.querySelector(".social-icons");
 let content=document.querySelector(".content");
 start_btn.addEventListener("click",mainArea);
@@ -115,7 +116,9 @@ function initTimer() {
         share_btn.style.display="block";
         rslt_detail.style.display="flex";
         content.style.justifyContent="space-between";
-
+        high_score_text.innerText=`Wpm: ${wpmTag.innerText}
+        Cpm: ${cpmTag.innerText}
+        Errors: ${errorTag.innerText}`;
     }
 }
 function resetTest() {

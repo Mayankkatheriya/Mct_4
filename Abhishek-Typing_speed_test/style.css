@@ -53,6 +53,26 @@ body {
     text-shadow: 2px 2px 4px rgba(208, 198, 198, 0.5);
     box-shadow: 1px 1px 4px #bfbfbf;
 }
+.high-score{
+  position: fixed;
+  top: 5rem;
+  right: 5rem;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.high-score-text{
+  height: 150px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 20px;
+  border: 1px solid white;
+}
 .wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -66,6 +86,8 @@ body {
 .wrapper .input-field {
   opacity: 0;
   position: absolute;
+  display: flex;
+  flex-wrap: wrap;
 }
 .input-field::-webkit-scrollbar{
   display: none;
@@ -82,6 +104,8 @@ body {
 .content-box .typing-text {
   overflow: scroll;
   max-height: 256px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .typing-text p {
   font-size: 22px;
