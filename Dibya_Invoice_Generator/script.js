@@ -214,4 +214,16 @@ if (
 let ne =document.getElementById('note');
 ne.addEventListener('keyup',function(){
   document.getElementById('not').textContent=ne.value
+});
+
+
+document.getElementById('pri-btn').addEventListener('click',()=>{
+  let inv =document.querySelector('.invoice')
+  document.querySelector('.details').style.display='none'
+  inv.classList.add('while-pr');
+  window.print();
+  document.querySelector('.details').style.display='flex'
+  // inv.style.width='50vw'
+  inv.classList.remove('while-pr');
+  
 })
