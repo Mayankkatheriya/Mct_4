@@ -62,10 +62,12 @@ To enhance user experience and make the shopping cart persistent across page rel
 ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/324d3c43-49e9-407c-9d2f-8f5175d01f6b)
 
 - **Notification for already item in cart:** When a user clicks again on the same item in the cart, a yellow notification bar (`#added`) appears at the top with alert sound,
+ 
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/ffbf0554-c945-4635-baed-cc7b0a6b639e)
 
   - **Notification for cart cleared:** When products cleared from the cart, a blue notification bar (`#added`) appears at the top, providing a   clear indication to the user.
-
-![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/ffbf0554-c945-4635-baed-cc7b0a6b639e)
+  - 
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/c47afd9a-d2b5-49e8-b8bf-f2536c85f692)
 
 - **Razorpay Integration:** Secure payments are facilitated through the integration of the Razorpay API. The `handlePayment` function uses Razorpay to handle the payment process when a user clicks the "Buy Now" button.
  
