@@ -8,6 +8,10 @@ const upCoverEl = document.querySelector(".upCover");
 const gameCoverOpenEl = document.querySelector(".gameCoverOpen");
 const downCoverEl = document.querySelector(".downCover");
 
+//  for audio
+
+const addToCartSound = new Audio('/Asset/game-ball-tap.mp3');
+const bumbBlast = new Audio('/Asset/mixkit-clear.wav');
 
 // landing page create kr raha he ye --------------------------
 gameCoverOpenEl.addEventListener("click",(e)=>{
@@ -19,16 +23,20 @@ downCoverEl.style.transition = "all 1.2s linear";
 
 gameCoverOpenEl.style.display = "none"
 gameCoverOpenEl.style.transition = "all 0.2s linear";
+addToCartSound.play();
 
 
 // landing page code end --------------------------
 
 });
 
-function audio(){
-  let gameAudio = new Audio();
-  gameAudio.src ="./Asset/game-ball-tap.mp3";
-} 
+
+
+
+// function audio(){
+//   let gameAudio = new Audio("./Asset/game-ball-tap.mp3");
+//   // gameAudio.src ="./Asset/game-ball-tap.mp3";
+// } 
 // ye function X pe click krne se hme game ko again start kr deta he ----------------------------
 
 reTryEl.addEventListener("click",()=>{
@@ -38,7 +46,12 @@ reTryEl.addEventListener("click",()=>{
   gameModeEl.selectedIndex=0;
   console.log("d");
   // audio();
+  
+    addToCartSound.play();
+ 
 })
+
+
 
 
 // running time ke liye  -----------------------------------------
@@ -85,13 +98,15 @@ gameModeEl.addEventListener("change", (e) => {
 function gameSelect(ROWS, COLS, SIZE) {
   let restartButton = document.getElementById("restart");
 
+ 
+
   let cells;
   let failedBombKey;
   let revealedKeys;
   let flaggedKeys;
   let map;
 
-
+  
   //  es function ko sumjhna he abhi -------------------------------------
   function toKey(row, col) {
     return row + "-" + col;
@@ -118,7 +133,13 @@ function gameSelect(ROWS, COLS, SIZE) {
         cell.style.float = "left";
         cell.style.width = SIZE + "px";
         cell.style.height = SIZE + "px";
-        cell.style.backgroundColor="orangered"
+        // cell.style.backgroundColor="orangered"
+        cell.style.backgroundColor="grey"
+
+
+        cell.addEventListener("click",()=>{
+          addToCartSound.play();
+        })
 //  cell style end ----------------------------------
 
 // yaha tk code understand 16-11-23 
@@ -147,7 +168,8 @@ function gameSelect(ROWS, COLS, SIZE) {
       }
     }
     restartButton.onclick = startGame;
-    audio();
+  
+    // audio();
   }
 
   function startGame() {
@@ -169,6 +191,7 @@ function gameSelect(ROWS, COLS, SIZE) {
       cells = new Map();
       createButtons();
     }
+    addToCartSound.play();
   }
 
   function updateButtons() {
@@ -177,7 +200,7 @@ function gameSelect(ROWS, COLS, SIZE) {
         let key = toKey(i, j);
         let cell = cells.get(key);
 
-        cell.style.backgroundColor = "aqua";
+        cell.style.backgroundColor = "grey";
         cell.style.color = "black";// ----------------
         cell.textContent = "";
         cell.disabled = false;
@@ -186,6 +209,7 @@ function gameSelect(ROWS, COLS, SIZE) {
         if (failedBombKey !== null && value === "bomb") {
           cell.disabled = true;
           cell.textContent = "💣";
+          bumbBlast.play();
           if (key === failedBombKey) {
             cell.style.backgroundColor = "red";
           }
@@ -213,7 +237,8 @@ function gameSelect(ROWS, COLS, SIZE) {
     if (failedBombKey !== null) {
       canvas.style.pointerEvents = "none";
       restartButton.style.display = "block";
-      clearTimeout(settimeStart)
+      clearTimeout(settimeStart);
+      
       
     } else {
       canvas.style.pointerEvents = "";

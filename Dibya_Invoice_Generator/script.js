@@ -4,18 +4,14 @@ let add_Btn = document.querySelector(".add-btn"),
   AMOUNT=0,
   chargeAdd =document.querySelector('.charge-Add'),
   InvoiceTotal= document.querySelector('.InvoiceTotal');
-  let company =document.getElementById('company');
-  console.log(company),billTo =document.getElementById('BillTo'), dateIss =document.getElementById('dateIss'),payT =document.getElementById('payT');
+  let company =document.getElementById('company'),billTo =document.getElementById('BillTo'), dateIss =document.getElementById('dateIss'),payT =document.getElementById('payT');
   let invoNo =document.getElementById('invoNo');
-  console.log(invoNo);
+ 
   
 invoNo.addEventListener('keyup',function(){
   console.log(invoNo.value);
   document.getElementById('invNoDA').textContent=invoNo.value
 })
-
-
-
 
 
 add_Btn.addEventListener("click", AddList);
@@ -86,12 +82,12 @@ list_Detail();
 function total(a, b) {
   return eval(a * b);
 }
-function TotalChange() {
-  let TotalA = document.querySelectorAll(".total");
-  TotalA.forEach((ele) => {
-    console.log(ele.value);
-  });
-}
+// function TotalChange() {
+//   let TotalA = document.querySelectorAll(".total");
+//   TotalA.forEach((ele) => {
+//     console.log(ele.value);
+//   });
+// }
 
 function AddList_InVoice(deta) {
   // console.log(deta);
@@ -214,4 +210,30 @@ if (
 let ne =document.getElementById('note');
 ne.addEventListener('keyup',function(){
   document.getElementById('not').textContent=ne.value
+});
+
+
+document.getElementById('pri-btn').addEventListener('click',()=>{
+  let inv = document.getElementById('invo');
+  inv.classList.add('while-pr');
+  inv.classList.remove('while-pr');
+  
+  document.querySelector('.details').style.display='none'
+  inv.classList.add('while-pr');
+  window.print();
+  document.querySelector('.details').style.display='flex'
+  // inv.style.width='50vw'
+  inv.classList.remove('while-pr');
+  
 })
+document.getElementById('save').addEventListener('click',()=>{
+  let inv = document.getElementById('page');
+  // inv.classList.add('while-pr');
+  html2pdf()
+  .from(inv)
+  .save();
+  
+})
+checkbox.addEventListener("change", () => {
+  document.body.classList.toggle("dark");
+});

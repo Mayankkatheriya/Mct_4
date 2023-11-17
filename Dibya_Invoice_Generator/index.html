@@ -11,6 +11,14 @@
 
 <body>
     <div class="details">
+        <div class="key">
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox" class="checkbox-label">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+              <span class="ball"></span>
+            </label>
+          </div>
 
         <div class="input-detail">
             <div class="Input-head">
@@ -48,25 +56,25 @@
                 <label for="">Bill to</label>
             </div>
             <div style="width: 80%; display: flex; justify-content: space-between;">
-                <input type="date" style= "width:150px" id="dateIss">
-            <input id="payT" type="date" style= "width:150px">
+                <input type="date" class="date-in" style= "width:150px" id="dateIss">
+            <input id="payT" class="date-in" type="date" style= "width:150px">
             </div>
 
         </div>
 
         <div class="List">
             <div class="List-head">
-                <h2 id="text">List of items</h2>
-                <h2>Price</h2>
-                <h2>Qty</h2>
-                <h2>Amount</h2>
+                <h4 id="text">List of items</h4>
+                <h4>Price</h4>
+                <h4>Qty</h4>
+                <h4>Amount</h4>
             </div>
             <ol class="list-item">
                 <li class="item">
-                    <input type="text" name="" id="text" required>
-                <input type="number" id="number1" required>
-                <input type="number" id="number2" required value="1">
-                <input class="total" type="number" id="total" value="" required>
+                    <input type="text" name="" id="text" class="lis-css" required>
+                <input type="number" id="number1" required class="lis-css">
+                <input type="number" id="number2" required value="1" class="lis-css">
+                <input class="total" type="number" id="total" value="" required class="lis-css">
         <button class="add">add</button>
         <div id="error-box"></div>
                     
@@ -103,19 +111,19 @@
 
 
 
-    <div class="invoice">
+    <div class="invoice" id="invo">
         <div class="print">
             <h1 style="padding-bottom: 20px;" class="priv">
                 Preview
             </h1>
             <div >
-                <button class="btn">Print</button>
-            <button class="btn">Save</button>
+                <button class="btn " id="pri-btn">Print</button>
+            <button class="btn" id="save">Save</button>
             </div>
         </div>
-        <div class="page">
+        <div class="page" id="page">
             <div class="logo">
-                <img src="" alt="img">
+                <img src="" alt="" class="l-img">
                 <p style="text-align: right ;font-size: 1.2rem; font-weight: 800;">Invoce No :- <span id="invNoDA" style="font-weight: 600;color: rgb(32, 88, 219);margin-right: 50px;"></span></p>
             </div>
             <div class="summary">
@@ -173,8 +181,10 @@
         </div>
 
     </div>
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
     <script src="https://kit.fontawesome.com/54ac71e1b5.js" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
+
 </body>
 
 </html>
