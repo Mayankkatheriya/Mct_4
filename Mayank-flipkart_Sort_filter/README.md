@@ -12,9 +12,9 @@ Welcome to the Flipkart Clone project! This is a replica of the popular e-commer
 - [License](#license)
 
 ## Demo
-[Click Me For Live Demo](https://drive.google.com/file/d/14hgGbh2DAEh_gQIvBkjKPOpay0NHpUl3/view)
+👉 [Click Me For Live Demo](https://drive.google.com/file/d/14hgGbh2DAEh_gQIvBkjKPOpay0NHpUl3/view)
 
-[Try it here](https://mayankkatheriya.github.io/Mct_4/Mayank-flipkart_Sort_filter/)
+👉🏻 [Try it here](https://mayankkatheriya.github.io/Mct_4/Mayank-flipkart_Sort_filter/)
 
 ## Features
 1. **Product Listing:** Display a list of products with details.
@@ -33,8 +33,8 @@ Welcome to the Flipkart Clone project! This is a replica of the popular e-commer
 2. Navigate to the project directory: `cd Mayank-flipkart_Sort_filter`
 3. Open `index.html` in your preferred browser.
 
-## Usage
-
+## UI
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/128832286/6cb8ff12-1142-478b-b565-b6596f51f17a)
 
 ## Contributing
 If you'd like to contribute to this project, please follow these guidelines:
