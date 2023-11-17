@@ -31,8 +31,6 @@ The project is organized into several key directories:
 ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/dc5cd807-a290-4c37-861a-a55cc29461fb) ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/77810dcf-3c1f-4b24-b6e5-1a2ad2bce132)
 
 
-
-
 - **Dynamic Rendering:** JavaScript is used to dynamically render product containers on the main page. The `renderProducts` function fetches product data from `products.json` and creates product containers dynamically, allowing for easy addition of new products without modifying the HTML code.
 
 ![Dynamic Rendering](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/9265bf56-80a6-4339-852d-073e2b7a29b8)
@@ -41,8 +39,19 @@ The project is organized into several key directories:
 
 ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/434dccca-5d1a-46c0-9e1b-1932aa8bc0f5)
 
-- **Real-time Cart Updates:** The Toastr library is employed to show real-time cart updates and notifications. When a user adds a product to the cart, Toastr displays a notification, enhancing the user experience by providing feedback on their actions.
+## Local Storage Functionality in cart
+To enhance user experience and make the shopping cart persistent across page reloads, local storage functionality has been implemented. Follow the steps below to understand the recent additions:
 
+1. **Initialization of Cart Key and Array:**
+   - A constant `cartKey` and an array `cart` have been declared in the `js/products.js` file.
+   - `cartKey` is set as 'cart', representing the key for storing/retrieving data in/from local storage.
+   - The `cart` array holds the cart items.
+
+   ```javascript
+   const cartKey = 'cart';
+   let cart = [];
+- **Real-time Cart Updates:** The Toastr library is employed to show real-time cart updates and notifications. When a user adds a product to the cart, Toastr displays a notification, enhancing the user experience by providing feedback on their actions.
+  
 ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/90d28793-9672-4c9c-a782-9fc9ac949409)
 - **Razorpay Integration:** Secure payments are facilitated through the integration of the Razorpay API. The `handlePayment` function uses Razorpay to handle the payment process when a user clicks the "Buy Now" button.
  
