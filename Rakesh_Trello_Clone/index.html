@@ -1,58 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
     <title>Trello Clone</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./style.css">
-    
-</head>
-
-<body>
-    <div class="board">
-     
-        <button id="Add_Board" type="button" class="button_all" style="margin-bottom: 10px;">Add Board</button>
-        <!-- <div class="swim-lane">
-            <form id="todo-form">
-                <input type="text"  id="todo-input" placeholder ='Enter Board Name'>
-                <div class='div_flex'> 
-                <button type = "submit" id ='final_add_board' class='button_all'>CREATE BOARD </button>
-                <button type='button' id='cancel'><i class="fa-solid fa-x"></i></button>  
-                </div>
-            </form>
-
-        </div> -->
-
-         <div class="swim">
-            
-
-            <!-- <div class="swim-lane" id="todo-lane">
-                <h3 class="heading">Doing</h3>
-                 <p class="task" draggable="true">Get Pen</p>
-                 <p class="task" draggable="true">Get Books</p>
-            </div>
-
-
-            <div class="swim-lane" id="todo-lane">
-                <h3 class="heading">Done</h3> 
-                 <p class="task" draggable="true">Get Shoes</p>
-                 <p class="task" draggable="true">Get Boots</p>
-            </div>
-
-
-            <div class="swim-lane" id="todo-lane">
-                <h3 class="heading">Getting Done</h3> 
-                 <p class="task" draggable="true">Get jackets</p>
-                 <p class="task" draggable="true">Get Warmer</p>
+  </head>
+  <body>
+    <div class="container">
+      <h1>TRELLO CLONE</h1>
+      <form class="add-tasks">
+        <input type="text" id="tasks-input" placeholder="Add your Tasks here" />
+        <button type="submit">Add+</button>
+      </form>
+      <div class="main-task-container">
+        <div class="task-container" id="todo-task">
+          <h3 class="heading">TODO</h3>
+          <!-- <div class="text" draggable="true">
+                <p class="task" >Go to gym </p>
+                <i class="material-icons" style="font-size:18px;">delete</i>
             </div> -->
-         </div>
+            <button class="btns" id="todo">Add your task</button>
+        </div>
+        <div class="task-container" id="doing-task">
+          <h3 class="heading">DOING</h3>
 
+            <button class="btns" id="doing">Add your task</button>
+        </div>
+        <div class="task-container" id="done-task">
+          <h3 class="heading">DONE</h3>
+
+            <button class="btns" id="done">Add your task</button>
+        </div>
+        <div class="task-container" id="done-task">
+          <h3 class="heading">ON HOLD</h3>
+            <button class="btns" id="hold">Add your task</button>
+        </div>
+      </div>
     </div>
 
-    <script src="./to-do.js" ></script>
-    <script src="./drag.js" ></script>
-
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
