@@ -171,6 +171,13 @@ function handlePayment(productTitle, productPrice, productImage) {
     rzp.open();
     
 }
+// Add this function to clear the cart
+function clearCart() {
+    cart = []; // Clear the cart array
+    updateCart(); // Update the cart display
+    toastr.info('Cart cleared'); // Display toastr notification
+    saveCartToStorage(); // Save the updated cart to local storage
+}
 
 
 // Call the renderProducts function to display product containers

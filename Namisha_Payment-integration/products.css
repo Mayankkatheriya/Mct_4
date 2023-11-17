@@ -145,6 +145,7 @@ h2{
             align-items: center;
             z-index: 1000;
             overflow-y: scroll;
+            display: flex;
             /* text-overflow: clip; */
             
         }
@@ -153,8 +154,6 @@ h2{
             background-color: #ffffff;
             padding: 20px 50px;
             border-radius: 5px;
-            
-            
         }
         /* Your existing CSS code */
 
@@ -163,6 +162,10 @@ h2{
     text-align: center;
     font-weight: 600;
     font-size: 1rem;
+}
+.cart-button{
+    display: flex;
+   gap: 12px;
 }
 .special {
     margin-top: 5px;
