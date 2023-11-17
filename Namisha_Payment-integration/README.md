@@ -22,7 +22,7 @@ The project is organized into several key directories:
 - **sounds:** Includes sound files for a delightful user experience.
   - The `thank-you-for-shopping-garvins.mp3` file plays when a successful purchase occurs.
   - The `mixkit-software-interface-start-2574.wav` file plays when item added to cart.
-  - The `error-126627.mp3` file plays when same item get clicked which alredy added to cart.
+  - The `error-126627.mp3` file plays when same item get clicked which already added to cart.
 
 - **vendor:** Holds external libraries and stylesheets, such as `animate.css`, `toastr.min.css`, and `font-awesome.min.css`.
 
