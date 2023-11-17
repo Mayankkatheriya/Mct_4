@@ -1,3 +1,5 @@
+// ==================GLOBAL VARIABLE
+
 let add_Btn = document.querySelector(".add-btn"),
   list_Item = document.querySelector(".list-item"),
   list_Items = document.querySelector(".list-items"),
@@ -6,14 +8,16 @@ let add_Btn = document.querySelector(".add-btn"),
   InvoiceTotal= document.querySelector('.InvoiceTotal');
   let company =document.getElementById('company'),billTo =document.getElementById('BillTo'), dateIss =document.getElementById('dateIss'),payT =document.getElementById('payT');
   let invoNo =document.getElementById('invoNo');
+  let charge_Put_T= document.querySelector('.charge-put-Tax'),charge_Put_D= document.querySelector('.charge-put-Dis'),charge_Put_Sh= document.querySelector('.charge-put-ship');
+  let ne =document.getElementById('note');
  
   
+  // ================INVOICE NUMBER ADD
 invoNo.addEventListener('keyup',function(){
-  console.log(invoNo.value);
   document.getElementById('invNoDA').textContent=invoNo.value
 })
 
-
+// ======================ADD LIST TO ITEM
 add_Btn.addEventListener("click", AddList);
 
 function AddList() {
@@ -34,6 +38,7 @@ function AddList() {
   addBtn()
   list_Detail();
 }
+// =============ADD BUTTON TO ADD MORE ITEMS
 function addBtn(){
   let addB =document.querySelector('.add')
   var errorBox = document.getElementById('error-box');
@@ -41,10 +46,9 @@ function addBtn(){
     if(validateForm(list_Item.children[list_Item.children.length - 1])){
       TotalCount(list_Item.children[list_Item.children.length - 1]);
       AddList_InVoice(list_Item.children[list_Item.children.length - 1])
-      addB
-      addB.disabled=true
-
       addB.classList.add('p')
+      addB.classList.remove('add')
+      
       errorBox.remove()
       add_Btn.style.display='block'
     }
@@ -53,6 +57,7 @@ function addBtn(){
 }
 addBtn();
 
+// ======================ADD DETAILS  TO FINAL
 function list_Detail() {
   
   let Item = document.querySelectorAll(".item");
@@ -78,17 +83,23 @@ function list_Detail() {
   });
 }
 list_Detail();
-
+// ============CALCULATE TOTAL
 function total(a, b) {
   return eval(a * b);
 }
-// function TotalChange() {
-//   let TotalA = document.querySelectorAll(".total");
-//   TotalA.forEach((ele) => {
-//     console.log(ele.value);
-//   });
-// }
 
+
+
+function TotalChange() {
+  let TotalA = document.querySelectorAll(".total");
+  TotalA.forEach((ele) => {
+    console.log(ele.value);
+  });
+}
+
+
+
+// ==========ADD DETAIL TO INVOICE
 function AddList_InVoice(deta) {
   // console.log(deta);
   let lis = document.createElement("li");
@@ -103,6 +114,7 @@ function AddList_InVoice(deta) {
     list_Items.append(lis)
 }
 
+// =======================CALCULATE TOTAL
 function TotalCount(det){
   let add =parseInt(det.children[3].value);
 AMOUNT+=add;
@@ -112,10 +124,10 @@ document.querySelector('.sub-A').textContent=`${AMOUNT}`
 
 
 
-let charge_Put_T= document.querySelector('.charge-put-Tax'),charge_Put_D= document.querySelector('.charge-put-Dis'),charge_Put_Sh= document.querySelector('.charge-put-ship');
 
 
 
+// ===========GET TAX,DIS,SHIPPING VALUE
 charge_Put_T.addEventListener('keyup',(e)=>{
   // console.log(e.target.value);
   document.querySelector('.charge-Tax').textContent=e.target.value
@@ -130,10 +142,7 @@ charge_Put_Sh.addEventListener('keyup',(e)=>{
 })
 
 
-function chargeDis(){
-
-}
-
+// ===========GET INVOICE COMPLETE
 document.querySelector('.generate').addEventListener('click',function(){
   if(validData()){
     let Tax =document.querySelector('.charge-Tax').textContent,dis=document.querySelector('.charge-Dis').textContent,ship=document.querySelector('.charge-Ship').textContent
@@ -143,6 +152,7 @@ document.querySelector('.generate').addEventListener('click',function(){
   
 })
 
+// ===========GET INFORMATION OF COMPANT AND CUSTOMER
 company.addEventListener('keyup',function(){
   // console.log(company.value);
   document.getElementById('com').textContent =company.value
@@ -160,7 +170,7 @@ payT.addEventListener('change',function(){
   document.getElementById('termAt').textContent=payT.value;
 });
 
-
+// ==============CHECK VALIDATION
 function validateForm(det) {
   var textValue = document.getElementById('text').value;
         var number1Value = det.children[0].value;
@@ -184,6 +194,8 @@ function validateForm(det) {
   
 }
 
+
+// ===============CHECK ALL DATA
 function validData(){
   // let fileInput = document.querySelector('.file-input'),
   input_css = document.querySelector('.input-css'),
@@ -207,12 +219,14 @@ if (
 
 
 }
-let ne =document.getElementById('note');
+
+
+// ===========ADD NOTE
 ne.addEventListener('keyup',function(){
   document.getElementById('not').textContent=ne.value
 });
 
-
+// ==============PRINT AND SAVA BUTTOM
 document.getElementById('pri-btn').addEventListener('click',()=>{
   let inv = document.getElementById('invo');
   inv.classList.add('while-pr');
@@ -234,6 +248,8 @@ document.getElementById('save').addEventListener('click',()=>{
   .save();
   
 })
+
+// ============TOOGLE KEY
 checkbox.addEventListener("change", () => {
   document.body.classList.toggle("dark");
 });

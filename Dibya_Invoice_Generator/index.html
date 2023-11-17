@@ -10,7 +10,11 @@
 </head>
 
 <body>
+<!-- --------------------DETAIL PAGE------------------- -->
+
     <div class="details">
+
+<!-- ---------------------TOGGLE KEY------------------- -->
         <div class="key">
             <input type="checkbox" class="checkbox" id="checkbox">
             <label for="checkbox" class="checkbox-label">
@@ -20,6 +24,8 @@
             </label>
           </div>
 
+
+<!-- ---------------------INPUT TAG FOR DETAIL PURPOSE------------------ -->
         <div class="input-detail">
             <div class="Input-head">
                 <label for="">Logo</label>
@@ -38,6 +44,9 @@
                 </div>
             </section>
         </div>
+
+
+<!-- ------------------TEXTAREA ADDRESS AND CUSTOMER NAME--------- -->
         <div style="width: 90%; display: flex;flex-direction: column; align-items: center;">
             <div class="Input-head">
                 <label for="">Your Company Details</label>
@@ -50,6 +59,8 @@
 
         </div>
 
+
+<!-- --------------------DATE OF ISSUE--------------- -->
         <div class="date">
             <div class="Input-head" >
                 <label for="">Your Company Details</label>
@@ -62,6 +73,8 @@
 
         </div>
 
+
+<!-- ---------------------LIST OF ITEMS--------------->
         <div class="List">
             <div class="List-head">
                 <h4 id="text">List of items</h4>
@@ -82,12 +95,18 @@
             </ol>
             <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
         </div>
+
+<!-- -----------ADDITONAL INFO----------------- -->
         <div class="Add-de">
+
+            <!-- -------------------NOTE TEXTAREA------------------ -->
             <div>
                 <label for="">Notes/Payment Terms</label>
                 <br>
                 <textarea name="" id="note" cols="30" rows="4"></textarea>
             </div>
+
+<!-- ----------------SUB TOTAL----------------- -->
             <div class="subC">
                 <h2 style="text-align: right;">Sub Total :- <span class="subA">0</span></h2>
                 <div class="charge">
@@ -105,13 +124,17 @@
             </div>
 
         </div>
+
+<!-- ---------------------BUTTOM TO GENERATE INVOICE--------------- -->
         <button class="generate">Invoice Generate</button>
 
     </div>
 
 
-
+<!-- ------------------PREVIEW---------------- -->
     <div class="invoice" id="invo">
+
+<!-- ------------------SAVE AND PRINT---------------- -->
         <div class="print">
             <h1 style="padding-bottom: 20px;" class="priv">
                 Preview
@@ -121,6 +144,7 @@
             <button class="btn" id="save">Save</button>
             </div>
         </div>
+<!-- ----------------------INVOICE HEADER---------------------- -->
         <div class="page" id="page">
             <div class="logo">
                 <img src="" alt="" class="l-img">
@@ -130,7 +154,7 @@
                 <p>summary</p>
                 <div class="hr"></div>
             </div>
-
+<!-- -----------------INVOICE ITEMS-------------- -->
             <ol class="all-detail">
                 <li id="com"></li>
                 <li id="bill"></li>
@@ -151,6 +175,7 @@
                 </ol>
             </div>
 
+ <!-- ----------------------INVOICE ADDITIONAL CHARGES------- -->
             <div class="Additional">
                 <div>
                     <p>SubTotal :-</p>
@@ -171,6 +196,7 @@
             <div class="hr"></div>
             <p class="inc">Invoice Total :- <span class=" InvoiceTotal"> 0.00</span></p>
 
+<!-- ----------------------INVOICE NOTE AND PAYMENT METHOD-------------- -->
             <div class="thank">
                 <h1>Notes :- <span id="not"></span></h1>
                 <p>Payment should be made by by UPI</p>
@@ -181,6 +207,8 @@
         </div>
 
     </div>
+
+    <!-- ----------------SCRIPT------------- -->
     <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
     <script src="https://kit.fontawesome.com/54ac71e1b5.js" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
