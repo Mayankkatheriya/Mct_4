@@ -213,7 +213,7 @@ li:not(:first-child) span {
   color: rgb(248, 67, 67);
   font-weight: lighter;
 }
-.social-icons{
+/* .social-icons{
   width: 100%;
   margin-top: 10px;
   display: flex;
@@ -248,4 +248,4 @@ li:not(:first-child) span {
   transition: .2s ease-in-out;
   background-color: skyblue;
   color: black;
-}
+} */
