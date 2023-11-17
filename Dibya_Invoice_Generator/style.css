@@ -1,6 +1,4 @@
-:root {
-    /* --bord: 2px solid black; */
-}
+
 
 * {
     padding: 0;
@@ -60,11 +58,12 @@ body {
     background-color: white;
     padding: 1%;
 }
-.date{
+
+.date {
     width: 90%;
-     display: flex;
-     flex-direction: column;
-      align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .input-detail {
@@ -75,13 +74,15 @@ body {
     justify-content: space-between;
     gap: 0.5rem;
 }
-.conti{
+
+.conti {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 90%;
 }
-.Input-head{
+
+.Input-head {
     display: flex;
     justify-content: space-between;
     width: 80%;
@@ -106,12 +107,13 @@ body {
     /* flex-direction: column; */
     justify-content: space-between;
     /* gap: 0.5rem; */
-    
-    
+
+
 
 }
-.List input{
-    
+
+.List input {
+
     border-radius: 5px;
     background: transparent;
     border: 1px solid rgb(165, 171, 176);
@@ -121,12 +123,13 @@ body {
     padding: 7px 8px;
     color: rgb(8, 9, 10);
     box-shadow: none;
-    :focus{
+
+    :focus {
         background-color: transparent;
         border-color: #3b49df;
         box-shadow: 1px 1px 0 #3b49df;
     }
-    
+
 }
 
 .List-head h2 {
@@ -147,11 +150,13 @@ body {
     justify-content: space-between;
     gap: 0.5rem;
 }
-.item input{
+
+.item input {
     width: 10%;
-    
+
 }
-#text{
+
+#text {
     width: 55%;
 }
 
@@ -159,11 +164,12 @@ body {
     height: 30px;
 }
 
-.add,.p {
+.add,
+.p {
     width: 50px;
     height: 30px;
     /* display: none; */
-    
+
     display: inline-block;
     outline: none;
     cursor: pointer;
@@ -176,16 +182,18 @@ body {
     line-height: 30px;
     font-weight: 400;
     text-align: center;
-    
+
 
 }
-.p:hover{
+
+.p:hover {
     baa
 }
+
 .add:hover {
-    background-color: #005fb2;  
+    background-color: #005fb2;
     border-color: #005fb2;
-} 
+}
 
 .Add-de {
     padding-top: 30px;
@@ -210,7 +218,8 @@ body {
     flex-direction: column;
     gap: 1rem;
 }
-.date-in{
+
+.date-in {
     height: 30px;
     width: 100px;
     border-radius: 5px;
@@ -240,17 +249,17 @@ body {
 }
 
 
-.generate{
-    
-    
-  
-    
+.generate {
+
+
+
+
     display: inline-block;
     outline: 0;
     border: 0;
     cursor: pointer;
-    transition: box-shadow 0.15s ease,transform 0.15s ease;
-    will-change: box-shadow,transform;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+    will-change: box-shadow, transform;
     background: #FCFCFD;
     box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #d6d6e7;
     height: 48px;
@@ -258,15 +267,16 @@ body {
     font-size: 18px;
     border-radius: 6px;
     color: #36395a;
-    transition: box-shadow 0.15s ease,transform 0.15s ease;
-    
-    
-    
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+
+
+
 
 }
-.generate:hover{
+
+.generate:hover {
     box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #d6d6e7;
-        transform: translateY(-2px);
+    transform: translateY(-2px);
 }
 
 
@@ -306,47 +316,51 @@ body {
     flex-direction: column;
     align-items: center; */
 }
-.while-pr{
+
+.while-pr {
     width: 100%;
     padding: 2%;
     padding-top: 5px;
     background-color: #c5d2e7;
 }
-.priv{
+
+.priv {
     color: #730293;
 }
-.print{
+
+.print {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
     /* border: 1px solid #000; */
 }
-.btn{
-  background-color: #0095ff;
-  border: 1px solid transparent;
-  border-radius: 3px;
-  box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.15385;
-  margin: 0;
-  outline: none;
-  padding: 8px .8em;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: baseline;
-  white-space: nowrap;
-  
+
+.btn {
+    background-color: #0095ff;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.15385;
+    margin: 0;
+    outline: none;
+    padding: 8px .8em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+
 }
 
 
@@ -373,7 +387,8 @@ body {
     align-items: center;
 
 }
-.summary P{
+
+.summary P {
     font-size: 1.2rem;
     font-weight: 600;
 }
@@ -406,7 +421,7 @@ body {
 .all-detail li {
     /* width: 200px; */
     /* border: var(--bord); */
-   
+
     word-wrap: break-word;
 }
 
@@ -434,7 +449,7 @@ body {
 .list-items {
     display: flex;
     flex-direction: column;
-    
+
 }
 
 .items {
@@ -445,7 +460,7 @@ body {
     border-bottom: 2px solid rgb(146, 139, 139);
     /* border-top-color: white; */
     ;
-    
+
 }
 
 
@@ -457,33 +472,34 @@ body {
     text-align: center;
     padding: 5px 0;
 }
-.add-btn{
-    
+
+.add-btn {
+
     appearance: none;
-  background-color: #2ea44f;
-  border: 1px solid rgba(27, 31, 35, .15);
-  border-radius: 6px;
-  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 20px;
-  padding: 6px 16px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-  white-space: nowrap;
-  display: none;
-  
-  
+    background-color: #2ea44f;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 6px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+    display: none;
+
+
 }
 
 
@@ -497,16 +513,18 @@ body {
     bottom: 0px;
     margin-left: 50%;
 }
-.Additional  p{
+
+.Additional p {
     font-weight: 700;
 }
 
 
-.pric p{
+.pric p {
     text-align: right;
     font-weight: 100;
 }
-textarea{
+
+textarea {
     font-size: 13px;
     border-radius: 4px;
     line-height: 1.5;
@@ -521,13 +539,15 @@ textarea{
     resize: none;
     overflow: hidden;
 }
-.logo-img{
+
+.logo-img {
     width: 200px;
     /* border: 1px solid #000000; */
     height: 50px;
 }
-.charge-Input input{
-    
+
+.charge-Input input {
+
     padding: 0 10px;
     text-align: left;
     transition-property: box-shadow, background;
@@ -547,10 +567,12 @@ textarea{
     font-weight: 400;
     font-style: normal;
     height: 30px;
-    :hover{
+
+    :hover {
         box-shadow: 0px 2px 4px rgb(39 44 52 / 12%);
     }
-    :focus{
+
+    :focus {
         transition-property: border-color, box-shadow, background;
         border-color: #39414D;
         outline: 0px;
@@ -558,8 +580,9 @@ textarea{
     }
 
 }
-.charge div p{
-    
+
+.charge div p {
+
     padding: 0 10px;
     text-align: left;
     transition-property: box-shadow, background;
@@ -574,14 +597,16 @@ textarea{
     font-weight: 600;
     font-style: normal;
     height: 30px;
-    
+
 
 }
+
 #error-box {
     display: none;
     color: red;
 }
-.inc{
+
+.inc {
     width: 90%;
     text-align: right;
     /* border: var(--bord); */
@@ -589,10 +614,12 @@ textarea{
     font-weight: 700;
 
 }
-.InvoiceTotal{
+
+.InvoiceTotal {
     font-weight: 500;
 }
-.thank{
+
+.thank {
     width: 90%;
     /* height: 100px; */
     padding: 10px;
@@ -603,36 +630,96 @@ textarea{
 
 
 }
-.thank h1{
+
+.thank h1 {
     font-size: 1.2rem;
     color: rgb(80, 80, 83);
 }
-.thank p{
+
+.thank p {
     text-align: center;
 
 }
-.thank h2{
+
+.thank h2 {
     font-size: 1.3rem;
     text-align: center;
 }
-#not{
+
+#not {
     color: black;
     font-weight: 400;
 
 }
+
 @media screen and (max-width:1024px) {
-    .Add-de{
+    .Add-de {
         flex-direction: column;
         gap: 1rem;
         padding-bottom: 50px;
     }
-    .subC{
+
+    .subC {
         width: 80%;
     }
-    
+
 }
+
 input::-webkit-inner-spin-button,
-    input::-webkit-outer-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-label {
+    background-color: #111;
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
+
+.checkbox-label .ball {
+    background-color: #fff;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.checkbox-label .ball {
+    transform: translateX(24px);
+}
+body.dark .details {
+    background-color: #292c35;
+}
+
+/* #9b59b6 */
+
+body.dark label,body.dark textarea:focus, body.dark input:focus, body.dark h2{
+    color: #fff;
+}
+body.dark #invoNo:focus, body.dark .lis-css:focus, body.dark .List-head{
+    color: #111;
+}

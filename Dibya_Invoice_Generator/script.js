@@ -4,18 +4,14 @@ let add_Btn = document.querySelector(".add-btn"),
   AMOUNT=0,
   chargeAdd =document.querySelector('.charge-Add'),
   InvoiceTotal= document.querySelector('.InvoiceTotal');
-  let company =document.getElementById('company');
-  console.log(company),billTo =document.getElementById('BillTo'), dateIss =document.getElementById('dateIss'),payT =document.getElementById('payT');
+  let company =document.getElementById('company'),billTo =document.getElementById('BillTo'), dateIss =document.getElementById('dateIss'),payT =document.getElementById('payT');
   let invoNo =document.getElementById('invoNo');
-  console.log(invoNo);
+ 
   
 invoNo.addEventListener('keyup',function(){
   console.log(invoNo.value);
   document.getElementById('invNoDA').textContent=invoNo.value
 })
-
-
-
 
 
 add_Btn.addEventListener("click", AddList);
@@ -86,12 +82,12 @@ list_Detail();
 function total(a, b) {
   return eval(a * b);
 }
-function TotalChange() {
-  let TotalA = document.querySelectorAll(".total");
-  TotalA.forEach((ele) => {
-    console.log(ele.value);
-  });
-}
+// function TotalChange() {
+//   let TotalA = document.querySelectorAll(".total");
+//   TotalA.forEach((ele) => {
+//     console.log(ele.value);
+//   });
+// }
 
 function AddList_InVoice(deta) {
   // console.log(deta);
@@ -238,3 +234,6 @@ document.getElementById('save').addEventListener('click',()=>{
   .save();
   
 })
+checkbox.addEventListener("change", () => {
+  document.body.classList.toggle("dark");
+});
