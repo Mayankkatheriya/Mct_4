@@ -13,12 +13,23 @@
 - [Contributing](#contributing)
 - [License](#license)
 
+## Demo
+👉🏻 [Click Me For Live Demo](https://drive.google.com/file/d/1PDAMzIh1VBh7nO3ezObSqJKojPEAm_au/view)
+
 ## Features
 
 - **Bookmark Creation:** Click the bookmark button to save the current timestamp along with a brief description and keypoint.
 - **Bookmark Listing:** View all bookmarks for the current video in the extension popup.
 - **Play from Bookmark:** Click on a bookmark to jump to that timestamp in the video.
 - **Bookmark Deletion:** Remove unwanted bookmarks from the list.
+
+## Technologies Used
+
+- **JavaScript (ES6+):** The primary programming language for building the extension.
+- **HTML/CSS:** Used for creating the extension popup UI.
+- **Chrome Extension APIs:** Leveraged the `chrome.tabs`, `chrome.storage`, and other APIs for extension functionality.
+- **Manifest Version 3:** The extension manifest file is in version 3 format.
+- **Git and GitHub:** Version control and collaboration
 
 ## Installation
 
