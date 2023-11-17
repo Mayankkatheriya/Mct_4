@@ -7,9 +7,11 @@ const reTryEl = document.querySelector("#reTry");
 const upCoverEl = document.querySelector(".upCover");
 const gameCoverOpenEl = document.querySelector(".gameCoverOpen");
 const downCoverEl = document.querySelector(".downCover");
+
 //  for audio
 
 const addToCartSound = new Audio('/Asset/game-ball-tap.mp3');
+const bumbBlast = new Audio('/Asset/mixkit-clear.wav');
 
 // landing page create kr raha he ye --------------------------
 gameCoverOpenEl.addEventListener("click",(e)=>{
@@ -21,6 +23,7 @@ downCoverEl.style.transition = "all 1.2s linear";
 
 gameCoverOpenEl.style.display = "none"
 gameCoverOpenEl.style.transition = "all 0.2s linear";
+addToCartSound.play();
 
 
 // landing page code end --------------------------
@@ -133,6 +136,10 @@ function gameSelect(ROWS, COLS, SIZE) {
         // cell.style.backgroundColor="orangered"
         cell.style.backgroundColor="grey"
 
+
+        cell.addEventListener("click",()=>{
+          addToCartSound.play();
+        })
 //  cell style end ----------------------------------
 
 // yaha tk code understand 16-11-23 
@@ -184,6 +191,7 @@ function gameSelect(ROWS, COLS, SIZE) {
       cells = new Map();
       createButtons();
     }
+    addToCartSound.play();
   }
 
   function updateButtons() {
@@ -201,6 +209,7 @@ function gameSelect(ROWS, COLS, SIZE) {
         if (failedBombKey !== null && value === "bomb") {
           cell.disabled = true;
           cell.textContent = "💣";
+          bumbBlast.play();
           if (key === failedBombKey) {
             cell.style.backgroundColor = "red";
           }
