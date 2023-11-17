@@ -26,6 +26,16 @@ body
     padding-right: 14px;
 }
 
+button{
+    border: 1px solid cyan;
+    background-color: #454545;
+    color: white;
+    border-radius: 7px;
+    margin-bottom: 7px;
+}
+
+
+
 
 .left, .right
 {
@@ -49,6 +59,14 @@ body
     padding: 4px;
     display: flex;
 }
+
+.innerContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+}
+
 textarea
 {
     width: 94%;
