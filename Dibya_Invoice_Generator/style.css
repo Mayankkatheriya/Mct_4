@@ -521,6 +521,11 @@ textarea{
     resize: none;
     overflow: hidden;
 }
+.logo-img{
+    width: 200px;
+    /* border: 1px solid #000000; */
+    height: 50px;
+}
 .charge-Input input{
     
     padding: 0 10px;
