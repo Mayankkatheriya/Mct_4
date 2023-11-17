@@ -169,7 +169,8 @@ function handlePayment(productTitle, productPrice, productImage) {
         description: `Payment for ${productTitle}`,
         image: productImage,
         handler: function (response) {
-            alert(`Payment successful for ${productTitle}!`);
+            // alert(`Payment successful for ${productTitle}!`);
+            toastr['success'](`Payment successful for${productTitle}!`);
             // Play the preloaded success sound
             successSound.play();
             

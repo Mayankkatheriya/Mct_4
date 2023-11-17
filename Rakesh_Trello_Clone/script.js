@@ -70,6 +70,9 @@ form.addEventListener("submit", e => {
   task.addEventListener("dragend", () => {
     task.classList.remove("dragging");
   });
+
+
+  
 });
 
 document.querySelectorAll(".btns").forEach(button => {
@@ -102,5 +105,15 @@ document.querySelectorAll(".btns").forEach(button => {
   task.addEventListener("dragend", () => {
     task.classList.remove("dragging");
   });
+
+  task.addEventListener("click",(e)=>{
+    Add_Desc();
+  })
+
 });
 });
+
+
+function Add_Desc(){
+    console.log("Desc o be added");
+}
