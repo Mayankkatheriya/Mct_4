@@ -8,9 +8,9 @@
     scrollbar-width: none;
 }
 
-*::-webkit-scrollbar{
+/* *::-webkit-scrollbar{
     display: none;
-}
+} */
 
 body{
     font-family: Roboto;
@@ -19,19 +19,24 @@ body{
 h1{
     color: rgb(255, 255, 255);
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 30px;
+    /* margin-top: 50px;
+    margin-bottom: 30px; */
+ 
 }
 
 .container{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     overflow: scroll;
     background-image: url("https://wallpapercave.com/wp/wp2752752.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; 
+    /* position: fixed; */
+    /* z-index: 100; */
+
 }
+
 
 .add-tasks{
     padding: 32px 32px 0;
@@ -66,8 +71,8 @@ h1{
     display: flex;
     gap: 18px;
     padding: 24px 32px;
-    height: 100%;
-    overflow: scroll;
+    height: 80vh;
+    /* overflow: scroll; */
     justify-content: flex-start;
     align-items: flex-start;
 }
@@ -84,7 +89,7 @@ h1{
     gap: 10px;
     background-color: rgb(223 227 230/55%);
     padding: 12px;
-    width: 220px;
+    width: 300px;
     border-radius: 5px;
     box-shadow: 0 0 5px 5px#686060;
     min-height: 90px;
@@ -92,11 +97,8 @@ h1{
 
 .task{
     width: 80%;
-    /* overflow: hidden; */
-    /* border: 2px solid red; */
     height: 100%;
-    /* color:rgb(68, 60, 60); */
-    /* background-color: transparent; */
+
 }
 
 i{
@@ -111,8 +113,6 @@ i{
     cursor: grab;
     display: flex;
     justify-content: space-between;
-    /* overflow: hidden; */
-    /* max-height: 120px; */
    
 }
 
@@ -155,6 +155,11 @@ i{
     }
     i{
         font-size: 10px;
+    }
+
+    .main-task-container{
+        flex-direction: column;
+        align-items: center;
     }
 }
 @media screen and (max-width:450px){
