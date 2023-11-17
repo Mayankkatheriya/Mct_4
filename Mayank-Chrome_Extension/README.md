@@ -9,6 +9,7 @@
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
+- [Screenshots](#screenshots)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
