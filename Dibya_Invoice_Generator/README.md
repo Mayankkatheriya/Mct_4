@@ -12,6 +12,7 @@
 
 * You have a basic HTML structure with a title, link to a CSS file, and three scripts, one for Font Awesome icons,one for your custom JavaScript and one is Html2pdf.
 * The user interface consists of 5 button for generate invoice, add items, add list, print invoice and save invoice.
+* The user interface consists of a button for toggling the dark theme 
 
 `CSS:`
 
@@ -28,4 +29,5 @@
 * `AddList_InVoice(deta):` To append the list in preview window.
 * `TotalCount(det):` To calculate final Amount.
 * `validateForm(det) & validData():` To check the mandatory fields.
-Your code is well-structured and functional, creating a user-friendly interface and to create an invoice as required.
+* `checkbox.addEventListener:` To toggle the dark theme and update the button icon.
+Your code is well-structured and functional, creating a user-friendly interface and to create an invoice as required and creating a user-friendly interface for managing all details with a toggleable dark theme.
