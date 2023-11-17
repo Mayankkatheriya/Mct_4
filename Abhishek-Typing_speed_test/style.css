@@ -32,15 +32,15 @@ body {
 }
 .start h1{
     margin-top: 9rem;
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: 500;
     color: whitesmoke;
     letter-spacing: 1px;
     text-decoration: 4px solid whitesmoke underline;
 }
 .start button{
-    height: 3.5rem;
-    width: 12rem;
+    height: 4rem;
+    width: 13rem;
     margin-top: 5rem;
     border-radius: 15px;
     font-size: 20px;
@@ -122,11 +122,10 @@ body {
   padding: 12px 0;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   border-top: 1px solid #bfbfbf;
   line-break: auto;
   flex-wrap: wrap;
-  /* visibility: hidden; */
 }
 .content button {
   outline: none;
@@ -138,7 +137,6 @@ body {
   border-radius: 5px;
   background-color: #bfbfbf;
   color: #0f172a;
-  
   transition: transform 0.5s ease;
 }
 button:hover{
@@ -163,7 +161,7 @@ button:hover{
   position: relative;
   align-items: center;
 }
-.share_btn button{
+.share_btn{
   margin-left: 17rem;
   align-items: center;
   outline: none;
@@ -173,9 +171,14 @@ button:hover{
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
-  background-color: cyan;
+  background-color: skyblue;
   color:white;
   transition: transform 0.5s ease;
+}
+.share_btn:hover{
+  transition: .3s ease-in;
+  background-color: #bfbfbf;
+  color: #0f172a;
 }
 .result-details li:not(:first-child) {
   padding-left: 22px;
@@ -185,7 +188,6 @@ button:hover{
   font-size: 19px;
 }
 .result-details li span {
-  /* display: block; */
   font-size: 20px;
   margin-left: 10px;
 }
@@ -210,4 +212,40 @@ li:not(:first-child) span {
 .timeLeft span,b{
   color: rgb(248, 67, 67);
   font-weight: lighter;
+}
+.social-icons{
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.instagram, .facebook, .linkedin, .twitter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.linkedin:hover{
+  transition: .2s ease-in-out;
+  background-color: skyblue;
+  color: black;
+}
+.facebook:hover{
+  transition: .2s ease-in-out;
+  background-color: skyblue;
+  color: black;
+}
+.instagram:hover{
+  transition: .2s ease-in-out;
+  background-color: skyblue;
+  color: black;
+}
+.twitter:hover{
+  transition: .2s ease-in-out;
+  background-color: skyblue;
+  color: black;
 }

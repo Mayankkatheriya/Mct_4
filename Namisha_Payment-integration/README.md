@@ -25,22 +25,39 @@ The project is organized into several key directories:
 
 - **clipart image:** `png-clipart-person-s-lip-illustration-make-up-for-ever-cosmetics-make-up-artist-eye-shadow-logo-forever-miscellaneous-angle.png` Incorporates an eye-catching clipart image in the header for a visually appealing introduction.
 
-![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/9265bf56-80a6-4339-852d-073e2b7a29b8)
-
 ## Features
 - **Responsive Design:** The website is designed to be accessible and visually appealing on various devices, ensuring a seamless experience for users.
+ 
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/dc5cd807-a290-4c37-861a-a55cc29461fb) ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/77810dcf-3c1f-4b24-b6e5-1a2ad2bce132)
+
+
+
 
 - **Dynamic Rendering:** JavaScript is used to dynamically render product containers on the main page. The `renderProducts` function fetches product data from `products.json` and creates product containers dynamically, allowing for easy addition of new products without modifying the HTML code.
 
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/9265bf56-80a6-4339-852d-073e2b7a29b8)
+
 - **Interactive Hover Effects:** Product containers have interactive hover effects, providing a visually pleasing experience for users. The CSS styles for `:hover` enhance the appearance of product containers when users interact with them.
+
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/434dccca-5d1a-46c0-9e1b-1932aa8bc0f5)
 
 - **Real-time Cart Updates:** The Toastr library is employed to show real-time cart updates and notifications. When a user adds a product to the cart, Toastr displays a notification, enhancing the user experience by providing feedback on their actions.
 
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/90d28793-9672-4c9c-a782-9fc9ac949409)
 - **Razorpay Integration:** Secure payments are facilitated through the integration of the Razorpay API. The `handlePayment` function uses Razorpay to handle the payment process when a user clicks the "Buy Now" button.
-
+ 
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/30763ffa-4f88-4074-9ff8-b88edd3719b0)
 - **Smooth Scroll Functionality:** The website features smooth scroll functionality for a better user experience. When users scroll, the navigation bar's background color changes, providing a subtle visual effect.
+ 
+  ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/7191ed55-69da-4efb-93b1-3df004aa9e71)
 
 - **Notification for Added Items:** When a product is added to the cart, a green notification bar (`#added`) appears at the top, providing a clear indication to the user.
+
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/324d3c43-49e9-407c-9d2f-8f5175d01f6b)
+
+- **Notification for already item in cart:** When user click again on same item's cart it's show item already in the cart, a yellow notification bar (`#added`) appears at the top, providing a clear indication to the user.
+  
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/ffbf0554-c945-4635-baed-cc7b0a6b639e)
 
 ## Getting Started
 1. Clone this repository to your local machine.

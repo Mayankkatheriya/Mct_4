@@ -5,6 +5,10 @@
   transition: all 0.1s ease-in-out;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body{
   font-family: 'Roboto', Arial, sans-serif;
   background-color: #F0F2F6;
@@ -182,13 +186,34 @@ form{
 
 /*------------------main-----------------------*/
 
+
 main{
+  position: relative;
   width: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   padding: 0 0.5rem;
   gap: 0.7rem;
+}
+
+#backToTop{
+  position: fixed;
+  top: 0;
+  left: 50%;
+  z-index: 5;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(0, 102, 255);
+  font-weight: 700;
+  font-size: 14px;
+  padding: .5rem 1rem;
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 0 0 3px 1px rgb(189, 189, 189);
+  /* display: none; */
 }
 
 .aside{

@@ -6,8 +6,7 @@ let deliverybox = document.querySelector("#delivery");
 let emiBox = document.querySelector("#noCost");
 let offerFilter = [...document.querySelectorAll('input[name="discount"]')];
 let ratingFilter = [...document.querySelectorAll('input[name="rating"]')];
-let minPrice = document.querySelector(".min")
-let maxPrice = document.querySelector(".max")
+
 
 
 // -------------------display-items----------------
@@ -168,5 +167,21 @@ rangePrice.forEach((ele) => {
         displayProducts(filteredProduct);
     })
 })
+
+//Scroll EVENT On window
+// let navbar= document.querySelector("header")
+let topBtn = document.querySelector("#backToTop");
+document.addEventListener("scroll", (e) => {
+  console.log(e);
+    if (e.target.scrollingElement.scrollTop > 200) {
+      // topBtn.style.display = "flex";
+      topBtn.style.top = "70px"
+      topBtn.style.transition = "all .3s linear"
+    } else {
+      // topBtn.style.display = "none";
+      topBtn.style.top = "0"
+      topBtn.style.transition = "all .3s linear"
+    }
+  });
 
 window.onload = () => displayProducts(productData);
