@@ -7,9 +7,11 @@ const reTryEl = document.querySelector("#reTry");
 const upCoverEl = document.querySelector(".upCover");
 const gameCoverOpenEl = document.querySelector(".gameCoverOpen");
 const downCoverEl = document.querySelector(".downCover");
+
 //  for audio
 
 const addToCartSound = new Audio('/Asset/game-ball-tap.mp3');
+const bumbBlast = new Audio('/Asset/mixkit-clear.wav');
 
 // landing page create kr raha he ye --------------------------
 gameCoverOpenEl.addEventListener("click",(e)=>{
@@ -207,6 +209,7 @@ function gameSelect(ROWS, COLS, SIZE) {
         if (failedBombKey !== null && value === "bomb") {
           cell.disabled = true;
           cell.textContent = "💣";
+          bumbBlast.play();
           if (key === failedBombKey) {
             cell.style.backgroundColor = "red";
           }
