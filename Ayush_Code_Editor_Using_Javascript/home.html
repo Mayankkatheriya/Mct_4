@@ -16,20 +16,57 @@
 
 <body>
 
+    <!-- Nav bar -->
     <nav>
         <div id="nav"><i class="fa-solid fa-code"></i>
-            <h1>Code Zone</h1></div>
+            <h1>Code Editor</h1></div>
     </nav>
 
+    <!-- Main container for the text area and output screen -->
     <div class="container">
+        <!-- Left container for code editor area -->
         <div class="left">
-            <label id="html"><i class="fa-brands fa-html5"></i>HTML</label>
+            <!-- HTML code editor -->
+            <div class="innerContainer">
+                <div>
+                    <label id="html"><i class="fa-brands fa-html5"></i>HTML</label>
+                </div>
+                <!-- Buttons for copy and clear -->
+                <div class="btnContainer">
+                    <button onclick="clearHtml()">Clear</button>
+                    <button onclick="copyToClipboard('html-code')">Copy to Clipboard</button>
+                </div>
+            
+            </div>
             <textarea id="html-code" onkeyup="run()"></textarea>
-            <label id="css"><i class="fa-brands fa-css3-alt"></i>CSS</label>
+             
+            <!-- CSS code editor -->
+            <div class="innerContainer">
+                <div>
+                    <label id="css"><i class="fa-brands fa-css3-alt"></i>CSS</label>
+                </div>
+                <!-- Buttons for copy and clear -->
+                <div class="btnContainer">
+                    <button onclick="clearCss()">Clear</button>
+                    <button onclick="copyToClipboard('html-code')">Copy to Clipboard</button>
+                </div>
+            </div>
             <textarea id="css-code" onkeyup="run()"></textarea>
-            <label id="js"><i class="fa-brands fa-js"></i>JavaScript</label>
+
+            <!-- Javascript code editor -->
+            <div class="innerContainer">
+                <div>
+                    <label id="js"><i class="fa-brands fa-js"></i>JavaScript</label>
+                </div>
+                <!-- Buttons for copy and clear -->
+                <div class="btnContainer">
+                    <button onclick="clearJs()">Clear</button>
+                    <button onclick="copyToClipboard('html-code')">Copy to Clipboard</button>
+                </div>
+            </div>
             <textarea id="javascript-code" onkeyup="run()"></textarea>
         </div>
+        <!-- Right container for displaying output -->
         <div class="right">
             <label><i class="fa-solid fa-play"></i>Output</label>
             <iframe id="output"></iframe>
