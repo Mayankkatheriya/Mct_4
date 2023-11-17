@@ -160,10 +160,13 @@ h2{
     font-weight: 600;
     font-size: 1rem;
 }
-.cart-button{
+.cart-button { 
     display: flex;
     justify-content: center;
     gap: 12px;
+}
+.cart-button button:hover{
+    opacity: 0.6;
 }
 .special {
     margin-top: 5px;
@@ -194,7 +197,7 @@ h2{
 }
 
 #cart-content button:hover {
-    background-color: rgb(86, 86, 195)
+    opacity: 0.6;
 }
 
         .cart{
