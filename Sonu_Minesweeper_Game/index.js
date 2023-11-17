@@ -7,7 +7,9 @@ const reTryEl = document.querySelector("#reTry");
 const upCoverEl = document.querySelector(".upCover");
 const gameCoverOpenEl = document.querySelector(".gameCoverOpen");
 const downCoverEl = document.querySelector(".downCover");
+//  for audio
 
+const addToCartSound = new Audio('/Asset/game-ball-tap.mp3');
 
 // landing page create kr raha he ye --------------------------
 gameCoverOpenEl.addEventListener("click",(e)=>{
@@ -25,10 +27,13 @@ gameCoverOpenEl.style.transition = "all 0.2s linear";
 
 });
 
-function audio(){
-  let gameAudio = new Audio();
-  gameAudio.src ="./Asset/game-ball-tap.mp3";
-} 
+
+
+
+// function audio(){
+//   let gameAudio = new Audio("./Asset/game-ball-tap.mp3");
+//   // gameAudio.src ="./Asset/game-ball-tap.mp3";
+// } 
 // ye function X pe click krne se hme game ko again start kr deta he ----------------------------
 
 reTryEl.addEventListener("click",()=>{
@@ -38,6 +43,9 @@ reTryEl.addEventListener("click",()=>{
   gameModeEl.selectedIndex=0;
   console.log("d");
   // audio();
+  
+    addToCartSound.play();
+ 
 })
 
 
@@ -122,7 +130,8 @@ function gameSelect(ROWS, COLS, SIZE) {
         cell.style.float = "left";
         cell.style.width = SIZE + "px";
         cell.style.height = SIZE + "px";
-        cell.style.backgroundColor="orangered"
+        // cell.style.backgroundColor="orangered"
+        cell.style.backgroundColor="grey"
 
 //  cell style end ----------------------------------
 
@@ -183,7 +192,7 @@ function gameSelect(ROWS, COLS, SIZE) {
         let key = toKey(i, j);
         let cell = cells.get(key);
 
-        cell.style.backgroundColor = "aqua";
+        cell.style.backgroundColor = "grey";
         cell.style.color = "black";// ----------------
         cell.textContent = "";
         cell.disabled = false;
