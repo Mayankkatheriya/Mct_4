@@ -21,6 +21,7 @@ downCoverEl.style.transition = "all 1.2s linear";
 
 gameCoverOpenEl.style.display = "none"
 gameCoverOpenEl.style.transition = "all 0.2s linear";
+addToCartSound.play();
 
 
 // landing page code end --------------------------
@@ -133,6 +134,10 @@ function gameSelect(ROWS, COLS, SIZE) {
         // cell.style.backgroundColor="orangered"
         cell.style.backgroundColor="grey"
 
+
+        cell.addEventListener("click",()=>{
+          addToCartSound.play();
+        })
 //  cell style end ----------------------------------
 
 // yaha tk code understand 16-11-23 
@@ -184,6 +189,7 @@ function gameSelect(ROWS, COLS, SIZE) {
       cells = new Map();
       createButtons();
     }
+    addToCartSound.play();
   }
 
   function updateButtons() {
