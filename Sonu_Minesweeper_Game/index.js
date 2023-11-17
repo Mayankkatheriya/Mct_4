@@ -41,6 +41,8 @@ reTryEl.addEventListener("click",()=>{
 })
 
 
+
+
 // running time ke liye  -----------------------------------------
 let timer = false;
 let counter = 0;
@@ -85,13 +87,15 @@ gameModeEl.addEventListener("change", (e) => {
 function gameSelect(ROWS, COLS, SIZE) {
   let restartButton = document.getElementById("restart");
 
+ 
+
   let cells;
   let failedBombKey;
   let revealedKeys;
   let flaggedKeys;
   let map;
 
-
+  
   //  es function ko sumjhna he abhi -------------------------------------
   function toKey(row, col) {
     return row + "-" + col;
@@ -119,6 +123,7 @@ function gameSelect(ROWS, COLS, SIZE) {
         cell.style.width = SIZE + "px";
         cell.style.height = SIZE + "px";
         cell.style.backgroundColor="orangered"
+
 //  cell style end ----------------------------------
 
 // yaha tk code understand 16-11-23 
@@ -147,7 +152,8 @@ function gameSelect(ROWS, COLS, SIZE) {
       }
     }
     restartButton.onclick = startGame;
-    audio();
+  
+    // audio();
   }
 
   function startGame() {
@@ -213,7 +219,8 @@ function gameSelect(ROWS, COLS, SIZE) {
     if (failedBombKey !== null) {
       canvas.style.pointerEvents = "none";
       restartButton.style.display = "block";
-      clearTimeout(settimeStart)
+      clearTimeout(settimeStart);
+      
       
     } else {
       canvas.style.pointerEvents = "";
