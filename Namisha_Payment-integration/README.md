@@ -69,7 +69,8 @@ To enhance user experience and make the shopping cart persistent across page rel
 
 ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/c47afd9a-d2b5-49e8-b8bf-f2536c85f692)
 
- - **Notification for clear whole cart items:** When whole products removed from the cart, a blue notification bar (`#cleared`) appears at the top and it shows `your cart is empty`, providing a 
+ - **Notification for clear whole cart items:** When whole products removed from the cart, a blue notification bar (`#cleared`) appears at the top and in cart text 
+ will show `your cart is empty` providing a 
  clear indication to the user.
 
 ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/f5021ea2-34b1-4ece-842c-1acebe57efa5)
