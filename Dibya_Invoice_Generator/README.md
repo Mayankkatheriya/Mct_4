@@ -1,5 +1,5 @@
 # Card_project
-## Hosted Link:  [Click Here](https://mayankkatheriya.github.io/Card_project/)
+## Hosted Link:  [Click Here](https://mayankkatheriya.github.io/Mct_4/Dibya_Invoice_Generator/)
 
 ## UI:
 ![ui](https://github.com/Mayankkatheriya/Mct_4/assets/125633895/cf41dad6-5640-4e33-bccd-66395faf5667)
