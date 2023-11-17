@@ -32,15 +32,15 @@ body {
 }
 .start h1{
     margin-top: 9rem;
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: 500;
     color: whitesmoke;
     letter-spacing: 1px;
     text-decoration: 4px solid whitesmoke underline;
 }
 .start button{
-    height: 3.5rem;
-    width: 12rem;
+    height: 4rem;
+    width: 13rem;
     margin-top: 5rem;
     border-radius: 15px;
     font-size: 20px;
