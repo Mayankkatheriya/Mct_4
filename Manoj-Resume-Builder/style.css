@@ -1,0 +1,543 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap");
+body {
+    display: flex;
+    justify-content: space-between;
+    background:#000;
+   transition: background-color 0.5s;
+    background-attachment: fixed; 
+    font-family: Arial, Helvetica, sans-serif; 
+    box-sizing: border-box;
+    font-family: "Rajdhani", sans-serif;
+    background-image:url('giphy.gif');
+   
+    width: 100%;
+  
+} 
+
+
+#optionsSelect{
+  background: linear-gradient(to top, #0ba360 0%, #3cba92 100%); 
+  height:4%;
+  
+}
+#firstOne{
+background-color:darkred;
+height:4%;
+}
+#secondOne{
+  background:goldenrod;
+  height:4%; 
+}
+
+#optionsSelect{
+  animation-duration: 6s;           
+  animation-iteration-count: infinite;
+  animation-direction: normal;        
+  animation-name: blink2;              
+  
+  /* The same can be written shorthand as     */
+  /* --------------------------------------   */
+  /* animation: 2.5s infinite normal blink;   */
+}
+@keyframes blink2 {
+  0%, 100% {              /* Defines the properties at these frames */
+      background: #054a46;
+      color: white;
+  }
+
+  50% {                   /* Defines the properties at these frames */
+      background: #ccc;
+      color:#5D4157;
+      border-radius: 48px;
+  }
+
+}
+#type {
+  /* We will define the width, height and padding of the container */
+  /* The text-align to center */
+
+  /* Use the animation `blink` to repeat infinitely for a time period of 2.5s*/
+  animation-duration: 5.5s;           
+  animation-iteration-count: infinite;
+  animation-direction: normal;        
+  animation-name: blink3;              
+  
+  /* The same can be written shorthand as     */
+  /* --------------------------------------   */
+  /* animation: 2.5s infinite normal blink;   */
+}
+@keyframes blink3 {
+  0%, 100% {              /* Defines the properties at these frames */
+      background:rebeccapurple;
+      color: white;
+  }
+
+  50% {                   /* Defines the properties at these frames */
+      background: #ccc;
+      color: rgb(135, 20, 51);
+      border-radius: 48px;
+  }
+}
+#anime {
+  /* We will define the width, height and padding of the container */
+  /* The text-align to center */
+
+  /* Use the animation `blink` to repeat infinitely for a time period of 2.5s*/
+  animation-duration: 3.5s;           
+  animation-iteration-count: infinite;
+  animation-direction: normal;        
+  animation-name: blink;              
+  
+  /* The same can be written shorthand as     */
+  /* --------------------------------------   */
+  /* animation: 2.5s infinite normal blink;   */
+}
+@keyframes blink {
+  0%, 100% {              /* Defines the properties at these frames */
+      background: rgb(139, 0, 30);
+      color: white;
+  }
+
+  50% {                   /* Defines the properties at these frames */
+      background: #ccc;
+      color: rgb(58, 20, 135);
+      border-radius: 48px;
+  }
+}
+/* FOR MY BODY I HAVE CHOSEN FLEXBOX MODEL  */
+h3{
+  text-shadow: 5px 5px 10px rgba(229, 16, 245, 0.4);
+}
+/* THIS ONE FOR ALL TEXT SHADOW EFFFECTS */
+textarea{
+    width:100%;
+}
+/* THE TEXT AREAS CREATED SHOULD OCCUPY 100 PERCENT WIDTH */
+/* NEXT WIDTH OF MY CONTAINER NAMELY FORM AND INPUT ELEMENT , RESUME 1 AND RESUME 2 SET THE WIIDTH TO 45 PERCENT */
+.container {
+    padding: 10px;
+    margin: 10px;
+    width: 45%;
+    box-sizing: border-box;
+}
+/* THIS ONE FOR TEXTAREA CREATED UPON EACH DOM EVENT AND WIDTH SHOULD BE 100 PERECENT OF THAT CONTAINER */
+.textAreaContainer {
+    margin-top: 10px;
+    width:100%;
+}
+/* THE OPTION DROP DOWN SHOULD TAKE THE FULL WIDTH 2 OPTION SELECTS */
+#optionsSelect{
+    width:100%;
+
+}
+/* MY FORM SHOULD TAKE FULL WIDTH OF THE CONTAINER */
+#myform{
+    width:100%;
+  
+}
+/* SIMILARLY LET ALL INPUTS UNDER FORM TAKE FULL FULL WIDTH FOR BETTER VISIBILITY */
+#nameInput,#exampleFormControlInput1,#exampleFormControlInput2,#exampleFormControlInput3,#exampleFormControlInput4,
+#exampleFormControlInput5,#exampleFormControlInput6,#exampleFormControlInput7,#professionalSummary1,#linkedin,#github{
+    width:100%;
+}
+.button-89 {
+  padding: 15px 20px;
+  font-size: 25px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background: transparent;
+  border: none;
+  position: relative;
+  color: #f0f0f0;
+  z-index: 1;
+}
+
+.button-.button-89,
+.button-89::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all .4s;
+}
+
+.button-89::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgb(173, 83, 137), rgb(60, 16, 83)); 
+  border-radius: 10px;
+  color:#004dff;
+}
+
+.button-89::after {
+  transform: translate(10px, 10px);
+  width: 35px;
+  height: 35px;
+  background: radial-gradient(circle at 12.3% 19.3%, rgb(85, 88, 218) 0%, rgb(95, 209, 249) 100.2%); 
+  backdrop-filter: blur(5px);
+  border-radius: 50px;
+}
+
+.button-89:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+}
+
+.button-89:hover::after {
+  border-radius: 10px;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.button:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
+}
+
+
+
+#first,#second,#third{
+  width:100%;
+
+}
+.textAreaContainer textarea {
+    display: block;
+   margin-bottom: 5px;
+}
+#textAreasContainer1,#textAreasContainer2,#textAreasContainer3{
+    width:auto;
+} */
+
+/* RESUME 2
+#container2 {
+  
+    display: flex;
+    flex-direction: column;
+}
+/* RESUME 3 */
+#container3{
+    display:flex;
+    flex-direction: column;
+}
+
+/* NAME APPEARS HERE I HAVE SET ITS WIDTH 2 25 PERCENT */
+#header2 {
+    width: 100%;
+    height: 33%;
+    background: #ff347f; /* Default color */
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* THIS ONE FOR THE OTHER MAIN CONTENT FLEXBOX WIDTH 75 PERCENT */
+/* .row {
+    width: 100%;
+    height: 83%;
+    display: flex;
+    flex-direction: row;
+} */
+/* CONTACT AND SKILLS WIDTH */
+/* #side {
+    width: 25%;
+    height: 100%;
+    background-color:cornsilk;
+    padding: 20px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border:1px solid red;
+} */
+#contact,#skills{
+  height:auto;
+}
+#skills5{
+  overflow-wrap:anywhere;
+}
+#main{
+overflow-wrap:anywhere;
+}
+/* #main {
+    width: 75%;
+    height: 100%;
+    background-coloR:white;
+    padding: 20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+} */
+#skills2,#education2,#experience2,#projects2,#summary2{
+background-color:white;
+width:100%;
+height:auto;
+
+}
+#side,#main{
+  overflow: scroll;
+}
+
+#header3 {
+    width: 100%;
+    height: 35%;
+    background-color:#db9e34; /* Default color */
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#row2{
+    width:100%;
+    height:85%;
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* Animation styles */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .textAreaContainer1 {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .textAreaContainer2 {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .textAreaContainer3 {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes scaleIn {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  /* Apply animations to specific containers */
+  #container1 {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  #container2 {
+    animation: slideInRight 1s ease-in-out;
+  }
+  
+  #container3 {
+    animation: scaleIn 1s ease-in-out;
+  }
+  
+#container2,#container3{
+  overflow-wrap: anywhere;
+}
+.textAreaContainer1,
+.textAreaContainer2,
+.textAreaContainer3 {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+#textAreasContainer1,
+#textAreasContainer2,
+#textAreasContainer3 {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Template switch transition */
+.template-switch-container {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.template-switch-container.hide {
+  opacity: 0;
+}
+.thirdbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+#container1 {
+/* Set your desired background color */
+background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+background-size: 400% 400%;
+animation: gradient 10s ease infinite;
+  }
+  @keyframes gradient{
+    0%{
+        background-position: 0% 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0% 50%;
+    }
+}
+  /* Add a stunning bounce and rotation animation to Container 1 */
+  @keyframes bounceAndRotate {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0) rotate(0);
+    }
+    40% {
+      transform: translateY(-30px) rotate(-5deg);
+    }
+    60% {
+      transform: translateY(-15px) rotate(5deg);
+    }
+  }
+  #container2,#container3{
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (min-width: 768px) {
+    .container {
+        width: 100%; /* Adjust width as needed */
+    }
+
+  }
+
+    /* Add any additional styles for tablet and desktop views */
+    /* .row {
+        flex-direction: row;
+    } */
+
+    .row {  
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    /* Create two unequal columns that sits next to each other */
+    /* Sidebar/left column */
+    .side {
+      flex: 20%;
+      background-color: #f1f1f1;
+      padding: 20px;
+    }
+    
+    /* Main column */
+    .main {
+      flex: 45%;
+      background-color: white;
+      padding: 20px;
+    }
+    #header2,
+    #header3 {
+        height: 15%;
+    }
+    #download-button1,
+    #download-button2 {
+        width: auto;
+    }
+
+    /* Responsive styles for form elements */
+  
+    
+/* Media Query for Desktops and Larger Screens */
+@media (min-width: 992px) {
+  .container {
+    width: 70%; /* Adjust width as needed */
+}
+
+}
+
+/* Media Query for Large Desktops */
+@media (min-width: 1200px) {
+    .container {
+        width: 50%; /* Adjust width as needed */
+    }
+   
+}
+@media (max-width:480px) {
+  .container {
+    width: 100%; /* Adjust width as needed */
+}
+#side{
+  width:auto;
+  height:auto;
+}
+#contact,#skills{
+  display:flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content:space-evenly;
+  width:100%;
+  height:200%;
+}
+body,
+  #container2,
+  #container3 {
+      width: 100%;
+      height:100%; /* Full width for mobile screens */
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between; /* Stack containers in a column on mobile screens */
+  }
+}
+.button-92{--c: #fff;
+/* text color */
+background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p,100%)/300% no-repeat,
+  #004dff;
+  width: 100%;
+    
+  margin: 10px; /* Adjust the margin based on your preference */
+  padding: 10px; /* Adjust the padding based on your preference */
+  text-align:left;
+/* background color */
+color: #0000;
+border: none;
+transform: perspective(500px) rotateY(calc(20deg*var(--_i,-1)));
+text-shadow: calc(var(--_i,-1)* 0.08em) -.01em 0   var(--c),
+  calc(var(--_i,-1)*-0.08em)  .01em 2px #0004;
+outline-offset: .1em;
+transition: 0.3s;
+}
+.button-92:hover,
+.button-92:focus-visible {
+  --_p: 0%;
+  --_i: 1;
+}
+
+.button-92:active {
+  text-shadow: none;
+  color: var(--c);
+  box-shadow: inset 0 0 9e9q #0005;
+  transition: 0s;
+}
+
+.button-92 {
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0;
+  cursor: pointer;
+  padding: .1em .3em;
+}
+
