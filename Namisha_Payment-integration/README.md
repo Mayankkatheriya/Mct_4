@@ -86,3 +86,5 @@ To enhance user experience and make the shopping cart persistent across page rel
 1. Clone this repository to your local machine.
    ```bash
    git clone https://github.com/Mayankkatheriya/Mct_4.git
+   
+2. Namisha Gurunani [Payment Integration](https://github.com/Mayankkatheriya/Mct_4/tree/main/Namisha_Payment-integration) --> [Demo Video](https://drive.google.com/file/d/1VtKJREkoc8YZNJtkHj7hRGh5XKlhYYEd/view?usp=drive_link) --> [Try it](https://mayankkatheriya.github.io/Mct_4/Namisha_Payment-integration/)
