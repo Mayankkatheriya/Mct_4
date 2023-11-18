@@ -48,7 +48,7 @@ const typingText = document.querySelector(".typing-text p"),
     wpmTag = document.querySelector(".wpm span"),
     cpmTag = document.querySelector(".cpm span");
 let timer,
-    maxTime = 5,
+    maxTime = 60,
     timeLeft = maxTime,
     charIndex =0,
     errors =0,
