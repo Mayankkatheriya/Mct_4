@@ -199,7 +199,7 @@ async function renderProducts() {
             address: 'Customer Address',
         },
         theme: {
-            color: '#F37254', // Replace with your desired color
+            color: '#092ca8', // Replace with your desired color
         },
     };
      // Create a Razorpay instance with the options

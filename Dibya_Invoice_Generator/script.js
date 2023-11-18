@@ -234,7 +234,7 @@ ne.addEventListener('keyup', function () {
 document.getElementById('pri-btn').addEventListener('click', () => {
   let inv = document.getElementById('invo');
   inv.classList.add('while-pr');
-  inv.classList.remove('while-pr');
+  // inv.classList.remove('while-pr');
 
   document.querySelector('.details').style.display = 'none'
   inv.classList.add('while-pr');

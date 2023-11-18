@@ -27,11 +27,11 @@ body
 }
 
 button{
-    border: 1px solid cyan;
     background-color: #454545;
     color: white;
-    border-radius: 7px;
+    border-radius: 5px;
     margin-bottom: 7px;
+    padding: 2px 5px;
 }
 
 
@@ -67,6 +67,10 @@ button{
     width: 95%;
 }
 
+#output{
+    border: 1px solid black;
+}
+
 textarea
 {
     width: 94%;
@@ -77,7 +81,7 @@ textarea
     border: 0;
     outline: 0;
     font-size: 18px;
-    color:#fff
+    color:#fff;
 }
 
 .right{
