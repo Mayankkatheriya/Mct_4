@@ -12,7 +12,7 @@ const addNewBookmark = (bookmarks, bookmark) => {
 
   //TODO add title to the bookmark
   const bookmarkTitleElement = document.createElement("div");
-  bookmarkTitleElement.textContent = bookmark.desc;
+  bookmarkTitleElement.innerHTML = bookmark.desc;
   bookmarkTitleElement.className = "bookmark-title";
   newBookmarkElement.appendChild(bookmarkTitleElement);
 
@@ -94,6 +94,8 @@ const onDelete = async (e) => {
   );
 };
 
+
+//*Start
 //TODO load content according to the situtation
 document.addEventListener("DOMContentLoaded", async () => {
   const activeTab = await getActiveTabURL();

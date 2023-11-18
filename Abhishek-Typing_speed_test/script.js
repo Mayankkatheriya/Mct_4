@@ -146,7 +146,7 @@ function shareText() {
     } else {
       alert("Sharing is not supported in your browser.");
     }
-  }
+}
 share_btn.addEventListener("click",shareText);
 loadParagraph();
 inpField.addEventListener("input", initTyping);
