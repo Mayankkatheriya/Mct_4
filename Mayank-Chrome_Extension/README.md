@@ -48,10 +48,10 @@
 
 ## Screenshots
 **Popup** \
-<img src="https://github.com/Mayankkatheriya/Mct_4/assets/128832286/db82db85-12df-4c58-8356-192168549858" alt="drawing" width="200"/>
-<img src="https://github.com/Mayankkatheriya/Mct_4/assets/128832286/dd9c029d-d118-47fe-b64c-627bd2922c11" alt="drawing" width="200"/>
-<img src="https://github.com/Mayankkatheriya/Mct_4/assets/128832286/91cf6077-55af-416f-9bf2-30bd09c75716" alt="drawing" width="200"/>
-<img src="https://github.com/Mayankkatheriya/Mct_4/assets/128832286/dda02724-6fc5-443c-aee8-63dd8b6b24ba" alt="drawing" width="200"/>
+<img src="https://github.com/Mayankkatheriya/Mct_4/assets/128832286/db82db85-12df-4c58-8356-192168549858" alt="drawing" width="200" height="300"/>
+<img src="https://github.com/Mayankkatheriya/Mct_4/assets/128832286/dd9c029d-d118-47fe-b64c-627bd2922c11" alt="drawing" width="200" height="300"/>
+<img src="https://github.com/Mayankkatheriya/Mct_4/assets/128832286/91cf6077-55af-416f-9bf2-30bd09c75716" alt="drawing" width="200" height="300"/>
+<img src="https://github.com/Mayankkatheriya/Mct_4/assets/128832286/dda02724-6fc5-443c-aee8-63dd8b6b24ba" alt="drawing" width="200" height="300"/>
 
 ## Contributing
 **Contributions** are welcome! To contribute to the development of the YouTube Bookmarks Extension, follow these guidelines:
