@@ -60,7 +60,7 @@ html{
     align-items: center;
     background-color: white;
     animation: bounceInUp; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s; /* don't forget to set a duration! */
+    animation-duration: 2s; /* to set a duration! */
 }
 
 
@@ -145,24 +145,28 @@ h2{
             align-items: center;
             z-index: 1000;
             overflow-y: scroll;
-            /* text-overflow: clip; */
-            
+            display: flex;
         }
 
         #cart-content {
             background-color: #ffffff;
             padding: 20px 50px;
             border-radius: 5px;
-            
-            
         }
-        /* Your existing CSS code */
 
 #cart-content h2 {
     margin-bottom: 10px;
     text-align: center;
     font-weight: 600;
     font-size: 1rem;
+}
+.cart-button { 
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+.cart-button button:hover{
+    opacity: 0.6;
 }
 .special {
     margin-top: 5px;
@@ -175,7 +179,7 @@ h2{
     margin-top: 5px; /* Adjust the margin-top as needed */
 }
 #cart-items h2 {
-    max-width: 300px; /* Adjust the max-width as needed */
+    max-width: 290px; /* Adjust the max-width as needed */
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -188,13 +192,12 @@ h2{
     border-radius: 5px;
     cursor: pointer;
     display: block;
-    margin: 10px auto;
+    margin: 8px 0;
     transition: background-color 0.3s ease;
-  
 }
 
 #cart-content button:hover {
-    background-color: rgb(86, 86, 195)
+    opacity: 0.6;
 }
 
         .cart{
@@ -233,8 +236,6 @@ h2{
             display: none; /* Show the cart button on hover */
         }
         .icon{
-            /* border: 2px solid red; */
-          /* border-radius: 50px; */
           width: 100px;
           height: 50px;
         }
@@ -286,7 +287,38 @@ h2{
         bottom: 20px;
         right: 20%;
     }
-    
+
   }
-  
+  @media screen and (max-width: 700px) {
+    header {
+        padding: 5px;
+    }
+
+    #cart-content {
+        padding: 20px;
+
+    }
+
+    .cart-button {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #cart-items .cart-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #cart-content button {
+        padding: 5px;
+    }
+
+    #products-container {
+        padding: 5px;
+    }
+
+    .product-container {
+        padding: 5px;
+    }
+}
 

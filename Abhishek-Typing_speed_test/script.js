@@ -3,15 +3,15 @@ let start_btn=document.querySelector(".strt-btn");
 let wrapper=document.querySelector(".wrapper");
 let share_btn=document.querySelector(".share_btn");
 let rslt_detail=document.querySelector(".result-details");
-let social_icons=document.querySelector(".social-icons");
+let high_score_text=document.querySelector(".high-score-text");
 let content=document.querySelector(".content");
+wrapper.style.display="none";
 start_btn.addEventListener("click",mainArea);
 
 function mainArea(){
     start.style.display="none";
     share_btn.style.display="none";
     rslt_detail.style.display="none";
-    social_icons.style.display="none";
     wrapper.style.display="block";
     const paragraphs = [
         "Authors often misinterpret the lettuce as a folklore rabbi, when in actuality it feels more like an uncursed bacon. Pursued distances show us how mother-in-laws can be charleses. Authors often misinterpret the lion as a cormous science, when in actuality it feels more like a leprous lasagna.",
@@ -115,17 +115,15 @@ function initTimer() {
         share_btn.style.display="block";
         rslt_detail.style.display="flex";
         content.style.justifyContent="space-between";
-
-        share_btn.addEventListener("click",()=>{
-            social_icons.style.display="flex";
-        })
+        high_score_text.innerText=`Wpm: ${wpmTag.innerText}
+        Cpm: ${cpmTag.innerText}
+        Errors: ${errorTag.innerText}`;
     }
 }
 function resetTest() {
     rslt_detail.style.display="none";
     content.style.justifyContent="center";
     share_btn.style.display="none";
-    social_icons.style.display="none";
     loadParagraph();
     clearInterval(timer);
     timeLeft = maxTime;
@@ -136,6 +134,20 @@ function resetTest() {
     errorTag.innerText = 0;
     cpmTag.innerText = 0;
 }
+function shareText() {
+    if (navigator.share) {
+      navigator
+        .share({
+          title: "HighScore",
+          text: `Words Per Minute(Wpm): ${wpmTag.innerText} Character Per Minute(Cpm): ${cpmTag.innerText} Errors: ${errorTag.innerText}`,
+        })
+        .then(() => console.log("Shared successfully"))
+        .catch((error) => console.error("Sharing failed", error));
+    } else {
+      alert("Sharing is not supported in your browser.");
+    }
+  }
+share_btn.addEventListener("click",shareText);
 loadParagraph();
 inpField.addEventListener("input", initTyping);
 tryAgainBtn.addEventListener("click", resetTest);

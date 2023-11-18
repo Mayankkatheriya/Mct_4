@@ -13,6 +13,7 @@ h1 {
   animation: pulse 2s infinite;
 
 }
+/* CSS keyframes for pulse animation */
 @keyframes pulse {
   0% {
       transform: scale(1);
@@ -26,7 +27,7 @@ h1 {
 }
 
 
-
+/* CSS styles for p, .exclusions */
 p {
   font-family: Georgia;
   font-style: italic;
@@ -60,6 +61,7 @@ p {
 }
 
 .hero-exclusions {
+  /* Fixed position at the bottom center of the hero image */
   position: fixed;
   text-align: center;
   top: 88%;
@@ -69,6 +71,7 @@ p {
 }
 
 .hero-text button {
+  /* Styling for the SHOP NOW button */
   border: none;
   outline: 0;
   display: inline-block;
@@ -88,14 +91,14 @@ p {
   /* animation: shake 1s infinite; */
   
 }
-
+/* CSS styles for .hero-text button on hover */
 .hero-text button:hover {
   background-color: transparent;
   color: white;
   border: 5px solid black;
   text-shadow: 2px 2px #000;
 }
-
+/* CSS styles for .exclusions (used for popup) */
 /*start of popup*/
 .exclusions {
   font-family: Georgia;

@@ -39,6 +39,10 @@ nav{
   align-items: center;
   justify-content: center;
 }
+#menu{
+  display: none;
+  cursor: pointer;
+}
 
 .logo{
   display: flex;
@@ -138,11 +142,18 @@ form{
 .material-icons{
   font-size: 20px;
 }
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  display: none;
+}
 
 /*----------------fixed-navbar----------------------*/
 
 .nav{
   width: 100%;
+  text-align: center;
   padding: 12px;
   display: flex;
   align-items: center;
@@ -225,6 +236,13 @@ main{
   align-items: flex-start;
   justify-content: flex-start;
   gap: 1rem;
+  position: relative;
+}
+#close-aside{
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  display: none;
 }
 
 hr{
@@ -501,6 +519,7 @@ div label{
 
 .sortOptions{
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 1rem;
   font-size: 0.875rem;
@@ -622,4 +641,48 @@ del{
   font-weight: 700;
   color: green;
   cursor: default;
+}
+@media screen and (max-width: 1023px) {
+  .nav {
+    display: none;
+  }
+  nav {
+    justify-content: space-between;
+    padding: .5rem 1rem;
+  }
+  #menu {
+    display: inline-block;
+  }
+  .searchbar{
+    display: none;
+  }
+  .list {
+    display: none;
+  }
+  .icons {
+    display: flex;
+  }
+  .aside {
+    position: absolute;
+    top: -4rem;
+    left: -280px;
+    z-index: 1000;
+    width: 280px;
+    /* display: none; */
+  }
+  .content {
+    width: 100%;
+  }
+  .product-card{
+    width: 100%;
+    max-width: 350px;
+  }
+  .product-list{
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #close-aside{
+    display: none;
+  }
 }

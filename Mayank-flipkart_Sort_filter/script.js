@@ -6,6 +6,7 @@ let deliverybox = document.querySelector("#delivery");
 let emiBox = document.querySelector("#noCost");
 let offerFilter = [...document.querySelectorAll('input[name="discount"]')];
 let ratingFilter = [...document.querySelectorAll('input[name="rating"]')];
+var asideMenu = document.querySelector('.aside');
 
 
 
@@ -28,8 +29,8 @@ const displayProducts = (data = productData) => {
     const div = document.createElement("div");
     div.classList.add("product-card");
     div.innerHTML = `
-    <img class="productImage" src="${product.image}" alt="">
-    <span class="productName">${product.title}</span>
+    <img class="productImage" src="${product.image}" alt="img">
+    <span class="productName" title = "${product.title}">${product.title}</span>
     <div class="rating">
         <div class="ratingContainer">
             <span class="rating-value">${product.rating}</span>
@@ -172,7 +173,6 @@ rangePrice.forEach((ele) => {
 // let navbar= document.querySelector("header")
 let topBtn = document.querySelector("#backToTop");
 document.addEventListener("scroll", (e) => {
-  console.log(e);
     if (e.target.scrollingElement.scrollTop > 200) {
       // topBtn.style.display = "flex";
       topBtn.style.top = "70px"
@@ -184,4 +184,30 @@ document.addEventListener("scroll", (e) => {
     }
   });
 
+  // onclick on menu bar 
+  const menubar = document.querySelector("#menu");
+  const closebtn = document.querySelector("#close-aside");
+  menubar.addEventListener("click", showAside)
+  function showAside() {
+    asideMenu.style.transition = "all 0.2s linear"
+    asideMenu.style.left = "0"
+    closebtn.style.display = "block"
+  }
+
+  // onclick on closeBtn 
+  
+  closebtn.addEventListener("click", closeAside)
+  function closeAside() {
+    asideMenu.style.transition = "all 0.2s linear"
+    asideMenu.style.left = "-280px"
+    closebtn.style.display = "none"
+  }
+
+  // window.document.body.addEventListener("resize", ()=>{
+  //   console.log(document.body.offsetWidth);
+  //   if (window.innerWidth > 999){
+  //     closebtn.style.display = "none"
+  //   }
+
+  // })
 window.onload = () => displayProducts(productData);

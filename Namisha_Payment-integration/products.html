@@ -4,44 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beauty Products</title>
-    <!-- Add Razorpay script -->
+    <!-- Adding Razorpay script -->
+
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+     <!-- Link to external CSS file for styling -->
     <link rel="stylesheet" href="products.css">
+
+    <!-- Link to external CSS file for animations -->
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
+   <!-- Link to external fonts from Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Frijole|Josefin+Sans:300,400,400i,600,700|Viga" rel="stylesheet">
+
+  <!-- Link to external CSS file for Toastr notifications -->
   <link
   href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"
   rel="stylesheet"
 />
+<!-- Link to external CSS file for Font Awesome icons -->
 <link
   href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css"
   rel="stylesheet"
 />
 </head>
 <body>
-    <a href="#" id="top"
-      ><i class="go-top fa-solid fa-chevron-up" style="color: #000000"></i
+    <!-- Scroll-to-top button -->
+    <a href="#" id="top">
+       <!-- Font Awesome icon for the up arrow --><i class="go-top fa-solid fa-chevron-up" style="color: #000000"></i
     ></a>
+     <!-- Header section -->
     <header> 
+         <!-- Logo linking to index.html -->
         <a href="./index.html"><img src="./png-clipart-person-s-lip-illustration-make-up-for-ever-cosmetics-make-up-artist-eye-shadow-logo-forever-miscellaneous-angle.png" class="icon" alt=""></a>
+
+        <!-- Heading with animation -->
         <h1  class="animate__animated animate__tada">Select Your Shade</h1>
+
+         <!-- Cart icon with animation and a count -->
         <div id="cart-icon" onclick="openCartPage()" class="animate__animated animate__shakeX">
             🛒 <span id="cart-count">0</span>
         </div>
     </header>
+    <!-- Container for displaying products with animation -->
     <div id="products-container" class="animate__animated animate__zoomInUp">
         <!-- Render product containers dynamically using JavaScript -->
     </div>
+    <!-- Cart page with content -->
     <div id="cart-page">
         <div id="cart-content">
+             <!-- Heading for the cart -->
             <h2 class="animate__animated animate__zoomInUp">Your Cart</h2>
+              <!-- List for displaying cart items -->
             <ul id="cart-items"></ul>
-            <button onclick="closeCartPage()">Close</button>
+
+            <!-- Buttons for closing the cart and clearing the cart -->
+            <div class="cart-button">
+            <button onclick="closeCartPage()" style="background-color: green;">Close</button>
+            <button onclick="clearCart()" style="background-color: rgb(255, 0, 0);">Clear</button> <!-- clear cart button -->
+        </div>
         </div>
     </div>
+   <!-- Include jQuery, Toastr (notification library), product-specific script, and Font Awesome -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <script src="products.js"></script>

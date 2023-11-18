@@ -1,31 +1,50 @@
 import { getActiveTabURL } from "./utlis.js";
 
+//TODO append BookMark to the extension
+
 const addNewBookmark = (bookmarks, bookmark) => {
-  const bookmarkTitleElement = document.createElement("div");
-  const bookmarkdels = document.createElement("div")
-  const controlsElement = document.createElement("div");
+
+  //TODO create a new bookMark
   const newBookmarkElement = document.createElement("div");
-
-  bookmarkTitleElement.textContent = bookmark.desc;
-  bookmarkTitleElement.className = "bookmark-title";
-  controlsElement.className = "bookmark-controls";
-
-  bookmarkdels.textContent = bookmark.dels;
-  bookmarkdels.className = "bookmark-dels";
-
-  setBookmarkAttributes("play", onPlay, controlsElement);
-  setBookmarkAttributes("delete", onDelete, controlsElement);
-
   newBookmarkElement.id = "bookmark-" + bookmark.time;
   newBookmarkElement.className = "bookmark";
   newBookmarkElement.setAttribute("timestamp", bookmark.time);
 
+  //TODO add title to the bookmark
+  const bookmarkTitleElement = document.createElement("div");
+  bookmarkTitleElement.textContent = bookmark.desc;
+  bookmarkTitleElement.className = "bookmark-title";
   newBookmarkElement.appendChild(bookmarkTitleElement);
+
+  //TODO add keypoint of bookmark
+  const bookmarkdels = document.createElement("div")
+  bookmarkdels.textContent = bookmark.dels;
+  bookmarkdels.className = "bookmark-dels";
   newBookmarkElement.appendChild(bookmarkdels);
+  
+  //TODO add controls of bookmark
+  const controlsElement = document.createElement("div");
+  controlsElement.className = "bookmark-controls";
+  setBookmarkAttributes("play", onPlay, controlsElement);
+  setBookmarkAttributes("delete", onDelete, controlsElement);
   newBookmarkElement.appendChild(controlsElement);
+
   bookmarks.appendChild(newBookmarkElement);
 };
 
+//TODO set attribute fuction for setting attributes to each control item
+
+const setBookmarkAttributes = (src, eventListener, controlParentElement) => {
+  const controlElement = document.createElement("img");
+
+  controlElement.src = "./Assets/" + src + ".png";
+  controlElement.title = src;
+  controlElement.classList.add(src)
+  controlElement.addEventListener("click", eventListener);
+  controlParentElement.appendChild(controlElement);
+};
+
+//TODO show all the bookmarks which are store in chrome storage(if available) for a prticular video
 const viewBookmarks = (currentBookmarks = []) => {
   const bookmarksElement = document.getElementById("bookmarks");
   bookmarksElement.innerHTML = "";
@@ -36,12 +55,15 @@ const viewBookmarks = (currentBookmarks = []) => {
       addNewBookmark(bookmarksElement, bookmark);
     }
   } else {
-    bookmarksElement.innerHTML = '<i class="row">No bookmarks to show</i>';
+    bookmarksElement.innerHTML =
+    `<i class="row">No bookmarks to show</i>
+    <img class="bhaiMeme" src="./Assets/bhai-kya-kar-raha-hai-tu-ashneer-grover.gif" alt="">`;
   }
 
   return;
 };
 
+//TODO click event for play button
 const onPlay = async (e) => {
   const bookmarkTime = e.target.parentNode.parentNode.getAttribute("timestamp");
   const activeTab = await getActiveTabURL();
@@ -52,6 +74,7 @@ const onPlay = async (e) => {
   });
 };
 
+//TODO click event for delete button
 const onDelete = async (e) => {
   const activeTab = await getActiveTabURL();
   const bookmarkTime = e.target.parentNode.parentNode.getAttribute("timestamp");
@@ -71,15 +94,7 @@ const onDelete = async (e) => {
   );
 };
 
-const setBookmarkAttributes = (src, eventListener, controlParentElement) => {
-  const controlElement = document.createElement("img");
-
-  controlElement.src = "./Assets/" + src + ".png";
-  controlElement.title = src;
-  controlElement.addEventListener("click", eventListener);
-  controlParentElement.appendChild(controlElement);
-};
-
+//TODO load content according to the situtation
 document.addEventListener("DOMContentLoaded", async () => {
   const activeTab = await getActiveTabURL();
   const queryParameters = activeTab.url.split("?")[1];
@@ -99,7 +114,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   else {
     const container = document.getElementsByClassName("container")[0];
 
-    container.innerHTML =
-      '<div class="title">This is not a youtube video page.</div>';
+    container.innerHTML = `
+    <div class="title">This is not a youtube video page.
+    <img src="./Assets/welcome-bhaisahab-ye-kis-line-me-aa-gaye-aap.gif" alt="" class="memegif"></div>
+    `
   }
 });

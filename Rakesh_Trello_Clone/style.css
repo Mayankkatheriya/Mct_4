@@ -1,106 +1,188 @@
-.board{
-    background-color: rgb(32, 70, 20);
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Roboto&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-#todo-input{
-    width: 100%;
-    height: 30px;
-    border: 2px solid black;
-    border-radius: 10px;
-    /* visibility: hidden; */
-    margin-bottom: 10px;
-    
+/* *::-webkit-scrollbar{
+    display: none;
+} */
+
+body{
+    font-family: Roboto;
 }
 
-#cancel{
-    width: 50px;
-    /* display: inline; */
-    margin-left: 10px;
-    height: 25px;
+h1{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    /* margin-top: 50px;
+    margin-bottom: 30px; */
+ 
 }
 
-.button_all{
-    background-color: blue;
-    color: white;
-    border: 1px solid black;
-    padding: 5px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100px;
-    display:inline;
-}
-
-#add{
-
-    background-color: black;
-    color: white;
-    border: 1px solid black;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 2px;
-    padding: 5px;
-
-}
-
-/* Board */
-.swim{
-    display: flex;
-    align-items: flex-start;
-    justify-content: start;
-    gap: 2rem;
-    padding: 24px 32px;
+.container{
+    width: 100vw;
+    height: 100vh;
     overflow: scroll;
-    height: 100%; 
+    background-image: url("https://wallpapercave.com/wp/wp2752752.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    /* position: fixed; */
+    /* z-index: 100; */
+
 }
 
-.swim-lane{
+
+.add-tasks{
+    padding: 32px 32px 0;
+}
+
+#tasks-input{
+    padding: 10px;
+    margin-right: 8px;
+    width: 220px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 50px #000000;
+    font-size: 15px;
+}
+
+.add-tasks button{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 50px #3b3b3b;
+    font-size: 14px;
+    background-color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+.main-task-container{
+    display: flex;
+    gap: 18px;
+    padding: 24px 32px;
+    height: 80vh;
+    /* overflow: scroll; */
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.heading{
+    margin-bottom: 10px;
+    font-size: 20px;
+    color:rgb(68, 60, 60);
+}
+
+.task-container{
     display: flex;
     flex-direction: column;
-    background-color: rgba(218, 197, 197, 0.15);
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+    gap: 10px;
+    background-color: rgb(223 227 230/55%);
     padding: 12px;
-    border-radius: 4px;
-    width: 250px;
-    min-width: 120px;
-    flex-wrap:wrap;
-    /* flex-flow: wrap; */
-    /* flex-shrink: shrink; */
+    width: 300px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 5px#686060;
+    /* min-height: 90px; */
 }
 
 .task{
-    background:rgb(182, 174, 174);
-    color: black;
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.15);
+    width: 80%;
+    height: 25px;
+
+}
+
+i{
+    cursor: pointer;
+}
+
+.text{
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px rgba(0, 0 , 0, 0.15);
     padding: 12px;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: move;
-}
-
-.is-dragging{
-    scale: 1.05px;
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.25);
-    background: rgb(50,50,50);
-    color:white;
-}
-
-
-.div_flex{
-    display: flex;
-    /* margin-top: 10px ; */
-    /* align-items: center; */
-    gap: 2rem;
-
-
-}
-
-.head_and_delete{
+    cursor: grab;
     display: flex;
     justify-content: space-between;
+   
+}
+
+.dragging{
+    scale: 1.05;
+    box-shadow: 0px 5px 15px rgba(0, 0 , 0, 0.25);
+    background-color: black;
+    color: white;
+}
+
+.btns{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(73, 72, 72);
+    cursor: pointer;
+}
+
+@media screen and (max-width:700px){
+    .heading{
+        font-size: 17px;
+    }
+    .btn{
+        font-size: 12px;
+    }
 }
 
 
-.heading{
-    margin: 0;
+@media screen and (max-width:620px){
+    .heading{
+        font-size: 15px;
+    }
+    .btn{
+        font-size: 10px;
+    }
+    .task{
+        font-size: 14px;
+    }
+    i{
+        font-size: 14px;
+    }
+
+    .main-task-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    h1{
+        color: black;
+    }
+}
+@media screen and (max-width:450px){
+    .main-task-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn{
+        font-size: 14px;
+    }
+    .task{
+        font-size: 14px;
+    }
+    h1{
+        color: black;
+    }
+}
+
+@media screen and (max-width:360px){
+   #tasks-input{
+     width: 180px;
+   }
 }

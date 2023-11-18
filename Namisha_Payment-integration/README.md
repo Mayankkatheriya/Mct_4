@@ -19,7 +19,10 @@ The project is organized into several key directories:
 
 - **js:** Contains JavaScript files. `products.js` includes functions for handling product-related interactions, while `razorpay-script.js` holds the Razorpay integration script.
 
-- **sounds:** Includes sound files for a delightful user experience. The `thank-you-for-shopping-garvins.mp3` file plays when a successful purchase occurs.
+- **sounds:** Includes sound files for a delightful user experience.
+  - The `thank-you-for-shopping-garvins.mp3` file plays when a successful purchase occurs.
+  - The `mixkit-software-interface-start-2574.wav` file plays when item added to cart.
+  - The `error-126627.mp3` file plays when same item get clicked which already added to cart.
 
 - **vendor:** Holds external libraries and stylesheets, such as `animate.css`, `toastr.min.css`, and `font-awesome.min.css`.
 
@@ -50,24 +53,34 @@ To enhance user experience and make the shopping cart persistent across page rel
    ```javascript
    const cartKey = 'cart';
    let cart = [];
-- **Real-time Cart Updates:** The Toastr library is employed to show real-time cart updates and notifications. When a user adds a product to the cart, Toastr displays a notification, enhancing the user experience by providing feedback on their actions.
+- **Real-time Cart Updates:** The Toastr library is employed to show real-time cart updates and notifications. When a user adds a product to the cart, remove product from the cart Toastr displays a notification, enhancing the user experience by providing feedback on their actions.
 
-![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/90d28793-9672-4c9c-a782-9fc9ac949409)
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/22d09f13-862c-427d-8a24-e4caeb56d7d6)
 
-- **Notification for Added Items:** When a product is added to the cart, a green notification bar (`#added`) appears at the top, providing a clear indication to the user.
+- **Notification for Added Items:** When a product is added to the cart, a green notification bar (`#added`) appears at the top with notification sound, providing a clear indication to the user.
 
 ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/324d3c43-49e9-407c-9d2f-8f5175d01f6b)
 
-- **Notification for already item in cart:** When a user clicks again on the same item in the cart, a yellow notification bar (`#added`) appears at the top,
-  
+- **Notification for already item in cart:** When a user clicks again on the same item in the cart, a yellow notification bar (`#already`) appears at the top with alert sound,
+ 
 ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/ffbf0554-c945-4635-baed-cc7b0a6b639e)
+
+  - **Notification for removed item from cart:** When products removed from the cart, a blue notification bar (`#removed`) appears at the top, providing a clear indication to the user.
+
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/c47afd9a-d2b5-49e8-b8bf-f2536c85f692)
+
+ - **Notification for clear whole cart items:** When whole products removed from the cart, a yellow notification bar (`#no item in the cart!`) appears at the top and in cart some text 
+ will be visible `your cart is empty` providing a 
+ clear indication to the user.
+
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/4cd0417f-e7a7-4496-b29b-348af2220269)
 
 - **Razorpay Integration:** Secure payments are facilitated through the integration of the Razorpay API. The `handlePayment` function uses Razorpay to handle the payment process when a user clicks the "Buy Now" button.
  
 ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/30763ffa-4f88-4074-9ff8-b88edd3719b0)
 - **Smooth Scroll Functionality:** The website features smooth scroll functionality for a better user experience. When users scroll, the navigation bar's background color changes, providing a subtle visual effect.
  
-  ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/7191ed55-69da-4efb-93b1-3df004aa9e71)
+ ![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/e0c9fa7e-b598-463d-b593-5e2f23a83b81)
 
 ## Getting Started
 1. Clone this repository to your local machine.

@@ -12,14 +12,15 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
 
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css"/>
     <link rel="icon" href="./Assests/Flipkart-Logo-removebg-preview-300x300.png">
     <title>Flipkart</title>
   </head>
   <body>
-    <!--------------------header------------------->
+    <!--*------------------header------------------->
     <header>
       <nav>
+        <i class="fa-solid fa-bars" id="menu" style="color: #ffffff;"></i>
         <div class="logo">
           <img src="./Assests/flipkart.png" alt="logo" />
           <p class="logo-text">
@@ -46,9 +47,13 @@
           <li class="more">More <i class="material-icons">expand_more</i></li>
           <li><i class="material-icons">shopping_cart</i> Cart</li>
         </ul>
+        <div class="icons">
+          <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+          <i class="fa-solid fa-user" style="color: #ffffff;"></i>
+        </div>
       </nav>
     </header>
-    <!-- -----------------nav-2---------------- -->
+    <!--* -----------------nav-2---------------- -->
     <section class="nav">
       <div class="Items">
         <span class="secItem"
@@ -70,12 +75,13 @@
         ><a class="secItem" href="">Offer Zone</a>
       </div>
     </section>
-    <!-- -----------------------main--------------------------- -->
+    <!--* -----------------------main--------------------------- -->
     <main>
       <!-- ---------back to op button------------- -->
       <a href="#" id="backToTop"><i class="material-icons">expand_less</i> Back to Top</a>
-      <!-- -----------------aside-------------- -->
+      <!--* -----------------aside-------------- -->
       <section class="aside">
+        <i class="fa-solid fa-x" style="color: #212121;" id="close-aside"></i>
         <div class="data-card">
           <img
             src="https://rukminim2.flixcart.com/fk-p-flap/400/400/image/7df6817a0fd9c93e.png?q=50"
@@ -135,7 +141,7 @@
             </div>
           </div>
           <hr />
-          <!-----------------discount-section--------------->
+          <!--*---------------discount-section--------------->
           <div class="discountsList">
             <div class="discounts discountsHeading">
               <p class="label">DISCOUNT</p>
@@ -169,7 +175,7 @@
             </div>
           </div>
           <hr />
-          <!-- ------------------f-assured filter------------------ -->
+          <!--* ------------------f-assured filter------------------ -->
           <div class="fAssuredCheckbox">
             <input
               type="checkbox"
@@ -184,7 +190,7 @@
                 alt=""
             /></label>
           </div>
-          <!-- ------------------one day delivery filter------------------ -->
+          <!--*------------------one day delivery filter------------------ -->
           <div class="deliveryCheckbox">
             <input
               type="checkbox"
@@ -202,7 +208,7 @@
             </div>
           </div>
           <hr />
-          <!-- ----------------offer-list filter--------------- -->
+          <!--* ----------------offer-list filter--------------- -->
           <div class="offerList toggleHeight">
             <div class="offers offerHeading">
               <p class="label">OFFERS</p>
@@ -234,7 +240,7 @@
             </div>
           </div>
           <hr />
-          <!-----------------rating-section--------------->
+          <!--*---------------rating-section--------------->
           <div class="ratingList toggleHeight">
             <div class="cRatings cRatingHeading">
               <p class="label">CUSTOMER RATINGS</p>
@@ -291,7 +297,7 @@
           </div>
         </div>
       </section>
-      <!-- -------------------main-content-------------- -->
+      <!--* -------------------main-content-------------- -->
       <section class="content">
         <div class="top-details">
           <div class="path">
@@ -334,7 +340,7 @@
         </div>
 
         <div class="product-list" id="productList">
-          <!-- Products will be added here -->
+          <!--* Products will be added here -->
         </div>
       </section>
     </main>

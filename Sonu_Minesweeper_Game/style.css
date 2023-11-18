@@ -117,10 +117,11 @@ html {
   height: 25px;
   width: 25px;
   border-radius: 50%;
-  background-color: orangered;
+  background-color: rgba(235, 229, 227, 0.071);
   transition: 0.8s;
   transform: translateY(10%) scale(0.9);
   cursor: pointer;
+  /* color: rgba(107, 181, 27, 0.456); */
 }
 
 
@@ -197,5 +198,6 @@ html {
   height: 60px;
   z-index: 10;
   transform: translate(-50%);
+
 
 }

@@ -3,6 +3,7 @@
   let currentVideo = "";
   let currentVideoBookmarks = [];
 
+  //TODO --------------function to fetch chrome storage-----------------------
   const fetchBookmarks = () => {
     return new Promise((resolve) => {
       chrome.storage.sync.get([currentVideo], (obj) => {
@@ -11,7 +12,10 @@
     });
   };
 
-  const addNewBookmarkEventHandler = async () => {
+  //TODO //----------event handler function for bookmark click-----------
+  const addNewBookmarkEventHandler = async (e) => {
+    
+
     let details = window.prompt("Enter keyPoint")
     const currentTime = youtubePlayer.currentTime;
     const newBookmark = {
@@ -27,25 +31,29 @@
     });
   };
 
+
+  //TODO ----------function for new video--------------
   const newVideoLoaded = async () => {
     const bookmarkBtnExists = document.getElementsByClassName("bookmark-btn")[0];
-
     currentVideoBookmarks = await fetchBookmarks();
 
+    //TODO   ----------trying to add all bookmarks-----------------
     if (!bookmarkBtnExists) {
       const bookmarkBtn = document.createElement("img");
 
       bookmarkBtn.src = chrome.runtime.getURL("Assets/bookmark.png");
       bookmarkBtn.className = "ytp-button " + "bookmark-btn";
       bookmarkBtn.title = "Click to bookmark current timestamp";
-      bookmarkBtn.style.height = "30px";
-      bookmarkBtn.style.width = "30px";
+      bookmarkBtn.style.height = "20px";
+      bookmarkBtn.style.width = "20px";
       bookmarkBtn.style.alignSelf = "center";
 
       youtubeLeftControls = document.getElementsByClassName("ytp-left-controls")[0];
       youtubePlayer = document.getElementsByClassName('video-stream')[0];
 
+      //----------------adding boookmark button on video----------
       youtubeLeftControls.appendChild(bookmarkBtn);
+      //--------------creating a click event on bookmark btn------------------
       bookmarkBtn.addEventListener("click", addNewBookmarkEventHandler);
     }
   };
@@ -68,7 +76,7 @@
 
   // newVideoLoaded();
 })();
-
+//TODO covert timestamp(seconds) in ISO format
 const getTime = t => {
   var date = new Date(0);
   date.setSeconds(t);
