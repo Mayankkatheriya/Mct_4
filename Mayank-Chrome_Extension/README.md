@@ -1,6 +1,6 @@
 # YouTube Bookmarks Extension
 
-<img src="Assets/extn-icon.png" alt="drawing" width="150"/>
+<img src="Assets/extn-icon.png" alt="drawing" width="150"/><img src="Assets/bookmark.png" alt="drawing" width="150"/>
 
 **YouTube Bookmarks Extension** is a Chrome extension that allows users to save timestamps as bookmarks while watching YouTube videos. It provides an easy way to revisit specific moments in a video without having to manually remember or search for them.
 
