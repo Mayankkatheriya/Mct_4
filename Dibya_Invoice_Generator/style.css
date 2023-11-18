@@ -714,7 +714,7 @@ body.dark .details {
 
 /* #9b59b6 */
 
-body.dark label,body.dark textarea:focus, body.dark input:focus, body.dark h2{
+body.dark label,body.dark textarea:focus, body.dark input:focus, body.dark .subC h2, body.dark .charge p{
     color: #fff;
 }
 body.dark #invoNo:focus, body.dark .lis-css:focus, body.dark .List-head{
