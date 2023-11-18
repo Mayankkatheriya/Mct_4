@@ -1,9 +1,9 @@
-#Typing Speed Test Game<br>
-#Overview:<br>
+# Typing Speed Test Game<br>
+# Overview:<br>
 Welcome to the Typing Speed Test Game! This interactive and engaging game is designed to help users improve their typing speed and accuracy. Whether you're a beginner looking to enhance your keyboard skills or an advanced typist aiming to break your personal speed record, this game is for you.<br>
 
 
-#Features:<br>
+# Features:<br>
 User-Friendly Interface: The game boasts a simple and intuitive interface, making it accessible to users of all skill levels.<br>
 
 Time-Based Challenges: Test your typing speed under pressure with time-based challenges. Set the timer and see how many words you can accurately type before the clock runs out.
