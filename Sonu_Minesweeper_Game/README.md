@@ -1,5 +1,9 @@
 # Minesweeper Game
 This project implements the classic Minesweeper game in JavaScript, ranging from easy to hard levels. Players can reveal cells and flag potential mines to clear the minefield without triggering any explosions.
+## Demo
+👉 [Click Me For Live Demo](https://drive.google.com/file/d/1Eqes827DI_aQ9is5OeLdlhOphTqpevjz/view?usp=sharing)
+
+👉🏻 [Try it here](https://mayankkatheriya.github.io/Mct_4/Sonu_Minesweeper_Game/)
 
 ## Features
 - **Multiple Difficulty Levels:** The game offers different difficulty levels, ranging from easy to hard, with varying grid sizes and mine distributions.
@@ -27,4 +31,5 @@ This project implements the classic Minesweeper game in JavaScript, ranging from
 - HTML5, CSS3
 - JavaScript
   
-
+## License
+This project is licensed under the [MIT License](LICENSE).
