@@ -4,15 +4,14 @@ let wrapper=document.querySelector(".wrapper");
 let share_btn=document.querySelector(".share_btn");
 let rslt_detail=document.querySelector(".result-details");
 let high_score_text=document.querySelector(".high-score-text");
-// let social_icons=document.querySelector(".social-icons");
 let content=document.querySelector(".content");
+wrapper.style.display="none";
 start_btn.addEventListener("click",mainArea);
 
 function mainArea(){
     start.style.display="none";
     share_btn.style.display="none";
     rslt_detail.style.display="none";
-    // social_icons.style.display="none";
     wrapper.style.display="block";
     const paragraphs = [
         "Authors often misinterpret the lettuce as a folklore rabbi, when in actuality it feels more like an uncursed bacon. Pursued distances show us how mother-in-laws can be charleses. Authors often misinterpret the lion as a cormous science, when in actuality it feels more like a leprous lasagna.",
@@ -125,7 +124,6 @@ function resetTest() {
     rslt_detail.style.display="none";
     content.style.justifyContent="center";
     share_btn.style.display="none";
-    // social_icons.style.display="none";
     loadParagraph();
     clearInterval(timer);
     timeLeft = maxTime;
