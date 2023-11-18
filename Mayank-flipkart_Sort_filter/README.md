@@ -7,7 +7,7 @@ Welcome to the Flipkart Clone project! This is a replica of the popular e-commer
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
-- [Usage](#usage)
+- [UI](#ui)
 - [Contributing](#contributing)
 - [License](#license)
 

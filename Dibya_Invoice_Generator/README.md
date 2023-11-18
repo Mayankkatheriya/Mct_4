@@ -4,7 +4,7 @@
 # UI:
 ## Light Theme:
 ![ui](https://github.com/Mayankkatheriya/Mct_4/assets/125633895/ceb803ba-8511-4259-9296-836c94f0cac3)
-## Dark Theam:
+## Dark Theme:
 ![ui-dark](https://github.com/Mayankkatheriya/Mct_4/assets/125633895/a96dc836-aabf-4d61-8e8d-b027bc667af8)
 
 

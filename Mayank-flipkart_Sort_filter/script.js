@@ -203,7 +203,7 @@ document.addEventListener("scroll", (e) => {
     closebtn.style.display = "none"
   }
 
-  // window.document.body.addEventListener("", ()=>{
+  // window.document.body.addEventListener("resize", ()=>{
   //   console.log(document.body.offsetWidth);
   //   if (window.innerWidth > 999){
   //     closebtn.style.display = "none"

@@ -681,3 +681,8 @@ del{
     justify-content: center;
   }
 }
+@media screen and (min-width: 1024px) {
+  #close-aside{
+    display: none;
+  }
+}
