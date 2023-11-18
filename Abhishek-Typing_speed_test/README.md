@@ -12,13 +12,6 @@ Accuracy Tracking: Keep track of your typing accuracy percentage. Receive instan
 
 Progress Tracking: Monitor your progress over time with detailed statistics. Track your words-per-minute (WPM) and observe how your typing speed evolves with practice.
 
-Customizable Settings: Personalize the game experience by adjusting settings such as font size, theme, and keyboard layout to suit your preferences.
-
-
-
-
-
-
 
 
 Hosted Link: https://mayankkatheriya.github.io/Mct_4/Abhishek-Typing_speed_test/
