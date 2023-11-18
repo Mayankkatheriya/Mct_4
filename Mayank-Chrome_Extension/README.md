@@ -31,6 +31,7 @@
 - **Chrome Extension APIs:** Leveraged the `chrome.tabs`, `chrome.storage`, and other APIs for extension functionality.
 - **Manifest Version 3:** The extension manifest file is in version 3 format.
 - **Git and GitHub:** Version control and collaboration
+<img src="https://thumbs.dreamstime.com/b/html-css-js-icon-set-web-development-logo-icon-set-html-css-javascript-programming-symbol-html-css-js-icon-set-web-178080904.jpg" alt="drawing" width="150"/> <img src="Assets/bookmark.png" alt="drawing" width="150"/>
 
 ## Installation
 
