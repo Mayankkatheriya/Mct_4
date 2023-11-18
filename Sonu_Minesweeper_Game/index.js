@@ -10,9 +10,9 @@ const downCoverEl = document.querySelector(".downCover");
 
 //  for audio
 
-const addToCartSound = new Audio('/Asset/game-ball-tap.mp3');
+const addToCartSound = new Audio('Asset/game-ball-tap.mp3');
 addToCartSound.preload = 'auto';
-const bumbBlast = new Audio('/Asset/mixkit-clear.wav');
+const bumbBlast = new Audio('Asset/mixkit-clear.wav');
 bumbBlast.preload = 'auto';
 // landing page create kr raha he ye --------------------------
 gameCoverOpenEl.addEventListener("click",(e)=>{
