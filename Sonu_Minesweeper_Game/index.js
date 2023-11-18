@@ -219,10 +219,10 @@ function gameSelect(ROWS, COLS, SIZE) {
             // empty
           } else if (value === 1) {
             cell.textContent = "1";
-            cell.style.color = "blue";
+            cell.style.color = "aqua";
           } else if (value === 2) {
             cell.textContent = "2";
-            cell.style.color = "green";
+            cell.style.color = "orangered";
           } else if (value >= 3) {
             cell.textContent = value;
             cell.style.color = "red";
