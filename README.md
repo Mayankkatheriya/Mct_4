@@ -8,5 +8,5 @@
 6. Namisha Gurunani [Payment Integration](https://github.com/Mayankkatheriya/Mct_4/tree/main/Namisha_Payment-integration) --> [Demo Video](https://drive.google.com/file/d/1VtKJREkoc8YZNJtkHj7hRGh5XKlhYYEd/view?usp=drive_link) --> [Try it](https://mayankkatheriya.github.io/Mct_4/Namisha_Payment-integration/)
 7. Rakesh Gupta [Trello Clone](https://github.com/Mayankkatheriya/Mct_4/tree/main/Rakesh_Trello_Clone) --> [Demo Video](https://drive.google.com/file/d/1yaSBj8HB-OA7gSRumY9cqZYUC7oOr1-0/view?usp=drive_link) --> [Try it](https://mayankkatheriya.github.io/Mct_4/Rakesh_Trello_Clone/)
 8. Sonu Kumar [Minesweeper Game](https://github.com/Mayankkatheriya/Mct_4/tree/main/Sonu_Minesweeper_Game) --> [Demo Video](https://drive.google.com/file/d/1Eqes827DI_aQ9is5OeLdlhOphTqpevjz/view) --> [Try it](https://mayankkatheriya.github.io/Mct_4/Sonu_Minesweeper_Game/)
-9. Manoj Hegade [Resume Template]() --> [Demo Video]() --> [Try it]()
+9. Manoj Hegade [Resume Template](https://github.com/Mayankkatheriya/Mct_4/tree/main/Manoj-Resume-Builder) --> [Demo Video](https://www.loom.com/share/7eb02e2cadd04eab8bd623cf01a30c6f?sid=691a58ee-e0fd-4445-b359-275d74dee5ff) --> [Try it](https://mayankkatheriya.github.io/Mct_4/Manoj-Resume-Builder/)
 
