@@ -8,7 +8,7 @@ function run()
 
     //applying the vale entered in textarea to aoutput window
     output.contentDocument.body.innerHTML = htmlcode + "<style>"+ csscode + "</style>";
-    output.contentWindow.evel(javascriptcode);
+    output.contentWindow.eval(javascriptcode);
 }
 
 function clearHtml() {
