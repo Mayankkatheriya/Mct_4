@@ -266,10 +266,6 @@ li:not(:first-child) span {
 }
 /* For mobile */
 @media screen and (min-width:300px) and (max-width:767px) {
-  body{
-    /* height: 100vh; */
-    /* width: 100vw; */
-  }
   .timeLeft{
     font-size: 1.5rem;
     margin-bottom: 1rem;
