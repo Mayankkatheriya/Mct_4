@@ -3,7 +3,7 @@ let start_btn=document.querySelector(".strt-btn");
 let wrapper=document.querySelector(".wrapper");
 let share_btn=document.querySelector(".share_btn");
 let rslt_detail=document.querySelector(".result-details");
-let high_score_text=document.querySelector(".high-score-text");
+// let high_score_text=document.querySelector(".high-score-text");
 let content=document.querySelector(".content");
 wrapper.style.display="none";
 start_btn.addEventListener("click",mainArea);
@@ -92,7 +92,6 @@ function initTyping() {
         characters.forEach(span => span.classList.remove("active"));
         characters[charIndex].classList.add("active");
         let wpm = Math.round(((charIndex - errors) / 5) / (maxTime - timeLeft) * 60);
-        wpm = wpm < 0 || !wpm || wpm === Infinity ? 0 : wpm;
         wpmTag.innerText = wpm;
         errorTag.innerText = errors;
         cpmTag.innerText = charIndex - errors;
@@ -115,9 +114,9 @@ function initTimer() {
         share_btn.style.display="block";
         rslt_detail.style.display="flex";
         content.style.justifyContent="space-between";
-        high_score_text.innerText=`Wpm: ${wpmTag.innerText}
-        Cpm: ${cpmTag.innerText}
-        Errors: ${errorTag.innerText}`;
+        // high_score_text.innerText=`Wpm: ${wpmTag.innerText}
+        // Cpm: ${cpmTag.innerText}
+        // Errors: ${errorTag.innerText}`;
     }
 }
 function resetTest() {

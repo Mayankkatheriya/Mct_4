@@ -122,7 +122,7 @@ body {
   position: relative;
 }
 .typing-text p span.correct {
-  color: yellowgreen;
+  color: rgb(169, 225, 58);
 }
 .typing-text p span.incorrect {
   color: red;

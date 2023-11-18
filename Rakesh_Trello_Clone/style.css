@@ -4,13 +4,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    -ms-overflow-style: none;
     scrollbar-width: none;
 }
 
-/* *::-webkit-scrollbar{
-    display: none;
-} */
+
 
 body{
     font-family: Roboto;
@@ -19,8 +16,6 @@ body{
 h1{
     color: rgb(255, 255, 255);
     text-align: center;
-    /* margin-top: 50px;
-    margin-bottom: 30px; */
  
 }
 
@@ -32,13 +27,11 @@ h1{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; 
-    /* position: fixed; */
-    /* z-index: 100; */
 
 }
 
 
-.add-tasks{
+.form{
     padding: 32px 32px 0;
 }
 
@@ -67,7 +60,7 @@ h1{
 
 
 
-.main-task-container{
+.container-2{
     display: flex;
     gap: 18px;
     padding: 24px 32px;
@@ -83,7 +76,7 @@ h1{
     color:rgb(68, 60, 60);
 }
 
-.task-container{
+.task-cont{
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -105,10 +98,21 @@ i{
     cursor: pointer;
 }
 
-.text{
+.k_btn{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(27, 25, 25);
+    cursor: pointer;
+    background-color: rgb(122, 139, 139);
+}
+
+.input_text{
     background-color: white;
     border-radius: 5px;
-    box-shadow: 0px 5px 15px rgba(0, 0 , 0, 0.15);
+    box-shadow: 0px 5px 15px rgba(0, 0 , 0, 0.2);
     padding: 12px;
     cursor: grab;
     display: flex;
@@ -123,7 +127,7 @@ i{
     color: white;
 }
 
-.btns{
+.add_btns{
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -137,7 +141,7 @@ i{
     .heading{
         font-size: 17px;
     }
-    .btn{
+    .add_btns{
         font-size: 12px;
     }
 }
@@ -147,8 +151,8 @@ i{
     .heading{
         font-size: 15px;
     }
-    .btn{
-        font-size: 10px;
+    .add_btns{
+        font-size: 14px;
     }
     .task{
         font-size: 14px;
@@ -157,7 +161,7 @@ i{
         font-size: 14px;
     }
 
-    .main-task-container{
+    .container-2{
         flex-direction: column;
         align-items: center;
     }
@@ -166,11 +170,11 @@ i{
     }
 }
 @media screen and (max-width:450px){
-    .main-task-container{
+    .container-2{
         flex-direction: column;
         align-items: center;
     }
-    .btn{
+    .add_btns{
         font-size: 14px;
     }
     .task{

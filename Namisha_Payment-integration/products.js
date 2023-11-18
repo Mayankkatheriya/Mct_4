@@ -199,11 +199,12 @@ async function renderProducts() {
             address: 'Customer Address',
         },
         theme: {
-            color: '#F37254', // Replace with your desired color
+            color: '#092ca8', // Replace with your desired color
         },
     };
-
+     // Create a Razorpay instance with the options
     const rzp = new Razorpay(options);
+    // Open the Razorpay payment dialog
     rzp.open();
     
 }
@@ -212,7 +213,7 @@ async function renderProducts() {
 renderProducts();
 
 
-//Scroll Js
+// Scroll Event Listener
 let navbar= document.querySelector("header")
 let topBtn = document.querySelector("#top");
 document.addEventListener("scroll", (e) => {
