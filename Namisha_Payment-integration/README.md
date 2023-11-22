@@ -55,7 +55,7 @@ To enhance user experience and make the shopping cart persistent across page rel
    let cart = [];
 - **Real-time Cart Updates:** The Toastr library is employed to show real-time cart updates and notifications. When a user adds a product to the cart, remove product from the cart Toastr displays a notification, enhancing the user experience by providing feedback on their actions.
 
-![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/22d09f13-862c-427d-8a24-e4caeb56d7d6)
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/c80ccc70-f748-439f-972e-4333ee89fd04)
 
 - **Notification for Added Items:** When a product is added to the cart, a green notification bar (`#added`) appears at the top with notification sound, providing a clear indication to the user.
 
@@ -67,7 +67,7 @@ To enhance user experience and make the shopping cart persistent across page rel
 
   - **Notification for removed item from cart:** When products removed from the cart, a blue notification bar (`#removed`) appears at the top, providing a clear indication to the user.
 
-![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/c47afd9a-d2b5-49e8-b8bf-f2536c85f692)
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/02da3f86-3c40-41a6-9fbe-2feb78700ee4)
 
  - **Notification for clear whole cart items:** When whole products removed from the cart, a yellow notification bar (`#no item in the cart!`) appears at the top and in cart some text 
  will be visible `your cart is empty` providing a 
