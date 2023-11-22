@@ -70,12 +70,24 @@ function clearCart() {
     toastr.warning(`No item in the cart!`); // Display toastr notification when cart is empty
     saveCartToStorage(); // Save the updated cart to local storage
 }
+// Function to calculate the total price of items in the cart
+function calculateTotalPrice() {
+    let totalPrice = 0;
+
+    // Iterate through each item in the cart and add its price to the total
+    cart.forEach(item => {
+        totalPrice += item.price;
+    });
+
+    return totalPrice;
+}
 
 // Function to update the cart display
 // Function to updateCart function to include a message when the cart is empty
 function updateCart() {
     const cartCount = document.getElementById('cart-count');
     const cartItems = document.getElementById('cart-items');
+    const totalCartPrice = document.getElementById('total-cart-price'); 
 
     // Update cart count
     cartCount.textContent = cart.length;
@@ -102,6 +114,8 @@ function updateCart() {
             `;
             cartItems.appendChild(li);
         });
+        // Display total cart price
+        totalCartPrice.textContent = `Total: Rs. ${calculateTotalPrice()}`; // total price of cart items
     }
 }
 // Function to remove a specific item from the cart
@@ -208,6 +222,60 @@ async function renderProducts() {
     rzp.open();
     
 }
+// Function to handle payment using Razorpay in cart
+function handlePayment() {
+    // Preload the audio for success notification
+    const successSound = new Audio('thank-you-for-shopping-garvins.mp3');
+    successSound.preload = 'auto';
+
+    // Calculate the total cart price
+    const totalCartPrice = calculateTotalPrice();
+
+    // Check if the cart is not empty
+    if (totalCartPrice > 0) {
+        // Display the total cart price in the button
+        document.getElementById('total-cart-price').innerHTML = `Pay Now: Rs. ${totalCartPrice}`;
+        
+        // Configure options for Razorpay
+        const options = {
+            key: 'rzp_test_DhnX2ljNSBBudR', // Replace with your Razorpay API key
+            amount: totalCartPrice * 100, // Amount in paisa
+            currency: 'INR',
+            name: 'Glamour Haven', // Replace with your company name
+            description: 'Payment for your order',
+            image: "profile.jpg",
+            handler: function (response) {
+                // Show success notification and play the success sound
+                toastr['success'](`Payment successful for your order!`);
+                // Play the preloaded success sound
+                successSound.play();
+                
+                // Clear the cart after successful payment
+                clearCart();
+            },
+            prefill: {
+                name: 'Customer Name',
+                email: 'customer@example.com',
+                contact: 'XXXXXXXXXX',
+            },
+            notes: {
+                address: 'Customer Address',
+            },
+            theme: {
+                color: '#092ca8', // Replace with your desired color
+            },
+        };
+
+        // Create a Razorpay instance with the options
+        const rzp = new Razorpay(options);
+
+        // Open the Razorpay payment dialog when the "Pay Now" button is clicked
+        rzp.open();
+    } else {
+        toastr.warning('Your cart is empty. Add items to your cart before making a payment.');
+    }
+}
+
 
 // Call the renderProducts function to display product containers
 renderProducts();
