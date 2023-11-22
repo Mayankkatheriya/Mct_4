@@ -1,156 +1,171 @@
 * {
-    font-family: Nunito, sans-serif;
-  }
-  body{
-    width: 100%;
-    background-color: rgb(252, 217, 171);
-  }
-  .responsive-cell-block {
-    min-height: 75px;
-  }
-  #heading {
-    text-decoration: dotted underline;
-    text-shadow: 0 2px 5px grey;
-  }
-  .text-blk {
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    line-height: 25px;
-  }
-  
-  .responsive-container-block {
-    min-height: 75px;
-    height: fit-content;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 0px;
-    margin-right: auto;
-    margin-bottom: 0px;
-    margin-left: auto;
-    justify-content: space-evenly;
-  }
-  
-  .team-head-text {
-    font-size: 48px;
-    font-weight: 900;
-    text-align: center;
-  }
-  
-  .team-head-text {
-    line-height: 50px;
-    width: 100%;
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 50px;
-    margin-left: 0px;
-  }
-  
-  .container {
-    max-width: 1380px;
-    margin-top: 60px;
-    margin-right: auto;
-    margin-bottom: 60px;
-    margin-left: auto;
-    padding-top: 0px;
-    padding-right: 30px;
-    padding-bottom: 0px;
-    padding-left: 30px;
-  }
-  
-  .card {
-    text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 20px 7px;
-    background-color: antiquewhite;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 30px;
-    padding-right: 25px;
-    padding-bottom: 30px;
-    padding-left: 25px;
-    transition: all 0.3s ease-in-out;
-    transform: scale(1);
-  }
-  .card:hover {
-    transform: scale(1.1);
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .project {
-    color: black;
-    font-weight: 600;
-  }
+  font-family: Nunito, sans-serif;
+}
+body {
+  width: 100%;
+  background-color: rgb(252, 217, 171);
+}
+.responsive-cell-block {
+  min-height: 75px;
+}
+#heading {
+  text-decoration: dotted underline;
+  text-shadow: 0 2px 5px grey;
+}
+#github-icon {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+#github-icon:hover {
+  transform: scale(1.2);
+}
+.text-blk {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  line-height: 25px;
+}
 
+.responsive-container-block {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  justify-content: space-evenly;
+}
 
-  .demo-icon, .web-icon {
-    width: 30px;
-  }
+.team-head-text {
+  font-size: 48px;
+  font-weight: 900;
+  text-align: center;
+}
 
+.team-head-text {
+  line-height: 50px;
+  width: 100%;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 50px;
+  margin-left: 0px;
+}
+
+.container {
+  max-width: 1380px;
+  margin-top: 60px;
+  margin-right: auto;
+  margin-bottom: 60px;
+  margin-left: auto;
+  padding-top: 0px;
+  padding-right: 30px;
+  padding-bottom: 0px;
+  padding-left: 30px;
+}
+
+.card {
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 20px 7px;
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  padding-right: 25px;
+  padding-bottom: 30px;
+  padding-left: 25px;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+}
+.card:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.project {
+  color: black;
+  font-weight: 600;
+}
+
+.demo-icon,
+.web-icon {
+  width: 30px;
+  transition: all 0.3s ease-in;
+}
+
+.demo-icon:hover,
+.web-icon:hover {
+  transform: scale(1.2);
+}
+
+.card-container {
+  width: 280px;
+  border-radius: 10px;
+  margin-top: 0px;
+  margin-right: 10px;
+  margin-bottom: 25px;
+  margin-left: 10px;
+}
+
+.name {
+  margin-top: 20px;
+  margin-right: 0px;
+  margin-bottom: 5px;
+  margin-left: 0px;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.position {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+}
+
+.feature-text {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 20px;
+  margin-left: 0px;
+  color: rgb(122, 122, 122);
+  line-height: 30px;
+}
+
+.social-icons {
+  width: 30%;
+  gap: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-image-wrapper {
+  clip-path: circle(50% at 50% 50%);
+  width: 130px;
+  height: 130px;
+}
+
+.team-member-image {
+  max-width: 100%;
+}
+
+@media (max-width: 500px) {
   .card-container {
-    width: 280px;
-    border-radius: 10px;
+    width: 100%;
     margin-top: 0px;
-    margin-right: 10px;
+    margin-right: 0px;
     margin-bottom: 25px;
-    margin-left: 10px;
-  }
-  
-  .name {
-    margin-top: 20px;
-    margin-right: 0px;
-    margin-bottom: 5px;
-    margin-left: 0px;
-    font-size: 18px;
-    font-weight: 800;
-  }
-  
-  .position {
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 10px;
     margin-left: 0px;
   }
-  
-  .feature-text {
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 20px;
-    margin-left: 0px;
-    color: rgb(122, 122, 122);
-    line-height: 30px;
-  }
-  
-  .social-icons {
-    width: 30%;
-    gap: 2rem;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .team-image-wrapper {
-    clip-path: circle(50% at 50% 50%);
-    width: 130px;
-    height: 130px;
-  }
-  
-  .team-member-image {
-    max-width: 100%;
-  }
-  
-  @media (max-width: 500px) {
-    .card-container {
-      width: 100%;
-      margin-top: 0px;
-      margin-right: 0px;
-      margin-bottom: 25px;
-      margin-left: 0px;
-    }
-  }
+}
 
-  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&amp;display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&amp;display=swap");
 
 *,
 *:before,

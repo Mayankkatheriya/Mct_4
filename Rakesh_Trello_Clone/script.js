@@ -1,8 +1,11 @@
-let form = document.querySelector(".add-tasks");
+let form = document.querySelector(".form");
 let inputValue = document.querySelector("#tasks-input");
 let todolist = document.querySelector("#todo-task");
-let tasks = document.querySelectorAll(".text");
-let taskContainer = document.querySelectorAll(".task-container");
+let tasks = document.querySelectorAll(".input_text");
+let taskContainer = document.querySelectorAll(".task-cont");
+
+
+
 
 tasks.forEach(task => {
   task.addEventListener("dragstart", () => {
@@ -16,7 +19,7 @@ tasks.forEach(task => {
 taskContainer.forEach(container => {
   container.addEventListener("dragover", (e) => {
     e.preventDefault();
-    let insertingtask = inserTask(container, e.clientY);
+    let insertingtask = AddTask(container, e.clientY);
     let curTask = document.querySelector(".dragging");
 
     if (!insertingtask) {
@@ -27,8 +30,8 @@ taskContainer.forEach(container => {
   });
 });
 
-let inserTask = (container, mouseY) => {
-  let alltask = container.querySelectorAll(".text:not(.dragging)");
+let AddTask = (container, mouseY) => {
+  let alltask = container.querySelectorAll(".input_text:not(.dragging)");
   let closesttask = null;
   let closestoffset = Number.NEGATIVE_INFINITY;
   alltask.forEach(task => {
@@ -48,7 +51,7 @@ form.addEventListener("submit", e => {
   let input = inputValue.value;
   if (!input) return;
   let task = document.createElement("div");
-  task.classList.add("text");
+  task.classList.add("input_text");
   task.setAttribute("draggable", "true");
   task.innerHTML = `
     <p class="task" contenteditable="true"> ${input} </p>
@@ -75,12 +78,12 @@ form.addEventListener("submit", e => {
   
 });
 
-document.querySelectorAll(".btns").forEach(button => {
+document.querySelectorAll(".add_btns").forEach(button => {
   button.addEventListener("click", () => {
     let task = document.createElement("div");
     let parentContainer = button.parentNode;
 
-    task.classList.add("text");
+    task.classList.add("input_text");
   task.setAttribute("draggable", "true");
   task.innerHTML = `
   <p class="task" contenteditable="true"  spellcheck="false""></p>

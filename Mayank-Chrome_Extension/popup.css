@@ -50,7 +50,9 @@
   margin: 5px 5px;
   padding: 3px;
 }
-
+.row{
+  color: black;
+}
 .bookmark {
   display: flex;
   align-items: center;

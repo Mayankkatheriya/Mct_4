@@ -233,12 +233,14 @@ ne.addEventListener('keyup', function () {
 // ==============PRINT AND SAVA BUTTOM
 document.getElementById('pri-btn').addEventListener('click', () => {
   let inv = document.getElementById('invo');
-  inv.classList.add('while-pr');
+  // inv.classList.add('while-pr');
   // inv.classList.remove('while-pr');
 
   document.querySelector('.details').style.display = 'none'
   inv.classList.add('while-pr');
+  
   window.print();
+
   document.querySelector('.details').style.display = 'flex'
   // inv.style.width='50vw'
   inv.classList.remove('while-pr');
