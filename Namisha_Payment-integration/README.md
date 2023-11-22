@@ -67,7 +67,7 @@ To enhance user experience and make the shopping cart persistent across page rel
 
   - **Notification for removed item from cart:** When products removed from the cart, a blue notification bar (`#removed`) appears at the top, providing a clear indication to the user.
 
-![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/c47afd9a-d2b5-49e8-b8bf-f2536c85f692)
+![image](https://github.com/Mayankkatheriya/Mct_4/assets/126158413/02da3f86-3c40-41a6-9fbe-2feb78700ee4)
 
  - **Notification for clear whole cart items:** When whole products removed from the cart, a yellow notification bar (`#no item in the cart!`) appears at the top and in cart some text 
  will be visible `your cart is empty` providing a 
