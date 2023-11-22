@@ -222,59 +222,6 @@ async function renderProducts() {
     rzp.open();
     
 }
-// Function to handle payment using Razorpay in cart
-function handlePayment() {
-    // Preload the audio for success notification
-    const successSound = new Audio('thank-you-for-shopping-garvins.mp3');
-    successSound.preload = 'auto';
-
-    // Calculate the total cart price
-    const totalCartPrice = calculateTotalPrice();
-
-    // Check if the cart is not empty
-    if (totalCartPrice > 0) {
-        // Display the total cart price in the button
-        document.getElementById('total-cart-price').innerHTML = `Pay Now: Rs. ${totalCartPrice}`;
-        
-        // Configure options for Razorpay
-        const options = {
-            key: 'rzp_test_DhnX2ljNSBBudR', // Replace with your Razorpay API key
-            amount: totalCartPrice * 100, // Amount in paisa
-            currency: 'INR',
-            name: 'Glamour Haven', // Replace with your company name
-            description: 'Payment for your order',
-            image: "profile.jpg",
-            handler: function (response) {
-                // Show success notification and play the success sound
-                toastr['success'](`Payment successful for your order!`);
-                // Play the preloaded success sound
-                successSound.play();
-                
-                // Clear the cart after successful payment
-                clearCart();
-            },
-            prefill: {
-                name: 'Customer Name',
-                email: 'customer@example.com',
-                contact: 'XXXXXXXXXX',
-            },
-            notes: {
-                address: 'Customer Address',
-            },
-            theme: {
-                color: '#092ca8', // Replace with your desired color
-            },
-        };
-
-        // Create a Razorpay instance with the options
-        const rzp = new Razorpay(options);
-
-        // Open the Razorpay payment dialog when the "Pay Now" button is clicked
-        rzp.open();
-    } else {
-        toastr.warning('Your cart is empty. Add items to your cart before making a payment.');
-    }
-}
 
 
 // Call the renderProducts function to display product containers
