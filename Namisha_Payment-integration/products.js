@@ -70,12 +70,24 @@ function clearCart() {
     toastr.warning(`No item in the cart!`); // Display toastr notification when cart is empty
     saveCartToStorage(); // Save the updated cart to local storage
 }
+// Function to calculate the total price of items in the cart
+function calculateTotalPrice() {
+    let totalPrice = 0;
+
+    // Iterate through each item in the cart and add its price to the total
+    cart.forEach(item => {
+        totalPrice += item.price;
+    });
+
+    return totalPrice;
+}
 
 // Function to update the cart display
 // Function to updateCart function to include a message when the cart is empty
 function updateCart() {
     const cartCount = document.getElementById('cart-count');
     const cartItems = document.getElementById('cart-items');
+    const totalCartPrice = document.getElementById('total-cart-price'); 
 
     // Update cart count
     cartCount.textContent = cart.length;
@@ -102,6 +114,8 @@ function updateCart() {
             `;
             cartItems.appendChild(li);
         });
+        // Display total cart price
+        totalCartPrice.textContent = `Total: Rs. ${calculateTotalPrice()}`; // total price of cart items
     }
 }
 // Function to remove a specific item from the cart
@@ -208,6 +222,7 @@ async function renderProducts() {
     rzp.open();
     
 }
+
 
 // Call the renderProducts function to display product containers
 renderProducts();

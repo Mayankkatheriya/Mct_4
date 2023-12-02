@@ -165,6 +165,7 @@ h2{
     justify-content: center;
     gap: 12px;
 }
+
 .cart-button button:hover{
     opacity: 0.6;
 }
@@ -208,6 +209,16 @@ h2{
             border: none;
             border-radius: 5px 0 0 0;
             cursor: pointer;
+        }
+        #total-cart-price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 10px;
+            text-align: center;
+            color: #333;
+            flex-direction: column;
+            display: flex;
+           
         }
            h1 {  
         top: 20%;  
